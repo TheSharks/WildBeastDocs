@@ -1,0 +1,2 @@
+# WildBeastDocs
+Documentation for WildBeast.
