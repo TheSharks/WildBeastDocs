@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>WildBeast - Documentation</title>
+      
+      
+        <meta name="description" content="Documentation">
+      
+      
+      
+        <meta name="author" content="TheSharks">
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="WildBeast">
+    <meta property="og:image" content="None/./img/wblogo.png">
+    <meta name="apple-mobile-web-app-title" content="WildBeast">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="./img/wblogo.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('./assets/fonts/icon.eot?52m981');
+      	src: url('./assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('./assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('./assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('./assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="./assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid Sans:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="./assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-indigo palette-accent-blue">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        WildBeast
+      </div>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/Dougley35" title="@Dougley35 on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/TheSharks" title="@TheSharks on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/TheSharks/WildBeast" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="./img/wblogo.png">
+        </div>
+      
+      <div class="name">
+        <strong>
+          WildBeast
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+          <br>
+          TheSharks/WildBeast
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/TheSharks/WildBeast/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/TheSharks/WildBeast/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="current" title="Home" href=".">
+      Home
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="General information" href="#general-information">
+                General information
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Main features" href="#main-features">
+                Main features
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Selfhosting" href="#selfhosting">
+                Selfhosting
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Discord server" href="#discord-server">
+                Discord server
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Windows Guide" href="install_windows/">
+      Windows Guide
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Linux Guide" href="install_linux/">
+      Linux Guide
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Updating" href="updating/">
+      Updating
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="FAQ" href="faq/">
+      FAQ
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Custom Command Framework" href="custom_commands/">
+      Custom Command Framework
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+              
+              <li>
+                <a href="https://twitter.com/Dougley35" target="_blank" title="@Dougley35 on Twitter">
+                  @Dougley35 on Twitter
+                </a>
+              </li>
+            
+            
+              
+              <li>
+                <a href="https://github.com/TheSharks" target="_blank" title="@TheSharks on GitHub">
+                  @TheSharks on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="welcome-to-the-wildbeast-documentation">Welcome to the WildBeast documentation!</h1>
+<p>WildBeast is a multifunction Discord bot intended to be able to perform various tasks, ranging from easy server moderation (Kick, ban) to having fun (8Ball etc.) in your Discord server. All created with customizability and ease of use in mind.</p>
+<h2 id="general-information">General information</h2>
+<p>WildBeast was originally written by <a href="https://github.com/SteamingMutt">SteamingMutt</a> "Dougley", <a href="https://github.com/Mirrorbreak">Mirrorbreak</a> "Mirrow" and Perpetucake. Since then it has became one of the more widely used Discord bots, with over 27000 servers and counting only on the official WildBot.</p>
+<p>It is written in JavaScript Node.JS, using the DiscordIE library.</p>
+<h2 id="main-features">Main features</h2>
+<p>These features are available in every WildBeast instance, including our official WildBot!</p>
+<ul>
+<li>Music streaming from YouTube, SoundCloud etc.</li>
+<li>Classy insults</li>
+<li>Dank meme generation system with your own parameters</li>
+<li>Useful advice</li>
+<li>Moderation commands</li>
+<li>NSFW images via e621 and rule34</li>
+<li>Server utilities (Welcome messages, server and user info etc.)</li>
+<li>High level of customization (Changing messages on a per-server basis, permission level system)</li>
+</ul>
+<p>In addition, WildBeast has its very own command building syntax which is very easy to start making new commands with. You can see more of this over at <a href="custom_commands/">the Custom Commands page</a>.</p>
+<h2 id="selfhosting">Selfhosting</h2>
+<p>We provide very extensive guides on installing WildBeast over here on the wiki, written by our trusty paperworker LWTechGaming. Currently we support installation on Windows and Ubuntu systems. Docker guides are on their way.</p>
+<p><strong>Resources for selfhosters</strong></p>
+<ul>
+<li><a href="install_windows/">Windows installation guide</a></li>
+<li><a href="install_linux/">Linux installation guide</a></li>
+<li><a href="updating/">Updating guide</a></li>
+</ul>
+<h2 id="discord-server">Discord server</h2>
+<p>We run a Discord server in which you can test WildBeast's functionality in our own sandboxes. Feel free to come over to chat, meet fellow coders and users alike or just hang out with the community! Click the banner below to get started.</p>
+<p><a href="https://discord.gg/0cFoiR5QVh5LZlQO"><img src="https://discordapp.com/api/guilds/110462143152803840/widget.png?style=banner2" alt="Discord server"></a></p>
+          <aside class="copyright" role="note">
+            
+              Copyright © 2016 TheSharks. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+    </div>
+    <div class="next">
+      
+        <a href="install_windows/" title="Windows Guide">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Windows Guide
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '.';
+      var repo_id  = 'TheSharks/WildBeast';
+    </script>
+    <script src="./assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Custom Command Framework - WildBeast</title>
+      
+      
+      
+      
+        <meta name="author" content="TheSharks">
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="WildBeast">
+    <meta property="og:image" content="None/../img/wblogo.png">
+    <meta name="apple-mobile-web-app-title" content="WildBeast">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../img/wblogo.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid Sans:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-indigo palette-accent-blue">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        Custom Command Framework
+      </div>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/Dougley35" title="@Dougley35 on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/TheSharks" title="@TheSharks on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/TheSharks/WildBeast" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="../img/wblogo.png">
+        </div>
+      
+      <div class="name">
+        <strong>
+          WildBeast
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+          <br>
+          TheSharks/WildBeast
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/TheSharks/WildBeast/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/TheSharks/WildBeast/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Windows Guide" href="../install_windows/">
+      Windows Guide
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Linux Guide" href="../install_linux/">
+      Linux Guide
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Updating" href="../updating/">
+      Updating
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="FAQ" href="../faq/">
+      FAQ
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="Custom Command Framework" href="./">
+      Custom Command Framework
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Custom Commands" href="#custom-commands">
+                Custom Commands
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Important notes" href="#important-notes">
+                Important notes
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Property declaration" href="#property-declaration">
+                Property declaration
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Command" href="#command">
+                Command
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+              
+              <li>
+                <a href="https://twitter.com/Dougley35" target="_blank" title="@Dougley35 on Twitter">
+                  @Dougley35 on Twitter
+                </a>
+              </li>
+            
+            
+              
+              <li>
+                <a href="https://github.com/TheSharks" target="_blank" title="@TheSharks on GitHub">
+                  @TheSharks on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>Custom Command Framework</h1>
+          
+          <p>This is the cheat sheet for the WildBeast command framework. Using these elements, you can build the command you really want to get into your own instance.</p>
+<p><strong>NOTE:</strong> Do not come to us with questions on how to write custom commands, some basic JavaScript and programming knowledge is required. We won't give you assistance in writing your commands beyond what is listed on this page!</p>
+<h2 id="custom-commands">Custom Commands</h2>
+<p>Starting at version 3.0.0, WildBeast allows for the addition of user created .js files with commands, given that they are written in the <strong>exact</strong> same format as default files. This page provides you with the tools you need to create your own commands.</p>
+<h2 id="important-notes">Important notes</h2>
+<ol>
+<li>Files need to declare commands to an array, and the array <strong>needs</strong> to be exported as <code>Commands</code>. </li>
+<li>Your command files must be in the <code>custom</code> folder within the <code>commands</code> folder. The path would therefore be <code>WildBeast/runtime/commands/custom</code>.</li>
+<li>Commands are <strong>objects</strong> added to an <strong>array</strong>, not the other way around!</li>
+</ol>
+<h2 id="property-declaration">Property declaration</h2>
+<p>Command objects consist of different <em>properties</em> which define how the command runs.
+Some properties are mandatory, some aren't. Properties marked with <code>[M]</code> are mandatory.</p>
+<p>Property list:</p>
+<ul>
+<li><code>name</code>: Command name. This is tied the name of the command's help module and <strong>not</strong> its callback name. [M]</li>
+<li><code>help</code>: Defines the message displayed when <code>help &lt;command&gt;</code> is ran. [M]</li>
+<li><code>level</code>: Defines minimum access level a user needs to execute this command, set to <code>master</code> to restrict usage to masters only. [M]</li>
+<li><code>fn</code>: Defines the Discordie function to execute. [M]</li>
+<li><code>noDM</code>: If set to true, disallows usage in direct messages.</li>
+<li><code>timeout</code>: Defines how many seconds the command will be on timeout for. These are server specific.</li>
+<li><code>usage</code>: Defines what will displayed as the example of its usage in the help command.</li>
+<li><code>overwrite</code>: If true, overwrite existing default commands with code of the custom one. If you forget to set this to true, the bot will abort the execution process!</li>
+<li><code>aliases</code>: Array of hard coded aliases for this command. This means to tsay that the command will trigger from multiple names. For instance, <code>ping</code> can have an alias named <code>pingbot</code> and the bot will respond the same to both.</li>
+<li><code>hidden</code>: If set to true, will hide the command from the help list. Useful for some soopah seekret commands.</li>
+</ul>
+<h2 id="command">Command</h2>
+<pre><code class="js">// New file is created
+var Commands = [] // Declaration of the command array
+
+Commands.ping = {
+  name: 'ping',
+  help: 'Check if I still live.'
+  timeout: 10,
+  usage: '&lt;pong&gt;',
+  overwrite: true, // WildBeast already has a command called ping, will overwrite with this
+  aliases: ['pong'],
+  level: 0,
+  fn: function(msg, suffix, bot) {
+    msg.channel.sendMessage('I LIVE')
+  }
+}
+
+exports.Commands = Commands // Expose the commands to the commandcontrol module
+</code></pre>
+
+<p>And that's how easy it is to create your own commands for WildBeast. Good luck in making your commands, and tinker to your heart's desire!</p>
+          <aside class="copyright" role="note">
+            
+              Copyright © 2016 TheSharks. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../faq/" title="FAQ">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                FAQ
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = 'TheSharks/WildBeast';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
