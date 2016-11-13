@@ -1,0 +1,40 @@
+# MkDocs config options
+
+# Meta
+site_name: 'WildBeast'
+site_description: 'Documentation'
+site_author: 'TheSharks'
+
+# Sitemap
+pages:
+  - Home: 'index.md'
+  - Windows Guide: 'install_windows.md'
+  - Linux Guide: 'install_linux.md'
+  - Updating: 'updating.md'
+  - FAQ: 'faq.md'
+  - Custom Command Framework: 'custom_commands.md'
+
+# Theme
+theme: 'material'
+
+# Material config options
+
+# Repo
+repo_name: 'GitHub'
+repo_url: 'https://github.com/TheSharks/WildBeast'
+
+# Copyright
+copyright: 'Copyright © 2016 TheSharks.'
+
+# Extra options
+extra:
+  logo: 'img/wblogo.png'
+  palette:
+    primary: 'indigo'
+    accent: 'blue'
+  font:
+    text: 'Droid Sans'
+    font: 'Droid Sans Mono'
+  author:
+    github: 'TheSharks'
+    twitter: 'Dougley35'
