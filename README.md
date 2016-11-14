@@ -12,5 +12,7 @@ This repository hosts the official documentation for WildBeast so you can contri
   
 When you make contributions to this repository, you have a more precise writing styleguide to follow. You can find them in the contribution guidelines.
 This is to keep our docs as accurate and up to date as possible, with minimal errors.
-
+  
+Before you make any changes to the documentation, read the guides in the [.github](https://github.com/TheSharks/WildBeastDocs/tree/master/.github) folder. You'll find info on what you need to do when editing this.
+  
 The repository is maintained by the Wiki team of TheSharks. Other teams have to make pull requests to get changes in.
