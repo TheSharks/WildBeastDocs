@@ -1,7 +1,7 @@
 <p style="text-align:center;">
 <img src="http://i.imgur.com/kg3pqR6.png">
 </p>
-
+![Build Status](https://snap-ci.com/TheSharks/WildBeastDocs/branch/master/build_image)
 ---
 
 Welcome to the now open source WildBeast documentation!
