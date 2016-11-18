@@ -16,7 +16,5 @@ When the test environment is running, you can open the URL `http://127.0.0.1:800
   
 **Important note:** If you add any pages, you need to add the page name and document into `mkdocs.yml` under the Sitemap section like this, otherwise your new page will not be added to the navbar.
 ![New page](https://i.imgur.com/irVh0Sm.png)
-##Building
-Once you have made the changes you want and are ready to make your pull request, shut down the MkDocs test server by hitting Ctrl+C. Then, in the same command window, run `mkdocs build`.
-  
-The changes will be implemented into the final compiled website version in the `site` directory. Once the compilation has finished, you can start making your pull request!
+##PR
+When you have made the changes you want, you can shut down the MkDocs test server by hitting Ctrl+C in the command prompt. Then you can feel free to make your pull request.
