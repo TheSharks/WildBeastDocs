@@ -1,10 +1,10 @@
-###Thank you for taking the time to contribute to the WildBeast documentation!###
+###Thank you for taking the time to contribute to the WildBeast documentation!
 
 Before you start making the changes to the documentation, let's clarify the following. **If you make changes, you must know what you're doing with WildBeast and/or the operating system in question.**
   
 Any larger additions or restructurations must be discussed with the WildBeast developers!
 
-## Rules
+#Rules
 Please follow these rules when making contributions to this repository.
 
 ## General contribution rules
