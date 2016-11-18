@@ -68,7 +68,8 @@ tag delete | Delete a tag. | tag delete `<name>` |
 ##Customize command
 The customize command is a multifaceted command that needs its own table to illustrate how it works.
   
-The customize command makes changes to the server-specific database of WildBeast. It allows you to set a custom member join announcement and tweak some responses. You need a permission level of 3 to use the customize command.
+The customize command makes changes to the server-specific database of WildBeast. It allows you to set a custom member join announcement and tweak some responses. You need a permission level of 3 to use the customize command.   
+
 Name | Description | Usage | Note 
 ---- | ----------- | ----- | ----- 
 customize | Base command for the customizer. | customize `<method>` `<parameter/content>` | See below for the methods.
@@ -80,6 +81,7 @@ welcome | Changes the welcome message specified above. | customize welcome `<mes
 nsfw | Change the response given when a channel doesn't have NSFW commands allowed. | customize nsfw `<message>` | 
 
 All commands except for the option-based ones (`welcoming` and `prefix`) support certain variables in the messages. The variables start with `%` and are the following.
+
 Variable | Description | Usable responses 
 -------- | ----------- | ---------------- 
 user | Username of the user that triggered the response. | All 
