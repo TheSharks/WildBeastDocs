@@ -44,8 +44,7 @@ After selecting the start menu folder, this is where things get precise. **Make 
 `Use MinTTY (the default terminal MSYS2)` (In *Configuring the terminal emulator to use with Git Bash*)  
 When you've gotten that straight, **you've set up Git in the way we intend to use it!**		
 
-Next, we'll retrieve the WildBeast GitHub repository, or clone in Git terms. This means that we download the bot using the Git SCM system.
-Now, you might ask: *Why are we doing this? Can't I just download a ZIP package?*  
+Next, we'll retrieve the WildBeast GitHub repository, or clone in Git terms. This means that we download the bot using the Git SCM system. Now, you might ask: *Why are we doing this? Can't I just download a ZIP package?*  
 The answer is: No. We're making it easier for you in the future to update WildBeast, just follow along for now.
 
 You'd want to figure out where you want the bot to be downloaded. Something simple like the root of the C:\ drive (Possibly some other drive, though **NOT A FLASH DRIVE**) or optionally your Desktop could be fine.
@@ -64,6 +63,20 @@ Now, why did we do it this way? The reason is simple: Ease of updating. If we ma
 That is the reason to why we use Git to download WildBeast.
 
 You have now successfully cloned the WildBeast Git repository!
+##Installing Python 2.7.12
+From WildBeast version 4.0.0 onwards, the fibers package is used in the bot. This package requires Python 2.7 to install, and hence we will also install that.
+
+[Click here](https://www.python.org/ftp/python/2.7.12/python-2.7.12.msi) to directly download the Python 2.7 installer. (Official source from python.org)
+
+Open the installer. Other options don't matter that much, but these two screens are crucial to have **exactly as follows!**
+
+![Python 2.7 install 1](https://i.imgur.com/GTU2Shh.png)
+
+![Python 2.7 install 2](https://i.imgur.com/cu4SsNq.png)
+
+It is especially important that you have all the boxes ticked in the latter image in order for this to work properly. Once you have completed this, proceed to the next step.
+
+**Important note to anyone that is running Python 3.5:** The PATH variables will be duplicated but the one that was previously installed stays as the one that is referred to as `python`. So if you installed 3.5 before, you're cool. But if you intend on installing 3.5 and using it primarily after this, you need to make changes to the variables. If you want to do this and need help, you can come ask on our help server.
 ##Installing the Node dependencies
 
 Now it's time to install the Node dependencies for the bot. These are smaller packages that WildBeast relies on to run.
