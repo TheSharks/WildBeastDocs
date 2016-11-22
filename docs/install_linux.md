@@ -39,7 +39,7 @@ v5.10.1
 ##Retrieving WildBeast
 Now we'll retrieve the WildBeast files via Git. Install it with the following command:
 ```bash
-apt-get install git
+sudo apt-get install git
 ```
 When the install completes, clone the WildBeast Git repository.
 ```bash
@@ -102,12 +102,6 @@ screen -S rethinkdb
 rethinkdb --bind all
 ```
 If RethinkDB runs without errors, you should be good to go. When this is the case, hit Ctrl + A and then Ctrl + D to detach from the screen session.
-
-WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, execute this:
-```bash
-node DougBot.js --createdatabase
-```
-After this it will tell you to restart without the parameter there. Don't do that yet, leave that to post-config.
 ##Configuration
 ##Setting up SFTP
 Next we'll make a config file for WildBeast. Unless you love your command line and editing stuff that way, this is the step where we'd advise you to bring out FileZilla. Using this program, you can transfer files from and to the server. This speeds up the editing process.
@@ -237,7 +231,11 @@ That's all, your config should now be ready to rock! Save it as `config.json` (*
 ##Running the bot
 Congratulations, your WildBeast instance should be ready to launch!
 
-To test if you've done everything correctly, you can do a "test run" with the bot. This means not making it permanently available, just testing if any errors are spat out when running.
+WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, execute this:
+```bash
+node DougBot.js --createdatabase
+```
+After this it will tell you to restart without the parameter there. To test if you've done everything correctly, you can do a "test run" with the bot. This means not making it permanently available, just testing if any errors are spat out when running.
 
 Run the following command within the bot's folder:
 ```bash
