@@ -29,7 +29,7 @@ copyright: 'Copyright © 2016 TheSharks'
 
 # Extra options
 extra:
-  logo: 'img/wblogo.png'
+  logo: 'img/thesharks_circular.png'
   palette:
     primary: 'indigo'
     accent: 'blue'
