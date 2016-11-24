@@ -122,7 +122,9 @@ Find `config.example.json` on your PC and open it using Notepad++ or any other c
 When opening the config file, you should have a file that looks like the [example config](https://github.com/TheSharks/WildBeast/blob/master/config.example.json) (The CSE is deprecated and likely to be removed, but the others are still needed)
 
 We'll now walk you through the different sections in the config and what they do.
+  
 ###Bot section
+  
 Property | Explanation | Notes
 -------- | ----------- | -----
 isbot | If an OAuth bot account should be used. | Recommended to be true due to [Discord bot rules](https://discordapp.com/developers/docs/topics/oauth2#bot-vs-user-accounts).
@@ -130,14 +132,18 @@ token | OAuth token for the bot. | Refer to the "Making the config" section.
 email | Email for normal user account that the bot will use. | **DO NOT** input your personal login details here.
 password | Password for the account mentioned above. | As above.
 oauth | The OAuth URL for the bot. | Refer to the "Making the config" section.
+  
 ###Database section
+  
 Property | Explanation | Notes
 -------- | ----------- | -----
 host | Points to WildBeast's database, localhost by default. | Don't modify unless you have a remote database set up.
 port | Specifies which network port the RethinkDB server is running on. | As above. Default is 28015.
 password | Password to RethinkDB user. | Admin account has no password by default. Don't set a password for the admin account unless you want to have to edit this.
 user | RethinkDB user account to use for accessing the database. | Admin by default. Admin will have permission to all databases so it should stay like this.
+  
 ###Settings section
+  
 Property | Explanation | Notes
 -------- | ----------- | -----
 prefix | The command prefix the bot will use. | Can be a special character like `/` etc.
@@ -145,13 +151,17 @@ autodeletemsg | Automatically delete music-related messages after a while. | The
 deleteTimeout | The amount of time after which to delete the messages. | Insert time in milliseconds, default 3000.
 deleteTimeoutLong | Same as above, but for messages that have a longer timeout.  | For now only [this message](https://github.com/TheSharks/WildBeast/blob/master/runtime/internal/voice.js#L204) uses the long timeout. In milliseconds, default 6000.
 maxvcslots | How many concurrent voice connections the bot can have until it won't join more. | Default limit is 10, depends on the beefyness of your system.
+  
 ###Permissions section
+  
 Property | Explanation | Notes
 -------- | ----------- | -----
 master | The highest possible access level of 9. Full permissions. |  Only give this to yourself and maybe others you really trust.
 level1, level2, level3 | Settable access levels that give users access to certain commands. | Default access levels can be found in [the command files](https://github.com/SteamingMutt/WildBeast/tree/master/runtime/commands).
 Notice: By default, when WildBeast joins a server it will set the owner's access level to 5. This is to give them control over normal users.
+  
 ###API keys section
+  
 Property | Explanation | Notes
 -------- | ----------- | -----
 imgflip | Your [imgflip](https://imgflip.com) login details. | Used in certain meme commands.
@@ -159,6 +169,7 @@ google | For retrieving data from YouTube. | Refer to the "Making the config" se
 mashape | For retrieving the Fortune Cow. | Refer to the "Making the config" section.
 cse | Deprecated and not required, don't bother with this. | This will be removed at some point.
 twitchId | For retrieving status of whether a user on Twitch is streaming or not. | Refer to the "Making the config" section.
+  
 ##Making the config
 - OAuth app
 	1. We'll start off by creating an OAuth application in Discord's developer interface so that the bot can login.
