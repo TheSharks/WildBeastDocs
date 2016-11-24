@@ -50,10 +50,15 @@ If you mess something up during the installation process, you can delete the dir
 Now it's time to install the rest of the dependencies for WildBeast. Change the working directory to WildBeast with the command `cd WildBeast` before proceeding.
 
 Next, we will install FFMPEG. **This is a crucial step if you want to use music playback, so pay attention!**
-Run these commands subsequently:
+Run this command:
 ```bash
 sudo apt-get install ffmpeg -y
 ```
+**Note:** Ubuntu 14.04 users need to do the following to install FFMPEG!
+```bash
+sudo add-apt-repository ppa:mc3man/trusty-media && sudo apt-get update && sudo apt-get install ffmpeg -y
+```
+
 Without changing workdir, we'll now install the Node modules required for usage in WildBeast. Execute the following:
 ```bash
 npm install
@@ -67,12 +72,6 @@ WildBeast@4.0.0 /home/(yourhomedir)
 +-- discordie@0.8.1
 (And so forth)
 ```
-
-**Note:** If you get get errors (Red text), there may be different reasons for that. You can try hotfixing with this command:
-```bash
-sudo add-apt-repository ppa:mc3man/trusty-media && sudo apt-get update && sudo apt-get install ffmpeg -y
-```
-After doing that, repeat the above. If you still get errors, feel free to come and ask us over at [WildBot's Territory](https://discord.gg/0cFoiR5QVh5LZlQO).
 
 Finally, we'll install youtube-dl for the bot to be able to retrieve videos from remote sources. Use this command to accomplish that.
 ```bash
@@ -91,7 +90,7 @@ Run the following commands one at a time.
 
 NOTE: The first command is **a single command**. If it takes up multiple lines here in the docs, that is due to physical screen size. **Make sure to paste it in as a whole!**
 ```bash
-source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee etc/apt/sources.list.d/rethinkdb.list
+source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
 wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install rethinkdb
