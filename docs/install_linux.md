@@ -39,7 +39,7 @@ v6.9.1
 ##Retrieving WildBeast
 Now we'll retrieve the WildBeast files via Git. Install it with the following command:
 ```bash
-sudo apt-get install git
+sudo apt-get install -y git
 ```
 When the install completes, clone the WildBeast Git repository and change into the newly created directory.
 ```bash
@@ -72,28 +72,44 @@ WildBeast@4.0.0 /home/(yourhomedir)
 | +-- crypto@0.0.3
 | `-- http@0.0.0
 +-- discordie@0.8.1
-(And so forth)
+...
 ```
 
 ##Installing RethinkDB and creating the DB
-As of WildBeast version 4.0.0, the bot uses RethinkDB to store server-specific data. This includes server owner, customize options and a whole bunch of other things.
+As of WildBeast version 4.0.0, RethinkDB is used to store server-specific data. This includes server owner, customize options and a whole bunch of other things.
 
 **Important note before starting:** Do not fiddle with RethinkDB options or execute commands outside of the ones we tell you to unless you understand RethinkDB and can unbork it yourself. We will not start solving your database if you messed it up.
 
 Run the following commands one at a time.
 
 NOTE: The first command is **a single command**. If it takes up multiple lines here in the docs, that is due to physical screen size. **Make sure to paste it in as a whole!**
+
+ <details>
+ <summary><bold>Commands to install RethinkDB on Ubuntu</bold></summary><p>
 ```bash
 source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
 wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install rethinkdb
 ```
+  </p></details>
+  
+ <details>
+ <summary><bold>Commands to install RethinkDB on Debian</bold></summary><p>
+```bash
+echo "deb http://download.rethinkdb.com/apt `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
+wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install rethinkdb
+```
+  </p></details>
+
 When RethinkDB has installed, run the following command. Keep in mind if you restart your server you will need to run this again to start the database service:
 ```bash
 rethinkdb --daemon
 ```
-If RethinkDB runs without errors, you should be good to go. When this is the case, hit Ctrl + A and then Ctrl + D to detach from the screen session.
+If RethinkDB runs without errors, you should be good to go.
+
 ##Configuration
 ##Setting up SFTP
 Next we'll make a config file for WildBeast. Unless you love your command line and editing stuff that way, this is the step where we'd advise you to bring out FileZilla. Using this program, you can transfer files from and to the server. This speeds up the editing process.
@@ -255,6 +271,8 @@ You can test simple functionality by running the `ping` command (With your desir
 Should you need to access the RethinkDB dashboard remotely to create, delete or edit the information stored within, You may create a tunnel via SSH to forward traffic from your browser to the server or run RethinkDB using the `--bind all` option with firewall rules to only allow your IP address to connect, this guide will not provide the required information to do this.
 
 To create a SSH tunnel in PuTTY follow these steps, if you have a profile with your server information already saved click on it once, else fill in the IP or FQDN in the "Host name (or IP address)" field. Under the category box you will see Connection, go to SSH and click the + sign, under this go to Tunnels. Source port can be anything but this guide assumes 8080, Destination is `127.0.0.1:8080`, the radio buttons below are Local and Auto. Click on Add then open the SSH connection and log into your server with your user and password. Now open your favorite browser and go to `http://127.0.0.1:8080` this should open the RethinkDB dashboard.
+[PuTTY Tunnel](http://i.imgur.com/NBIxQzh.png)
+[RethinkDB Dashboard](http://i.imgur.com/OFSk91K.png)
 
 ##Background running WildBeast
 With the current system that we described above, the bot will run until the SSH session is closed or an error occurs that ends the process. How can we combat this? The answer is: PM2!
