@@ -8,9 +8,9 @@ Welcome to the installation guide for WildBeast on Linux! In this guide, we'll w
 	-  Processor: Single core @ 3,30 GHz will work just fine, as above.
 	-  SSH access to the server.
 - Programs
-	- SSH client, i.e. [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) for executing commands to the server
-	- FTP program, i.e. [FileZilla](https://filezilla-project.org/) for quick editing and upload of files
-	- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io)
+	- SSH client, i.e. [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) or [BitVise](https://www.bitvise.com/ssh-client-download) for executing commands on the server
+	- SFTP program, i.e. [FileZilla](https://filezilla-project.org/) or [WinSCP](https://winscp.net/eng/index.php) for quick editing and upload of files
+	- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io) or [Brackets](http://brackets.io/)
 
 ##Pre-setup
 We higly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04). When this is complete, you can proceed to the next step.
@@ -20,9 +20,9 @@ General note: During installation, some administrative tasks will be executed. F
 Luckily, the process of executing as sudo isn't that complicated. Just put `sudo` ahead of every install command or other administrative equivalent.
 You will be asked for a password when doing the command, that's all that really is added.
 **Keep this in mind when setting up, so you don't waste our time with errors that stem from lacking permissions!**
-This does of course not apply to you who choose to not do the basic initial server setup and instead run as root.
+This does of course not apply to you who choose to not do the basic initial server setup and instead run as root, which should not be done as running programs as the root user opens your server to vulnerabilities.
 ##Installing Node
-First off, we'll install Node.JS, the library WildBeast uses. The current 6.x.x version works fine.
+First off, we'll install Node.JS, the runtime WildBeast uses. The current 6.x.x version works fine.
 ```bash
 wget -qO- https://deb.nodesource.com/setup_6.x | sudo bash -
 sudo apt-get install -y nodejs
@@ -30,33 +30,35 @@ sudo apt-get install -y build-essential
 ```
 After that is completed, you can check your Node version by executing the following:
 ```bash
-node --version
+node -v
 ```
 The output should then be this or close to that.
 ```bash
-v5.10.1
+v6.9.1
 ```
 ##Retrieving WildBeast
 Now we'll retrieve the WildBeast files via Git. Install it with the following command:
 ```bash
 sudo apt-get install git
 ```
-When the install completes, clone the WildBeast Git repository.
+When the install completes, clone the WildBeast Git repository and change into the newly created directory.
 ```bash
-git clone https://github.com/TheSharks/WildBeast.git
+git clone https://github.com/TheSharks/WildBeast.git && cd WildBeast
 ```
-If you mess something up during the installation process, you can delete the directory with `rm -d -f -r /WildBeast` and reclone the Git repo.
+If you mess something up during the installation process, you can delete the directory with `rm -d -f -r ~/WildBeast` and reclone the Git repo.
 ##Installing additional dependencies
-Now it's time to install the rest of the dependencies for WildBeast. Change the working directory to WildBeast with the command `cd WildBeast` before proceeding.
+Now it's time to install the rest of the dependencies for WildBeast.
 
 Next, we will install FFMPEG. **This is a crucial step if you want to use music playback, so pay attention!**
-Run this command:
-```bash
-sudo apt-get install ffmpeg -y
-```
+
 **Note:** Ubuntu 14.04 users need to do the following to install FFMPEG!
 ```bash
 sudo add-apt-repository ppa:mc3man/trusty-media && sudo apt-get update && sudo apt-get install ffmpeg -y
+```
+
+Run this command:
+```bash
+sudo apt-get install -fy ffmpeg
 ```
 
 Without changing workdir, we'll now install the Node modules required for usage in WildBeast. Execute the following:
@@ -73,14 +75,6 @@ WildBeast@4.0.0 /home/(yourhomedir)
 (And so forth)
 ```
 
-Finally, we'll install youtube-dl for the bot to be able to retrieve videos from remote sources. Use this command to accomplish that.
-```bash
-npm install fent/node-youtube-dl -g
-```
-If you get errors or the bot fails to run later on, rebuild YTDL by executing this command.
-```bash
-npm rebuild youtube-dl
-```
 ##Installing RethinkDB and creating the DB
 As of WildBeast version 4.0.0, the bot uses RethinkDB to store server-specific data. This includes server owner, customize options and a whole bunch of other things.
 
@@ -95,10 +89,9 @@ wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install rethinkdb
 ```
-When RethinkDB has installed, run the following commands one at a time:
+When RethinkDB has installed, run the following command. Keep in mind if you restart your server you will need to run this again to start the database service:
 ```bash
-screen -S rethinkdb
-rethinkdb --bind all
+rethinkdb --daemon
 ```
 If RethinkDB runs without errors, you should be good to go. When this is the case, hit Ctrl + A and then Ctrl + D to detach from the screen session.
 ##Configuration
@@ -257,7 +250,7 @@ If the bot runs without any errors, you have had success so far!
 
 You can test simple functionality by running the `ping` command (With your desired prefix) in a text channel that the bot can see. If it answers "Pong!", then congratulations, *you have successfully set up WildBeast!*
 ##Background running WildBeast
-With the current system that we described above, the bot will run but doesn't keep going when you log off but shuts down. How can we combat this? The answer is: PM2!
+With the current system that we described above, the bot will run until the SSH session is closed or an error occurs that ends the process. How can we combat this? The answer is: PM2!
 
 PM2, short of Process Manager 2, is a Node app intended to run and manage multiple apps running on one account in a Linux environment, which enables more than one process running at a time.
 
@@ -265,11 +258,11 @@ Our official instance, namely WildBot uses PM2, so this resource is a good one t
 ##Installing PM2 and starting the bot
 Before doing this, hit Ctrl+C (Close command) to shut down WildBeast if it's still running.
 
-You can install PM2 by using the following command in the server root folder:
+You can install PM2 by using the following command:
 ```bash
-npm install pm2 -g
+sudo npm install pm2 -g
 ```
-When PM2 is installed, navigate to the WildBeast install directory (`cd Wildbeast` if you are in the server root). Then execute the following command:
+When PM2 is installed, navigate to the WildBeast install directory (`cd ~/Wildbeast` if you are in the server root). Then execute the following command:
 ```bash
 pm2 start DougBot.js
 ```
