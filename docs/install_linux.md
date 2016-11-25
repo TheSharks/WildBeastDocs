@@ -268,7 +268,8 @@ You can test simple functionality by running the `ping` command (With your desir
 
 ##RethinkDB Dashboard
 **The following information is for those who need to access the RethinkDB web interface to create, delete or edit the database contents.**
-- Should you need to access the RethinkDB dashboard remotely to create, delete or edit the information stored within, You may create a tunnel via SSH to forward traffic from your browser to the server or run RethinkDB using the `--bind all` option with firewall rules to only allow your IP address to connect, this guide will not provide the required information to do this.
+
+Should you need to access the RethinkDB dashboard remotely to create, delete or edit the information stored within, You may create a tunnel via SSH to forward traffic from your browser to the server or run RethinkDB using the `--bind all` option with firewall rules to only allow your IP address to connect, this guide will not provide the required information to do this.
 
 To create a SSH tunnel in PuTTY follow these steps, if you have a profile with your server information already saved click on it once, else fill in the IP or FQDN in the "Host name (or IP address)" field. Under the category box you will see Connection, go to SSH and click the + sign, under this go to Tunnels. Source port can be anything but this guide assumes 8080, Destination is `127.0.0.1:8080`, the radio buttons below are Local and Auto. Click on Add then open the SSH connection and log into your server with your user and password. Now open your favorite browser and go to `http://127.0.0.1:8080` this should open the RethinkDB dashboard.
 [PuTTY Tunnel](http://i.imgur.com/NBIxQzh.png)
