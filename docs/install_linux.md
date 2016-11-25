@@ -13,7 +13,7 @@ Welcome to the installation guide for WildBeast on Linux! In this guide, we'll w
 	- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io) or [Brackets](http://brackets.io/)
 
 ##Pre-setup
-We higly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04). When this is complete, you can proceed to the next step.
+We highly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04). When this is complete, you can proceed to the next step.
 
 ##Installation
 General note: During installation, some administrative tasks will be executed. For these to work (Especially installations), **you need to run these commands as sudo**! They might error if you don't.
@@ -166,7 +166,7 @@ maxvcslots | How many concurrent voice connections the bot can have until it won
 Property | Explanation | Notes
 -------- | ----------- | -----
 master | The highest possible access level of 9. Full permissions. |  Only give this to yourself and maybe others you really trust.
-level1, level2, level3 | Settable access levels that give users access to certain commands. | Default access levels can be found in [the command files](https://github.com/SteamingMutt/WildBeast/tree/master/runtime/commands).
+level1, level2, level3 | Settable access levels that give users access to certain commands. | Default access levels can be found in [command reference](http://docs.thesharks.xyz/commands/).
 Notice: By default, when WildBeast joins a server it will set the owner's access level to 5. This is to give them control over normal users.
   
 ###API keys section
