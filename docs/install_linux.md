@@ -85,7 +85,7 @@ Run the following commands one at a time.
 NOTE: The first command is **a single command**. If it takes up multiple lines here in the docs, that is due to physical screen size. **Make sure to paste it in as a whole!**
 
  <details>
- <summary><bold>Commands to install RethinkDB on Ubuntu</bold></summary><p>
+ <summary>**Commands to install RethinkDB on Ubuntu** (click here)</summary><p>
 ```bash
 source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
 wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
@@ -95,7 +95,7 @@ sudo apt-get install rethinkdb
   </p></details>
   
  <details>
- <summary><bold>Commands to install RethinkDB on Debian</bold></summary><p>
+ <summary>**Commands to install RethinkDB on Debian** (click here)</summary><p>
 ```bash
 echo "deb http://download.rethinkdb.com/apt `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
 wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
