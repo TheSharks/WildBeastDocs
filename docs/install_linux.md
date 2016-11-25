@@ -3,7 +3,7 @@ Welcome to the installation guide for WildBeast on Linux! In this guide, we'll w
 ##Prerequisites
 - A Linux server
 	-  Type: VPS is enough to run WB, dedicated is a bit overshooting unless you have something else running there as well.
-	-  OS: LTS or latest version or Ubuntu or Debian 8
+	-  OS: Ubuntu LTS or latest, or Debian 8
 	-  RAM: 512 MB upwards, if you plan on having it on just a few servers. Scale up if necessary.
 	-  Processor: Single core @ 3,30 GHz will work just fine, as above.
 	-  SSH access to the server.
