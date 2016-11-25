@@ -58,7 +58,7 @@ sudo add-apt-repository ppa:mc3man/trusty-media && sudo apt-get update && sudo a
 
 Run this command:
 ```bash
-sudo apt-get install -fy ffmpeg
+sudo apt-get install -y ffmpeg
 ```
 
 Without changing workdir, we'll now install the Node modules required for usage in WildBeast. Execute the following:
