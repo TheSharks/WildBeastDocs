@@ -64,7 +64,7 @@ sudo add-apt-repository ppa:mc3man/trusty-media && sudo apt-get update && sudo a
 Edit /etc/apt/sources.list with your favorite editor or via SFTP using the methods described later in this guide.
 Enable the non-free repo by finding and changing the following or similar line: 
 ```bash
-deb http://mirror.us.leaseweb.net/debian/ jessie main'
+deb http://mirror.us.leaseweb.net/debian/ jessie main
 ```
 to look like this now: 
 ```bash
@@ -77,7 +77,8 @@ deb http://mirror.us.leaseweb.net/debian/ jessie-backports main contrib non-free
 Now run 
 ```bash
 sudo apt-get update
-``` and continue to the next command.
+```
+and continue to the next command.
   </p></details>
 
 Run this command:
