@@ -3,61 +3,89 @@ Welcome to the installation guide for WildBeast on Linux! In this guide, we'll w
 ##Prerequisites
 - A Linux server
 	-  Type: VPS is enough to run WB, dedicated is a bit overshooting unless you have something else running there as well.
-	-  OS: Ubuntu, latest version if possible.
-	-  RAM: 512 MB upwards, if you plan on having it on just a few servers. Scale up if necessary.
-	-  Processor: Single core @ 3,30 GHz will work just fine, as above.
+	-  OS: Ubuntu LTS or latest, optionally Debian 8
+	-  RAM: May work on 256 MB, 512MB is recommended. If you plan on having it on just a few servers. Scale up if necessary.
+	-  Processor: Single core @ 2.60 GHz or higher will work just fine, as above.
 	-  SSH access to the server.
 - Programs
-	- SSH client, i.e. [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) for executing commands to the server
-	- FTP program, i.e. [FileZilla](https://filezilla-project.org/) for quick editing and upload of files
-	- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io)
+	- SSH client, i.e. [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) or [BitVise](https://www.bitvise.com/ssh-client-download) for executing commands on the server
+	- SFTP program, i.e. [FileZilla](https://filezilla-project.org/) or [WinSCP](https://winscp.net/eng/index.php) for quick editing and upload of files
+	- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io) or [Brackets](http://brackets.io/)
 
 ##Pre-setup
-We higly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04). When this is complete, you can proceed to the next step.
+We highly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04). When this is complete, you can proceed to the next step.
 
 ##Installation
 General note: During installation, some administrative tasks will be executed. For these to work (Especially installations), **you need to run these commands as sudo**! They might error if you don't.
 Luckily, the process of executing as sudo isn't that complicated. Just put `sudo` ahead of every install command or other administrative equivalent.
 You will be asked for a password when doing the command, that's all that really is added.
 **Keep this in mind when setting up, so you don't waste our time with errors that stem from lacking permissions!**
-This does of course not apply to you who choose to not do the basic initial server setup and instead run as root.
+While you may think running the following commands as the root user is easy, we advice against it due to the security risks involved when using such a powerful user, instead please use `sudo`.
 ##Installing Node
-First off, we'll install Node.JS, the library WildBeast uses. The current 6.x.x version works fine.
+First off, we'll install Node.JS, the runtime WildBeast uses. The current 6.x.x version works fine.
 ```bash
-wget -qO- https://deb.nodesource.com/setup_6.x | sudo bash -
+sudo apt-get install -y curl
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential
 ```
 After that is completed, you can check your Node version by executing the following:
 ```bash
-node --version
+node -v
 ```
 The output should then be this or close to that.
 ```bash
-v5.10.1
+v6.9.1
 ```
 ##Retrieving WildBeast
 Now we'll retrieve the WildBeast files via Git. Install it with the following command:
 ```bash
-sudo apt-get install git
+sudo apt-get install -y git
 ```
-When the install completes, clone the WildBeast Git repository.
+When the install completes, the following set of commands will download the necessary files to run WildBeast and change into the newly created directory.
 ```bash
-git clone https://github.com/TheSharks/WildBeast.git
+git clone https://github.com/TheSharks/WildBeast.git && cd WildBeast
 ```
-If you mess something up during the installation process, you can delete the directory with `rm -d -f -r /WildBeast` and reclone the Git repo.
+If you mess something up during the installation process, you can delete the directory with `rm -d -f -r ~/WildBeast` and reclone the Git repo.
 ##Installing additional dependencies
-Now it's time to install the rest of the dependencies for WildBeast. Change the working directory to WildBeast with the command `cd WildBeast` before proceeding.
+Now it's time to install the rest of the dependencies for WildBeast.
 
 Next, we will install FFMPEG. **This is a crucial step if you want to use music playback, so pay attention!**
-Run this command:
-```bash
-sudo apt-get install ffmpeg -y
-```
-**Note:** Ubuntu 14.04 users need to do the following to install FFMPEG!
+
+ <details>
+ <summary>**Commands to install FFMPEG on Ubuntu 14.04** (click here)</summary><p>
 ```bash
 sudo add-apt-repository ppa:mc3man/trusty-media && sudo apt-get update && sudo apt-get install ffmpeg -y
 ```
+  </p></details>
+  
+ <details>
+ <summary>**Commands to install FFMPEG on Ubuntu 16.04** (click here)</summary><p>
+```bash
+sudo apt-get install -y ffmpeg
+```
+  </p></details>
+  
+  <details>
+  <summary>**Commands to install FFMPEG on Debian 8** (click here)</summary><p>
+Edit **/etc/apt/sources.list** from the terminal using vi or nano, this will require the use of `sudo`. Alternatively edit this file using SFTP with the methods described later in this guide.
+Enable the non-free repo by finding and changing the following or similar line: 
+```bash
+deb http://mirror.us.leaseweb.net/debian/ jessie main
+```
+to look like this now: 
+```bash
+deb http://mirror.us.leaseweb.net/debian/ jessie main non-free
+```
+Enable the backports repo by adding this line at the bottom of the file: 
+```bash
+deb http://mirror.us.leaseweb.net/debian/ jessie-backports main contrib non-free
+```
+Now run the following commands to update the repo information and install FFMPEG
+```bash
+sudo apt-get update && sudo apt-get install -y ffmpeg
+```
+  </p></details>
 
 Without changing workdir, we'll now install the Node modules required for usage in WildBeast. Execute the following:
 ```bash
@@ -70,37 +98,44 @@ WildBeast@4.0.0 /home/(yourhomedir)
 | +-- crypto@0.0.3
 | `-- http@0.0.0
 +-- discordie@0.8.1
-(And so forth)
+...
 ```
 
-Finally, we'll install youtube-dl for the bot to be able to retrieve videos from remote sources. Use this command to accomplish that.
-```bash
-npm install fent/node-youtube-dl -g
-```
-If you get errors or the bot fails to run later on, rebuild YTDL by executing this command.
-```bash
-npm rebuild youtube-dl
-```
 ##Installing RethinkDB and creating the DB
-As of WildBeast version 4.0.0, the bot uses RethinkDB to store server-specific data. This includes server owner, customize options and a whole bunch of other things.
+As of WildBeast version 4.0.0, RethinkDB is used to store server-specific data. This includes server owner, customize options and a whole bunch of other things.
 
 **Important note before starting:** Do not fiddle with RethinkDB options or execute commands outside of the ones we tell you to unless you understand RethinkDB and can unbork it yourself. We will not start solving your database if you messed it up.
 
 Run the following commands one at a time.
 
 NOTE: The first command is **a single command**. If it takes up multiple lines here in the docs, that is due to physical screen size. **Make sure to paste it in as a whole!**
+
+ <details>
+ <summary>**Commands to install RethinkDB on Ubuntu** (click here)</summary><p>
 ```bash
 source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
 wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install rethinkdb
 ```
-When RethinkDB has installed, run the following commands one at a time:
+  </p></details>
+  
+ <details>
+ <summary>**Commands to install RethinkDB on Debian** (click here)</summary><p>
 ```bash
-screen -S rethinkdb
-rethinkdb --bind all
+echo "deb http://download.rethinkdb.com/apt `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
+wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install rethinkdb
 ```
-If RethinkDB runs without errors, you should be good to go. When this is the case, hit Ctrl + A and then Ctrl + D to detach from the screen session.
+  </p></details>
+
+When RethinkDB has installed, run the following command. Keep in mind if you restart your server you will need to run this again to start the database service:
+```bash
+rethinkdb --daemon
+```
+If RethinkDB runs without errors, you should be good to go.
+
 ##Configuration
 ##Setting up SFTP
 Next we'll make a config file for WildBeast. Unless you love your command line and editing stuff that way, this is the step where we'd advise you to bring out FileZilla. Using this program, you can transfer files from and to the server. This speeds up the editing process.
@@ -157,7 +192,7 @@ maxvcslots | How many concurrent voice connections the bot can have until it won
 Property | Explanation | Notes
 -------- | ----------- | -----
 master | The highest possible access level of 9. Full permissions. |  Only give this to yourself and maybe others you really trust.
-level1, level2, level3 | Settable access levels that give users access to certain commands. | Default access levels can be found in [the command files](https://github.com/SteamingMutt/WildBeast/tree/master/runtime/commands).
+level1, level2, level3 | Settable access levels that give users access to certain commands. | Default access levels can be found in [command reference](http://docs.thesharks.xyz/commands/).
 Notice: By default, when WildBeast joins a server it will set the owner's access level to 5. This is to give them control over normal users.
   
 ###API keys section
@@ -256,8 +291,21 @@ Upon first run, the bot will automatically create the database tables needed to 
 If the bot runs without any errors, you have had success so far!
 
 You can test simple functionality by running the `ping` command (With your desired prefix) in a text channel that the bot can see. If it answers "Pong!", then congratulations, *you have successfully set up WildBeast!*
+
+##RethinkDB Dashboard
+**The following information is for those who need to access the RethinkDB web interface to create, delete or edit the database contents. This is for users that want maximum control and are familiar with database engines, so skip this if you don't meet those criteria.**
+
+Should you need to access the RethinkDB dashboard remotely to create, delete or edit the information stored within.
+You may create a tunnel using SSH to forward traffic from your browser to the server or run RethinkDB using the `--bind all` option with firewall rules to only allow your IP address to connect. This guide will not provide the required information to do this.
+
+To create an SSH tunnel in PuTTY follow these steps.
+Fill in the IP or FQDN in the "Host name (or IP address)" field or load an already saved profile by clicking on it once then the load button. Under the category box you will see `Connection`, go to SSH and click the `+` sign, under this go to `Tunnels`. `Source port` can be anything but this guide assumes 8080. `Destination` is `127.0.0.1:8080`, the radio buttons below are `Local` and `Auto`, it should look like the following [example image](http://i.imgur.com/NBIxQzh.png). Now you must click on the `Add` button then click Open to start the SSH session. You will be prompted for your server's username and password. Now open your favorite browser and go to `http://127.0.0.1:8080` and this should open the RethinkDB dashboard.
+
+
+[RethinkDB Dashboard](http://i.imgur.com/OFSk91K.png)
+
 ##Background running WildBeast
-With the current system that we described above, the bot will run but doesn't keep going when you log off but shuts down. How can we combat this? The answer is: PM2!
+With the current system that we described above, the bot will run until the SSH session is closed or an error occurs that ends the process. How can we combat this? The answer is: PM2!
 
 PM2, short of Process Manager 2, is a Node app intended to run and manage multiple apps running on one account in a Linux environment, which enables more than one process running at a time.
 
@@ -265,11 +313,11 @@ Our official instance, namely WildBot uses PM2, so this resource is a good one t
 ##Installing PM2 and starting the bot
 Before doing this, hit Ctrl+C (Close command) to shut down WildBeast if it's still running.
 
-You can install PM2 by using the following command in the server root folder:
+You can install PM2 by using the following command:
 ```bash
-npm install pm2 -g
+sudo npm install pm2 -g
 ```
-When PM2 is installed, navigate to the WildBeast install directory (`cd Wildbeast` if you are in the server root). Then execute the following command:
+When PM2 is installed, navigate to the WildBeast install directory (`cd ~/Wildbeast` if you are in the server root). Then execute the following command:
 ```bash
 pm2 start DougBot.js
 ```
