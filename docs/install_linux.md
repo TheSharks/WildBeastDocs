@@ -61,7 +61,7 @@ sudo add-apt-repository ppa:mc3man/trusty-media && sudo apt-get update && sudo a
   
  <details>
  <summary>**Commands to install FFMPEG on Debian 8** (click here)</summary><p>
-Edit /etc/apt/sources.list with your favorite editor or via SFTP using the methods described later in this guide.
+Edit **/etc/apt/sources.list** from the terminal using vi or nano, this will require the use of `sudo`. Alternatively edit this file using SFTP with the methods described later in this guide.
 Enable the non-free repo by finding and changing the following or similar line: 
 ```bash
 deb http://mirror.us.leaseweb.net/debian/ jessie main
