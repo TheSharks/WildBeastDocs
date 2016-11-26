@@ -24,6 +24,7 @@ While you may think running the following commands as the root user is easy, we 
 ##Installing Node
 First off, we'll install Node.JS, the runtime WildBeast uses. The current 6.x.x version works fine.
 ```bash
+sudo apt-get install -y curl
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential
