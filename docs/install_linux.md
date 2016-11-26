@@ -53,7 +53,7 @@ Now it's time to install the rest of the dependencies for WildBeast.
 Next, we will install FFMPEG. **This is a crucial step if you want to use music playback, so pay attention!**
 
  <details>
- <summary>**Commands to install FFMPEG on Ubuntu** (click here)</summary><p>
+ <summary>**Commands to install FFMPEG on Ubuntu 14.04** (click here)</summary><p>
 ```bash
 sudo add-apt-repository ppa:mc3man/trusty-media && sudo apt-get update && sudo apt-get install ffmpeg -y
 ```
