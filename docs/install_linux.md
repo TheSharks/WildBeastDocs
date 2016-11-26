@@ -42,7 +42,7 @@ Now we'll retrieve the WildBeast files via Git. Install it with the following co
 ```bash
 sudo apt-get install -y git
 ```
-When the install completes, the following set of commands wil download the necessary files to run WildBeast and change into the newly created directory.
+When the install completes, the following set of commands will download the necessary files to run WildBeast and change into the newly created directory.
 ```bash
 git clone https://github.com/TheSharks/WildBeast.git && cd WildBeast
 ```
