@@ -74,17 +74,11 @@ Enable the backports repo by adding this line at the bottom of the file:
 ```bash
 deb http://mirror.us.leaseweb.net/debian/ jessie-backports main contrib non-free
 ```
-Now run 
+Now run the following commands to update the repo information and install FFMPEG
 ```bash
-sudo apt-get update
+sudo apt-get update && sudo apt-get install -y ffmpeg
 ```
-and continue to the next command.
   </p></details>
-
-Run this command:
-```bash
-sudo apt-get install -y ffmpeg
-```
 
 Without changing workdir, we'll now install the Node modules required for usage in WildBeast. Execute the following:
 ```bash
