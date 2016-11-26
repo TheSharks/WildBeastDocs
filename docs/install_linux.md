@@ -60,7 +60,12 @@ sudo add-apt-repository ppa:mc3man/trusty-media && sudo apt-get update && sudo a
   </p></details>
   
  <details>
- <summary>**Commands to install FFMPEG on Debian 8** (click here)</summary><p>
+ <summary>**Commands to install FFMPEG on Ubuntu 16.04** (click here)</summary><p>
+```bash
+sudo apt-get install -y ffmpeg
+```
+  </p></details>
+   <summary>**Commands to install FFMPEG on Debian 8** (click here)</summary><p>
 Edit **/etc/apt/sources.list** from the terminal using vi or nano, this will require the use of `sudo`. Alternatively edit this file using SFTP with the methods described later in this guide.
 Enable the non-free repo by finding and changing the following or similar line: 
 ```bash
