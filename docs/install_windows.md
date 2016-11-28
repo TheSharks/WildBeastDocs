@@ -7,7 +7,7 @@ Welcome to the installation guide for WildBeast on Windows! In this guide, we'll
 - Programs
 	- We will be installing programs that are directly related to the bot later on. They will not be listed here.
 	- These programs are required pre-setup:
-		- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io)
+		- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io) or [Brackets](http://brackets.io/)
 
 ##Installation
 General note: Quite a few steps in this guide will be using administrative permissions. Therefore we recommend that you are logged into an administrator account to not have to type the admin password every time you perform something.
@@ -229,9 +229,12 @@ That's all, your config should now be ready to rock! Save it as `config.json` (*
 ##Running the bot
 Congratulations, your WildBeast instance should be ready to launch!
 
-To test if you've done everything correctly, you can do a "test run" with the bot. This means not making it permanently available, just testing if any errors are spat out when running.
+WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, execute this:
+```bash
+node DougBot.js --createdatabase
+```
+After this it will tell you to restart without the parameter there. To test if you've done everything correctly, you can do a "test run" with the bot. This means not making it permanently available, just testing if any errors are spat out when running.
 
-Open a command window in the WildBeast folder (Shift+Right click and select Open command window here)
 Run the following command within the bot's folder:
 ```bash
 node DougBot.js
