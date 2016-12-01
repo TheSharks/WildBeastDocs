@@ -1,3 +1,5 @@
+REM --> This file was shamelessly borrowed from SexualRhinoceros/MusicBot
+
 @ECHO off
 
 REM  --> Check for permissions
