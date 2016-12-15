@@ -231,9 +231,11 @@ Congratulations, your WildBeast instance should be ready to launch!
 
 WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, execute this:
 ```bash
-node DougBot.js --createdatabase
+npm run createdatabase
 ```
-After this it will tell you to restart without the parameter there. To test if you've done everything correctly, you can do a "test run" with the bot. This means not making it permanently available, just testing if any errors are spat out when running.
+The script will create the required databases. Wait for it to complete before continuing.
+
+To test if you've done everything correctly, you can do a "test run" with the bot. This means not making it permanently available, just testing if any errors are spat out when running.
 
 Run the following command within the bot's folder:
 ```bash

@@ -2,7 +2,7 @@
 WildBeast is a multifunction Discord bot intended to be able to perform various tasks, ranging from easy server moderation (Kick, ban) to having fun (8Ball etc.) in your Discord server. All created with customizability and ease of use in mind.
 
 ##General information
-WildBeast was originally written by [SteamingMutt](https://github.com/SteamingMutt) "Dougley", [Mirrorbreak](https://github.com/Mirrorbreak) "Mirrow" and Perpetucake. Since then it has became one of the more widely used Discord bots, with over 27000 servers and counting only on the official WildBot.
+WildBeast was originally written by [SteamingMutt](https://github.com/SteamingMutt) "Dougley", [Mirrorbreak](https://github.com/Mirrorbreak) "Mirrow" and Perpetucake. Since then it has became one of the more widely used Discord bots, with over 35000 servers and counting only on the official WildBot.
 
 It is written in JavaScript Node.JS, using the DiscordIE library.
 
@@ -28,6 +28,7 @@ We provide very extensive guides on installing WildBeast over here on the wiki, 
 - [Windows installation guide](install_windows.md)
 - [Linux installation guide](install_linux.md)
 - [Updating guide](updating.md)
+- [Custom command cheat sheet](custom_commands.md)
 
 ##Discord server
 We run a Discord server in which you can test WildBeast's functionality in our own sandboxes. Feel free to come over to chat, meet fellow coders and users alike or just hang out with the community! Click the banner below to get started.
