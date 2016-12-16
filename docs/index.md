@@ -1,4 +1,4 @@
-# Welcome to the WildBeast documentation!
+#Welcome to the WildBeast documentation!
 WildBeast is a multifunction Discord bot intended to be able to perform various tasks, ranging from easy server moderation (Kick, ban) to having fun (8Ball etc.) in your Discord server. All created with customizability and ease of use in mind.
 
 ##General information
