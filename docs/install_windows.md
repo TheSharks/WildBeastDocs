@@ -231,7 +231,7 @@ Congratulations, your WildBeast instance should be ready to launch!
 
 WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, execute this:
 ```bash
-npm run createdatabase
+npm run-script createdatabase
 ```
 The script will create the required databases. Wait for it to complete before continuing.
 
