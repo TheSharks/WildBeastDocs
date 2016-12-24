@@ -12,7 +12,7 @@ Welcome to the installation guide for WildBeast on Windows! In this guide, we'll
 ##Installation
 General note: Quite a few steps in this guide will be using administrative permissions. Therefore we recommend that you are logged into an administrator account to not have to type the admin password every time you perform something.
 ##Installing Node
-Go to [the NodeJS download page](https://nodejs.org/en/download/current/) and download the version relevant to your OS bit version.
+Go to [the NodeJS download page](https://nodejs.org/en/download/) and download the version relevant to your OS bit version.
 
 It's pretty straight forward, just make sure that the features tab looks like this.
 
