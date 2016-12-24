@@ -22,6 +22,7 @@ ping | Ping the bot to test responsiveness. |  | 0
 plaineval | Same as eval, just with a different scope. | plaineval `<code>` | master 
 prefix | Make the bot return its current prefix. |  | 0 
 purge | Delete a specified count of messages. | purge `<amount>` | Manage Messages permission required. 
+rankup | Bump a user's permission level up by one notch. | rankup @User | 3 
 say | Make the bot say something you specify. | say `<message>` | 0  
 server-info | Print information on the server. |  | 0 
 setlevel | Set the level of a user or role. | setlevel `<@User/@Role/@everyone>` `<-1/0/1/2/3>` | 3 
