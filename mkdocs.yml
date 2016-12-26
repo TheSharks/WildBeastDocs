@@ -1,8 +1,8 @@
 # MkDocs config options
 
 # Meta
-site_name: 'WildBeast'
-site_description: 'Documentation'
+site_name: 'WildBeast Documentation'
+site_description: 'Welcome to the WB documentation'
 site_author: 'TheSharks'
 
 # Sitemap
@@ -11,6 +11,7 @@ pages:
   - Command reference: 'commands.md'
   - Windows Guide: 'install_windows.md'
   - Linux Guide: 'install_linux.md'
+  - Docker Guide: 'install_docker.md'
   - Updating: 'updating.md'
   - FAQ: 'faq.md'
   - Custom Command Framework: 'custom_commands.md'
