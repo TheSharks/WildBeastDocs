@@ -22,6 +22,7 @@ ping | Ping the bot to test responsiveness. |  | 0
 plaineval | Same as eval, just with a different scope. | plaineval `<code>` | master 
 prefix | Make the bot return its current prefix. |  | 0 
 purge | Delete a specified count of messages. | purge `<amount>` | Manage Messages permission required. 
+rankup | Bump a user's permission level up by one notch. | rankup @User | 3 
 say | Make the bot say something you specify. | say `<message>` | 0  
 server-info | Print information on the server. |  | 0 
 setlevel | Set the level of a user or role. | setlevel `<@User/@Role/@everyone>` `<-1/0/1/2/3>` | 3 
@@ -46,6 +47,7 @@ rip | Posts a ripme.xyz about someone. | rip `<name>` | 0
 rule34 | Search for an image via rule34. | rule34 `<searchwords>` | 0 (NSFW)
 stroke | Stroke someone's ego. | stroke `<name>` | 0 
 urbandictionary | Search for a definition from the Urban Dictionary. | urbandictionary `<searchwords>` | 0 
+xkcd | Search for XKCD comics. Use nothing for random, current for latest or a number to get that one. | xkcd `<(nothing)/current/(number)>` | 0
 yesno | Return a yes or no GIF. |  | 0 
 yomomma | Yo momma is so fat that... You know the drill. |  | 0 
 **Music commands** | 

@@ -95,7 +95,7 @@ As of WildBeast version 4.0.0, the bot uses RethinkDB to store server-specific d
 
 Click [this link](https://download.rethinkdb.com/windows/rethinkdb-2.3.5.zip) to download the RethinkDB executable. (No worries, that's the official download link)
 
-When the file has downloaded, extract rethinkdb.exe to someplace suitable. We'd recommend creating a new folder on your C:\ drive and naming it RethinkDB, then just put the file in there. Browse to the directory you put the executable in, then hit Shift+Right click and select "Open command window here". In the command prompt, type in the following command:
+When the file has downloaded, extract rethinkdb.exe to someplace suitable. We'd recommend creating a new folder on your C:\ drive and naming it RethinkDB, then just put the file in there. (**NOTE: WildBeast and RethinkDB have to be on the same drive in order to work**) Browse to the directory you put the executable in, then hit Shift+Right click and select "Open command window here". In the command prompt, type in the following command:
 ```bash
 rethinkdb --bind all
 ```
@@ -155,7 +155,6 @@ Property | Explanation | Notes |
 imgflip | Your [imgflip](https://imgflip.com) login details. | Used in certain meme commands. |
 google | For retrieving data from YouTube. | Refer to the "Making the config" section. |
 mashape | For retrieving the Fortune Cow. | Refer to the "Making the config" section. |
-cse | Deprecated and not required, don't bother with this. | This will be removed at some point. |
 twitchId | For retrieving status of whether a user on Twitch is streaming or not. | Refer to the "Making the config" section. |
   
 ##Making the config
@@ -213,8 +212,6 @@ twitchId | For retrieving status of whether a user on Twitch is streaming or not
 		5. This will add the API to your application. Navigate back to the dashboard and click on the app itself. It should now have an appearance that resembles to this.
 			![Mashape App Page](https://s4.postimg.org/oounhvvj1/mashapeapp.png)
 		7. Hit "Get the keys" in the top-right corner. In the drop-down menu that is opened, select "Production". This will be your Mashape API key for that application. Copy that and replace the "A mashape key" placeholder in the config with that key.
-    - CSE
-    	- This option isn't required anymore and can safely be left alone. If you really want to get one you can, but it won't do anything and you'll have to do that yourself.
     - Twitch
         - This API is used with the `twitch` command. This will be the client ID the bot passes to Twitch when retrieving stream status.
 			1. Go to the [Twitch Connections page](https://www.twitch.tv/settings/connections), scroll down to the bottom and click "Register new application".
@@ -229,17 +226,16 @@ That's all, your config should now be ready to rock! Save it as `config.json` (*
 ##Running the bot
 Congratulations, your WildBeast instance should be ready to launch!
 
-WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, execute this:
+WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, open a command prompt in the bot folder (Shift + Right Click -> Open Command Window here) and execute this:
 ```bash
-node DougBot.js --createdatabase
+npm run-script dbcreate
 ```
-After this it will tell you to restart without the parameter there. To test if you've done everything correctly, you can do a "test run" with the bot. This means not making it permanently available, just testing if any errors are spat out when running.
+The script will create the required databases. Wait for it to complete before continuing.
 
-Run the following command within the bot's folder:
+To start the bot after database creation, run the following command within the bot's folder:
 ```bash
 node DougBot.js
 ```
-Upon first run, the bot will automatically create the database tables needed to run it.
 
 If the bot runs without any errors, you have had success so far!
 

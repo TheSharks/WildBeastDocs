@@ -202,7 +202,6 @@ Property | Explanation | Notes
 imgflip | Your [imgflip](https://imgflip.com) login details. | Used in certain meme commands.
 google | For retrieving data from YouTube. | Refer to the "Making the config" section.
 mashape | For retrieving the Fortune Cow. | Refer to the "Making the config" section.
-cse | Deprecated and not required, don't bother with this. | This will be removed at some point.
 twitchId | For retrieving status of whether a user on Twitch is streaming or not. | Refer to the "Making the config" section.
   
 ##Making the config
@@ -260,8 +259,6 @@ twitchId | For retrieving status of whether a user on Twitch is streaming or not
 		5. This will add the API to your application. Navigate back to the dashboard and click on the app itself. It should now have an appearance that resembles to this.
 		![Mashape App Page](https://s4.postimg.org/oounhvvj1/mashapeapp.png)
 		7. Hit "Get the keys" in the top-right corner. In the drop-down menu that is opened, select "Production". This will be your Mashape API key for that application. Copy that and replace the "A mashape key" placeholder in the config with that key.
-    - CSE
-    	- This option isn't required anymore and can safely be left alone. If you really want to get one you can, but it won't do anything and you'll have to do that yourself.
     - Twitch
         - This API is used with the `twitch` command. This will be the client ID the bot passes to Twitch when retrieving stream status.
 			1. Go to the [Twitch Connections page](https://www.twitch.tv/settings/connections), scroll down to the bottom and click "Register new application".
@@ -278,7 +275,7 @@ Congratulations, your WildBeast instance should be ready to launch!
 
 WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, execute this:
 ```bash
-node DougBot.js --createdatabase
+npm run-script dbcreate
 ```
 After this has finished, it will tell you if the necessary database and tables have been created or already existed. To test if you've done everything correctly, you can do a "test run" with the bot. This means not making it permanently available, just testing if any errors are spat out when running.
 
