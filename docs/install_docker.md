@@ -54,7 +54,7 @@ git clone https://github.com/TheSharks/WildBeast
 ```
 When it completes, do `cd WildBeast` to get into the WildBeast folder. Then run the following command:
 ```bash
-docker-compose build
+docker-compose up
 ```
 The Docker composition will take a good while so go make yourself a coffee or something while waiting for it to complete. (Trust me, I went to the sauna while it crunched around and it was still going when I came back)
 
