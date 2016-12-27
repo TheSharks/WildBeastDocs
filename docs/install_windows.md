@@ -95,7 +95,7 @@ As of WildBeast version 4.0.0, the bot uses RethinkDB to store server-specific d
 
 Click [this link](https://download.rethinkdb.com/windows/rethinkdb-2.3.5.zip) to download the RethinkDB executable. (No worries, that's the official download link)
 
-When the file has downloaded, extract rethinkdb.exe to someplace suitable. We'd recommend creating a new folder on your C:\ drive and naming it RethinkDB, then just put the file in there. Browse to the directory you put the executable in, then hit Shift+Right click and select "Open command window here". In the command prompt, type in the following command:
+When the file has downloaded, extract rethinkdb.exe to someplace suitable. We'd recommend creating a new folder on your C:\ drive and naming it RethinkDB, then just put the file in there. (**NOTE: WildBeast and RethinkDB have to be on the same drive in order to work**) Browse to the directory you put the executable in, then hit Shift+Right click and select "Open command window here". In the command prompt, type in the following command:
 ```bash
 rethinkdb --bind all
 ```
