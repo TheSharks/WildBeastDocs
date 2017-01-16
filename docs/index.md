@@ -27,6 +27,7 @@ We provide very extensive guides on installing WildBeast over here on the wiki, 
 
 - [Windows installation guide](install_windows.md)
 - [Linux installation guide](install_linux.md)
+- [Docker installation guide](install_docker.md)
 - [Updating guide](updating.md)
 - [Custom command cheat sheet](custom_commands.md)
 
