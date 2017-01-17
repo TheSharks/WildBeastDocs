@@ -15,9 +15,8 @@ git pull
 This will retrieve the latest changes directly from GitHub.
 **NOTE:** If you have made changes to the files, you might get an error saying that the local changes would be overwritten by the merge. In this case, you either have to manually insert changes into the code (By copying the changes from the commit, release or whatever) or discarding your local changes. If you go for the latter, you can do it with the following command:
 ```bash
-git checkout -- path/to/file
+git fetch --all && git reset --hard
 ```
-Replace the `path/to/file` placeholder with the file that is specified in the error.
 ##Updating the dependencies
 Dependencies, or deps for short, are utilities that WildBeast relies on to work. These all come in form of Node packages which are kept in one big repository over at the [NPM website](https://www.npmjs.com).
 The retrieving and installation of these packages has been largely automated due to the existence of `package.json`. This file specifies what to retrieve and update when the need arises. You can update the bot's dependencies at will, but doing so at regular intervals is recommended.

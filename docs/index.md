@@ -4,7 +4,7 @@ WildBeast is a multifunction Discord bot intended to be able to perform various 
 ##General information
 WildBeast was originally written by [SteamingMutt](https://github.com/SteamingMutt) "Dougley", [Mirrorbreak](https://github.com/Mirrorbreak) "Mirrow" and Perpetucake. Since then it has became one of the more widely used Discord bots, with over 35000 servers and counting only on the official WildBot.
 
-It is written in JavaScript Node.JS, using the DiscordIE library.
+It is written in JavaScript using the Node.js runtime, and with the Discordie library.
 
 ##Main features
 These features are available in every WildBeast instance, including our official WildBot!
