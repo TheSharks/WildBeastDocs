@@ -139,6 +139,24 @@ deleteTimeout | The amount of time after which to delete the messages. | Insert 
 deleteTimeoutLong | Same as above, but for messages that have a longer timeout.  | For now only [this message](https://github.com/TheSharks/WildBeast/blob/master/runtime/internal/voice.js#L204) uses the long timeout. In milliseconds, default 6000. |
 maxvcslots | How many concurrent voice connections the bot can have until it won't join more. | Default limit is 10, depends on the beefyness of your system. |
   
+###Bezerk section
+  
+**IMPORTANT NOTE:** Unless you use Bezerk, the WildBeast WSM, **do not modify anything here as it's for advanced users only!**
+  
+Property | Explanation | Notes |
+-------- | ----------- | ----- |
+use | Whether Bezerk shall be used or not. | Do not modify unless you use Bezerk. |
+uri | Specifies the websocket address for the Bezerk server. | As above. Default is `ws://localhost:1337` |
+  
+###Elasticsearch section
+  
+**IMPORTANT NOTE:** Unless you use Elastic and Kibana like we do, **don't modify this unless your instance is and want easier log stashing!**
+  
+Property | Explanation | Notes |
+-------- | ----------- | ----- |
+use | Whether Elastic shall be used or not. | Do not modify unless you use Elastic. |
+client/host | Specifies the address for the Elastic server. | As above. Default is `localhost:9200` |
+  
 ###Permissions section
   
 Property | Explanation | Notes |
