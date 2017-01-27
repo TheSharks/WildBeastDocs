@@ -79,7 +79,7 @@ The customize command makes changes to the server-specific database of WildBeast
 Name | Description | Usage | Note 
 ---- | ----------- | ----- | ----- 
 customize | Base command for the customizer. | customize `<method>` `<parameter/content>` | See below for the methods.
-prefix | Change the command prefix. Enclose the prefix in double quotes. | customize prefix "`<prefix>` | 
+prefix | Change the command prefix. Enclose the prefix in double quotes. | customize prefix "`<prefix>`" | 
 permissions | Change response given when users don't have permissions to execute a command. | customize permissions `<message>` | 
 timeout | Change response given when a command is still on cooldown. | customize timeout `<message>` | 
 welcoming| Changes whether the bot should send a welcome message when a new member joins. | customize welcoming `<off/channel/private>` | 
