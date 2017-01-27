@@ -54,8 +54,8 @@ yesno | Return a yes or no GIF. |  | 0
 yomomma | Yo momma is so fat that... You know the drill. |  | 0 
 **Music commands** | 
 leave-voice | Leave the voice channel. |  | 1 
-music | Pause or resume music playing. |  | 1 
-playlist | Print the current playlist. If the delete subcommand is passed, remove a song from the playlist. Number specifies track to remove. | playlist OR playlist delete `<position>` | 0 
+music | Pause or resume music playing. | music pause OR music play | 1 
+playlist | Print the current playlist. If the clear subcommand is used, the playlist is cleared. If delete subcommand is passed, remove a song from the playlist. Number specifies track to remove. | playlist OR playlist clear OR playlist delete `<position>` | 0 
 request | Request a song to add to the playlist. | request `<url/searchwords>` | 1 
 shuffle | Shuffle the current playlist. |  | 2 
 voice | Make the bot join the voice channel. |  | 1 
