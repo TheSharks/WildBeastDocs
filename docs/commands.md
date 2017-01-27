@@ -58,7 +58,7 @@ music | Pause or resume music playing. | music pause OR music play | 1
 playlist | Print the current playlist. If the clear subcommand is used, the playlist is cleared. If delete subcommand is passed, remove a song from the playlist. Number specifies track to remove. | playlist OR playlist clear OR playlist delete `<position>` | 0 OR 1 for clear and delete
 request | Request a song to add to the playlist. | request `<url/searchwords>` | 1 
 shuffle | Shuffle the current playlist. |  | 2 
-voice | Make the bot join the voice channel. |  | 1 
+voice | Make the bot join the voice channel. | Channel name OR nothing to join the channel you are in. | 1 
 volume | Adjust player volume by providing a number. Return the current volume by not returning a parameter. | volume `<0-100>` OR nothing | 1 
 voteskip | Vote to skip a song. |  | 1 
 **Tag commands** | 
