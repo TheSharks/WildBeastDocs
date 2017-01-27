@@ -150,7 +150,7 @@ uri | Specifies the websocket address for the Bezerk server. | As above. Default
   
 ###Elasticsearch section
   
-**IMPORTANT NOTE:** Unless you use Elastic and Kibana like we do, **don't modify this unless your instance is and want easier log stashing!**
+**IMPORTANT NOTE:** Unless you use Elastic like we do, **don't modify this!** It's meant for large instances and hence advanced users only!
   
 Property | Explanation | Notes |
 -------- | ----------- | ----- |
