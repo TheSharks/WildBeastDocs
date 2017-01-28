@@ -11,6 +11,7 @@ Name | Description | Usage | Level
 ban | Ban a user from the server. | ban @User `<days of messages to delete>`| Ban permission required. 
 customize | Customize the bot's behavior in the server. | See the table below. | 3 
 eval | Evaluate Discordie code. | eval `<code>` | master 
+globalban | Disallow users from using the bot in any servers it's in. | globalban `<ban/unban/status>` `<userid>` | master 
 hello | Make the bot greet you. |  | 0 
 info | Print information on the bot. |  | 0 
 join-server | Tell the bot to join a server. | join-server `<invite-link>` | 0 
@@ -43,6 +44,7 @@ leetspeak | Encode a message to 1337sp3ak. | leetspeak `<message>` | 0
 magic8ball | Ask for a decision from the magic 8 ball. |  | 0 
 meme | Make a meme. [Meme types here](https://github.com/TheSharks/WildBeast/blob/master/runtime/commands/memes.json) | meme `<memetype>` `"<Upper line>"` `"<Bottom line>"` | 0 
 randomcat | Return a random cat picture. |  | 0 
+randommeme | Get a random meme from Imgur. |  | 0 
 rip | Posts a ripme.xyz about someone. | rip `<name>` | 0 
 rule34 | Search for an image via rule34. | rule34 `<searchwords>` | 0 (NSFW)
 stroke | Stroke someone's ego. | stroke `<name>` | 0 
@@ -52,17 +54,19 @@ yesno | Return a yes or no GIF. |  | 0
 yomomma | Yo momma is so fat that... You know the drill. |  | 0 
 **Music commands** | 
 leave-voice | Leave the voice channel. |  | 1 
-music | Pause or resume music playing. |  | 1 
-playlist | Print the current playlist. If the delete subcommand is passed, remove a song from the playlist. Number specifies track to remove. | playlist OR playlist delete `<position>` | 0 
+music | Pause or resume music playing. | music pause OR music play | 1 
+playlist | Print the current playlist. If the clear subcommand is used, the playlist is cleared. If delete subcommand is passed, remove a song from the playlist. Number specifies track to remove. | playlist OR playlist clear OR playlist delete `<position>` | 0 OR 1 for clear and delete
 request | Request a song to add to the playlist. | request `<url/searchwords>` | 1 
 shuffle | Shuffle the current playlist. |  | 2 
-voice | Make the bot join the voice channel. |  | 1 
-volume | Adjust player volume. | volume `<0-100>` | 1 
+voice | Make the bot join the voice channel. | Channel name OR nothing to join the channel you are in. | 1 
+volume | Adjust player volume by providing a number. Return the current volume by not returning a parameter. | volume `<0-100>` OR nothing | 1 
 voteskip | Vote to skip a song. |  | 1 
 **Tag commands** | 
 tag | Base command for tags. Returns a tag if specified. | tag `<subcommand/name>` | 0 (Also subcommands)
 tag create | Create a tag. | tag create `<name>` `<content>` | 
 tag edit | Edit an existing tag. | tag edit `<name>` `<newcontent>` | 
+tag list | Retrieve a list of tags you created or which someone else did. | tag list `<nothing/mention>` | 
+tag random | Get a random tag from the database. |  | 
 tag raw | Return the raw data of a tag. | tag raw `<name>` | 
 tag owner | Return the owner of a tag. | tag owner `<name>` | 
 tag delete | Delete a tag. | tag delete `<name>` | 
@@ -75,20 +79,21 @@ The customize command makes changes to the server-specific database of WildBeast
 Name | Description | Usage | Note 
 ---- | ----------- | ----- | ----- 
 customize | Base command for the customizer. | customize `<method>` `<parameter/content>` | See below for the methods.
-prefix | Change the command prefix. Enclose the prefix in double quotes. | customize prefix "`<prefix>` | 
+prefix | Change the command prefix. Enclose the prefix in double quotes. | customize prefix "`<prefix>`" | 
 permissions | Change response given when users don't have permissions to execute a command. | customize permissions `<message>` | 
 timeout | Change response given when a command is still on cooldown. | customize timeout `<message>` | 
 welcoming| Changes whether the bot should send a welcome message when a new member joins. | customize welcoming `<off/channel/private>` | 
 welcome | Changes the welcome message specified above. | customize welcome `<message>` | 
 nsfw | Change the response given when a channel doesn't have NSFW commands allowed. | customize nsfw `<message>` | 
+volume | Change the default volume the bot will assume when joining a voice channel. Anti-earrape measure. | customize volume `<0-100>` | 
 
 All commands except for the option-based ones (`welcoming` and `prefix`) support certain variables in the messages. The variables start with `%` and are the following.
 
 Variable | Description | Usable responses 
 -------- | ----------- | ---------------- 
-user | Username of the user that triggered the response. | All 
-server | Name of the server. | All 
-channel | Name of the channel the response was triggered in. | All except `welcome` 
-timeout | Amount of seconds the command is on cooldown. | Only `timeout`
-ulevel | Short of user level, the user's current permission level. | Only `permissions` 
-nlevel | Short of need level, permission level required to execute the command. | Only `permissions` 
+user | Username of the user that triggered the response. | All | 
+server | Name of the server. | All | 
+channel | Name of the channel the response was triggered in. | All except `welcome` | 
+timeout | Amount of seconds the command is on cooldown. | Only `timeout` | 
+ulevel | Short of user level, the user's current permission level. | Only `permissions` | 
+nlevel | Short of need level, permission level required to execute the command. | Only `permissions` | 

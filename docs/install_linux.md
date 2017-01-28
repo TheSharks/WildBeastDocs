@@ -179,13 +179,31 @@ user | RethinkDB user account to use for accessing the database. | Admin by defa
   
 ###Settings section
   
-Property | Explanation | Notes
--------- | ----------- | -----
-prefix | The command prefix the bot will use. | Can be a special character like `/` etc.
-autodeletemsg | Automatically delete music-related messages after a while. | The time for this is possible to configure. Boolean.
-deleteTimeout | The amount of time after which to delete the messages. | Insert time in milliseconds, default 3000.
-deleteTimeoutLong | Same as above, but for messages that have a longer timeout.  | For now only [this message](https://github.com/TheSharks/WildBeast/blob/master/runtime/internal/voice.js#L204) uses the long timeout. In milliseconds, default 6000.
-maxvcslots | How many concurrent voice connections the bot can have until it won't join more. | Default limit is 10, depends on the beefyness of your system.
+Property | Explanation | Notes |
+-------- | ----------- | ----- |
+prefix | The command prefix the bot will use. | Can be a special character like `/` etc. |
+autodeletemsg | Automatically delete music-related messages after a while. | The time for this is possible to configure. Boolean. |
+deleteTimeout | The amount of time after which to delete the messages. | Insert time in milliseconds, default 3000. |
+deleteTimeoutLong | Same as above, but for messages that have a longer timeout.  | For now only [this message](https://github.com/TheSharks/WildBeast/blob/master/runtime/internal/voice.js#L204) uses the long timeout. In milliseconds, default 6000. |
+maxvcslots | How many concurrent voice connections the bot can have until it won't join more. | Default limit is 10, depends on the beefyness of your system. |
+  
+###Bezerk section
+  
+**IMPORTANT NOTE:** Unless you use Bezerk, the WildBeast WSM, **do not modify anything here as it's for advanced users only!**
+  
+Property | Explanation | Notes |
+-------- | ----------- | ----- |
+use | Whether Bezerk shall be used or not. | Do not modify unless you use Bezerk. |
+uri | Specifies the websocket address for the Bezerk server. | As above. Default is `ws://localhost:1337` |
+  
+###Elasticsearch section
+  
+**IMPORTANT NOTE:** Unless you use Elastic like we do, **don't modify this!** It's meant for large instances and hence advanced users only!
+  
+Property | Explanation | Notes |
+-------- | ----------- | ----- |
+use | Whether Elastic shall be used or not. | Do not modify unless you use Elastic. |
+client/host | Specifies the address for the Elastic server. | As above. Default is `localhost:9200` |
   
 ###Permissions section
   
@@ -258,7 +276,7 @@ twitchId | For retrieving status of whether a user on Twitch is streaming or not
 		4. Open the fortunecow API page and in one of the dropdowns on the left, change it to the application you just created and hit "Test Endpoint" on any you wish to test. Only one is required.
 		5. This will add the API to your application. Navigate back to the dashboard and click on the app itself. It should now have an appearance that resembles to this.
 		![Mashape App Page](https://s4.postimg.org/oounhvvj1/mashapeapp.png)
-		7. Hit "Get the keys" in the top-right corner. In the drop-down menu that is opened, select "Production". This will be your Mashape API key for that application. Copy that and replace the "A mashape key" placeholder in the config with that key.
+		6. Hit "Get the keys" in the top-right corner. In the drop-down menu that is opened, select "Production". This will be your Mashape API key for that application. Copy that and replace the "A mashape key" placeholder in the config with that key.
     - Twitch
         - This API is used with the `twitch` command. This will be the client ID the bot passes to Twitch when retrieving stream status.
 			1. Go to the [Twitch Connections page](https://www.twitch.tv/settings/connections), scroll down to the bottom and click "Register new application".
@@ -267,6 +285,17 @@ twitchId | For retrieving status of whether a user on Twitch is streaming or not
 			3. Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".
 			![Twitch app management](https://s22.postimg.org/tjz4qes69/twitchappmanage.png)
 			4. Copy that character sequence and replace the "A twitch Client-ID" placeholder in the config with that ID.
+    - Imgur
+	    - This API is used in conjuction with the `randommeme` command to pull random memes from Imgur.
+	    	1. Go to the [Imgur App Registration](https://api.imgur.com/oauth2/addclient).
+	    	2. Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.
+	    	3. Fill in the email you fancy to receive notifications about this app in.
+	    	4. Description... Well, anything you find useful there.
+	    	5. You should end up with the below view.
+	    	![Imgur app creation](http://i.imgur.com/cAAkBHl.png)
+            6. Solve the CAPTCHA and hit "Submit" on the bottom of the page. This will take you to the page where you can see your client ID and secret.
+            ![Imgur ID & secret](http://i.imgur.com/PUdSz6B.png)
+            7. Copy the Client ID and replace the "A Imgur Client-ID" placeholder with that value.
 
 That's all, your config should now be ready to rock! Save it as `config.json` (**NOT** `config.example.json` as the bot will error if you do. TLDR: Don't hit Ctrl+S, hit Ctrl+Alt+S) and upload it to the server via FileZilla.
 
@@ -298,7 +327,7 @@ To create an SSH tunnel in PuTTY follow these steps.
 Fill in the IP or FQDN in the "Host name (or IP address)" field or load an already saved profile by clicking on it once then the load button. Under the category box you will see `Connection`, go to SSH and click the `+` sign, under this go to `Tunnels`. `Source port` can be anything but this guide assumes 8080. `Destination` is `127.0.0.1:8080`, the radio buttons below are `Local` and `Auto`, it should look like the following [example image](http://i.imgur.com/NBIxQzh.png). Now you must click on the `Add` button then click Open to start the SSH session. You will be prompted for your server's username and password. Now open your favorite browser and go to `http://127.0.0.1:8080` and this should open the RethinkDB dashboard.
 
 
-[RethinkDB Dashboard](http://i.imgur.com/OFSk91K.png)
+![RethinkDB Dashboard](http://i.imgur.com/OFSk91K.png)
 
 ##Background running WildBeast
 With the current system that we described above, the bot will run until the SSH session is closed or an error occurs that ends the process. How can we combat this? The answer is: PM2!

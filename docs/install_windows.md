@@ -139,6 +139,24 @@ deleteTimeout | The amount of time after which to delete the messages. | Insert 
 deleteTimeoutLong | Same as above, but for messages that have a longer timeout.  | For now only [this message](https://github.com/TheSharks/WildBeast/blob/master/runtime/internal/voice.js#L204) uses the long timeout. In milliseconds, default 6000. |
 maxvcslots | How many concurrent voice connections the bot can have until it won't join more. | Default limit is 10, depends on the beefyness of your system. |
   
+###Bezerk section
+  
+**IMPORTANT NOTE:** Unless you use Bezerk, the WildBeast WSM, **do not modify anything here as it's for advanced users only!**
+  
+Property | Explanation | Notes |
+-------- | ----------- | ----- |
+use | Whether Bezerk shall be used or not. | Do not modify unless you use Bezerk. |
+uri | Specifies the websocket address for the Bezerk server. | As above. Default is `ws://localhost:1337` |
+  
+###Elasticsearch section
+  
+**IMPORTANT NOTE:** Unless you use Elastic like we do, **don't modify this!** It's meant for large instances and hence advanced users only!
+  
+Property | Explanation | Notes |
+-------- | ----------- | ----- |
+use | Whether Elastic shall be used or not. | Do not modify unless you use Elastic. |
+client/host | Specifies the address for the Elastic server. | As above. Default is `localhost:9200` |
+  
 ###Permissions section
   
 Property | Explanation | Notes |
@@ -210,16 +228,27 @@ twitchId | For retrieving status of whether a user on Twitch is streaming or not
 		3. Once the app is created, click "Add API to your application" and search for `fortunecow`.
 		4. Open the fortunecow API page and in one of the dropdowns on the left, change it to the application you just created and hit "Test Endpoint" on any you wish to test. Only one is required.
 		5. This will add the API to your application. Navigate back to the dashboard and click on the app itself. It should now have an appearance that resembles to this.
-			![Mashape App Page](https://s4.postimg.org/oounhvvj1/mashapeapp.png)
-		7. Hit "Get the keys" in the top-right corner. In the drop-down menu that is opened, select "Production". This will be your Mashape API key for that application. Copy that and replace the "A mashape key" placeholder in the config with that key.
+		![Mashape App Page](https://s4.postimg.org/oounhvvj1/mashapeapp.png)
+		6. Hit "Get the keys" in the top-right corner. In the drop-down menu that is opened, select "Production". This will be your Mashape API key for that application. Copy that and replace the "A mashape key" placeholder in the config with that key.
     - Twitch
         - This API is used with the `twitch` command. This will be the client ID the bot passes to Twitch when retrieving stream status.
 			1. Go to the [Twitch Connections page](https://www.twitch.tv/settings/connections), scroll down to the bottom and click "Register new application".
 			2. Fill in the fields. Name should be your app name, and set the Redirect URI to `http://localhost` unless you want something to function differently. Set the app type to "Chat Bot" as that's what you're basically doing here.
-				![Twitch app](https://s4.postimg.org/gpvrfsebx/twitchapp.png)
+			![Twitch app](https://s4.postimg.org/gpvrfsebx/twitchapp.png)
 			3. Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".
-				![Twitch app management](https://s22.postimg.org/tjz4qes69/twitchappmanage.png)
+			![Twitch app management](https://s22.postimg.org/tjz4qes69/twitchappmanage.png)
 			4. Copy that character sequence and replace the "A twitch Client-ID" placeholder in the config with that ID.
+    - Imgur
+	    - This API is used in conjuction with the `randommeme` command to pull random memes from Imgur.
+	    	1. Go to the [Imgur App Registration](https://api.imgur.com/oauth2/addclient).
+	    	2. Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.
+	    	3. Fill in the email you fancy to receive notifications about this app in.
+	    	4. Description... Well, anything you find useful there.
+	    	5. You should end up with the below view.
+	    	![Imgur app creation](http://i.imgur.com/cAAkBHl.png)
+            6. Solve the CAPTCHA and hit "Submit" on the bottom of the page. This will take you to the page where you can see your client ID and secret.
+            ![Imgur ID & secret](http://i.imgur.com/PUdSz6B.png)
+            7. Copy the Client ID and replace the "A Imgur Client-ID" placeholder with that value.
 
 That's all, your config should now be ready to rock! Save it as `config.json` (**NOT** `config.example.json` as the bot will error if you do. TLDR: Don't hit Ctrl+S, hit Ctrl+Alt+S).
 
