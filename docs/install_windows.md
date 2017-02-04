@@ -87,7 +87,7 @@ npm install
 ```
 This will download the dependencies. Wait until it completes, and when you are able to execute commands again the install has completed. The output is too huge to provide an image of, so you'll have to do without.
 
-If you get errors that say `WARN` and yellow text, you can ignore those. If you however start getting red text, there might be a problem installing. Check that the WildBeast directory does not require admin permissions to execute stuff in. You may come and ask us [over at WildBot's Territory](https://discord.gg/0cFoiR5QVh5LZlQO) if you need help debugging these errors.
+If you get errors that say `WARN` and yellow text, you can ignore those. If you however start getting red text, there might be a problem installing. Check that the WildBeast directory does not require admin permissions to execute stuff in. You may come and ask us [over at WildBot's Territory](https://discord.gg/wildbot) if you need help debugging these errors.
 ##Installing RethinkDB and creating the DB
 As of WildBeast version 4.0.0, the bot uses RethinkDB to store server-specific data. This includes server owner, customize options and a whole bunch of other things.
 
@@ -277,5 +277,5 @@ Keep in mind, if you have further questions or need help, we're around over at o
 
 On the behalf of the WildBeast team, *we hope you enjoy your bot!*
 <p align="left">
-  <a href="https://discord.gg/0cFoiR5QVh5LZlQO"><img src="https://discordapp.com/api/guilds/110462143152803840/widget.png?style=banner2" alt="Discord server"></a>
+  <a href="https://discord.gg/wildbot"><img src="https://discordapp.com/api/guilds/110462143152803840/widget.png?style=banner2" alt="Discord server"></a>
 </p>

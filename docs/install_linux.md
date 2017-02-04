@@ -355,5 +355,5 @@ Keep in mind, if you have further questions or need help, we're around over at o
 
 On the behalf of the WildBeast team, *we hope you enjoy your bot!*
 <p align="left">
-  <a href="https://discord.gg/0cFoiR5QVh5LZlQO"><img src="https://discordapp.com/api/guilds/110462143152803840/widget.png?style=banner2" alt="Discord server"></a>
+  <a href="https://discord.gg/wildbot"><img src="https://discordapp.com/api/guilds/110462143152803840/widget.png?style=banner2" alt="Discord server"></a>
 </p>
