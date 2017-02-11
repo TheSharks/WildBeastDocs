@@ -6,5 +6,6 @@ compile:
     - mkdocs build
 deployment:
   production:
+    branch: master
     commands: 
-    - scp -r ./site $TARGET_SSH_USERNAME@$TARGET_SSH_IP:$TARGET_DIRECTORY
+    - scp -r ./site $DEPLOYMENT_USERNAME@$DEPLOYMENT_IP:$DEPLOYMENT_DIRECTORY
