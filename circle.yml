@@ -1,0 +1,14 @@
+machine:
+  python:
+    version: 3.5.2
+test:
+  override:
+    - exit 0 # We don't use CI to test
+compile:
+  override:
+    - mkdocs build
+deployment:
+  production:
+    branch: master
+    commands: 
+    - scp -r ./site $DEPLOYMENT_USERNAME@$DEPLOYMENT_IP:$DEPLOYMENT_DIRECTORY
