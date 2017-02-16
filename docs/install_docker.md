@@ -50,7 +50,7 @@ When the computer boots up next time, Docker will autostart when the system star
 ##Retrieving WildBeast
 When Docker announces it's ready to use, open Windows PowerShell. You can now retrieve the WildBeast repository. Type the following command into the terminal:
 ```bash
-git clone https://github.com/TheSharks/WildBeast
+git clone https://github.com/TheSharks/WildBeast.git
 ```
 When it completes, do `cd WildBeast` to get into the WildBeast folder. Then run the following command:
 ```bash
