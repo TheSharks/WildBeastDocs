@@ -285,7 +285,7 @@ twitchId | For retrieving status of whether a user on Twitch is streaming or not
 			3. Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".
 			![Twitch app management](https://s22.postimg.org/tjz4qes69/twitchappmanage.png)
 			4. Copy that character sequence and replace the "A twitch Client-ID" placeholder in the config with that ID.
-    - Imgur
+        - Imgur
 	    - This API is used in conjuction with the `randommeme` command to pull random memes from Imgur.
 	    	1. Go to the [Imgur App Registration](https://api.imgur.com/oauth2/addclient).
 	    	2. Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.
@@ -296,6 +296,11 @@ twitchId | For retrieving status of whether a user on Twitch is streaming or not
             6. Solve the CAPTCHA and hit "Submit" on the bottom of the page. This will take you to the page where you can see your client ID and secret.
             ![Imgur ID & secret](http://i.imgur.com/PUdSz6B.png)
             7. Copy the Client ID and replace the "A Imgur Client-ID" placeholder with that value.
+    - Cleverbot
+	    - This API is used in conjuction with the `cleverbot` command to do cleverbot discussions.
+	    	1. Go to [cleverbot.io](https://cleverbot.io/keys) and login to get your API user and key.
+	    	2. After logging in, copy the contents of the "API User" and "API Key" fields and paste them into the appropriate fields in the config, API User to cleverbot_user and API Key to cleverbot_key.
+			![Cleverbot Keys](http://i.imgur.com/Rn01Umh.png)
 
 That's all, your config should now be ready to rock! Save it as `config.json` (**NOT** `config.example.json` as the bot will error if you do. TLDR: Don't hit Ctrl+S, hit Ctrl+Alt+S) and upload it to the server via FileZilla.
 

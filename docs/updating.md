@@ -3,9 +3,10 @@ This is a short instruction on how to keep your WildBeast instance up to date.
 ##Updating the bot
 When an update is made to the WildBeast source code, this becomes known as a Git [commit](https://github.com/SteamingMutt/WildBeast/commits/master). Smaller hotfixes and commits happen all the time which are then compiled into larger [releases](https://github.com/SteamingMutt/WildBeast/releases). These releases mark larger milestones within the bot's history, for instance 2.0.0 and 3.0.0 which represent major releases.
 A couple notes:
- - Commits can be made at any rate, the commit names and descriptions (At least on the ones not made by Doug) will tell whether it's worth implementing this into your instance right away.
- - Releases (AKA minor releases) represent larger patches, and it is recommended to update the bot when these releases are made.
- - Major releases are breaking changes in the code. These are really major reworks that change the way the entire bot functions. Updating at these points is near to a must.
+
+- Commits can be made at any rate, the commit names and descriptions (At least on the ones not made by Doug) will tell whether it's worth implementing this into your instance right away.
+- Releases (AKA minor releases) represent larger patches, and it is recommended to update the bot when these releases are made.
+- Major releases are breaking changes in the code. These are really major reworks that change the way the entire bot functions. Updating at these points is near to a must.
 
 So, now that we have the update structure laid out, let's get to the gist of updating WildBeast. Updating this bot is fairly simple, regardless of system being used. **However, this requires you to have downloaded the bot via Git in order to work!**
 When updating the bot, run the following command in CMD (Windows) or console (Linux) **with the working directory pointed to the WildBeast folder:**
