@@ -50,7 +50,7 @@ When the computer boots up next time, Docker will autostart when the system star
 ##Retrieving WildBeast
 When Docker announces it's ready to use, open Windows PowerShell. You can now retrieve the WildBeast repository. Type the following command into the terminal:
 ```bash
-git clone https://github.com/TheSharks/WildBeast
+git clone https://github.com/TheSharks/WildBeast.git
 ```
 When it completes, do `cd WildBeast` to get into the WildBeast folder. Then run the following command:
 ```bash
@@ -193,7 +193,23 @@ With the danger zone clarified, let's proceed to configuration.
 			![Twitch app](https://s4.postimg.org/gpvrfsebx/twitchapp.png)
 			3. Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".
 			![Twitch app management](https://s22.postimg.org/tjz4qes69/twitchappmanage.png)
-			4. Copy that character sequence and apply it to the `API_KEYS_TWITCH` option.
+			4. Copy that character sequence and apply it to the `API_KEYS_TWITCH_ID` option.
+    - Imgur
+	    - This API is used in conjuction with the `randommeme` command to pull random memes from Imgur.
+	    	1. Go to the [Imgur App Registration](https://api.imgur.com/oauth2/addclient).
+	    	2. Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.
+	    	3. Fill in the email you fancy to receive notifications about this app in.
+	    	4. Description... Well, anything you find useful there.
+	    	5. You should end up with the below view.
+	    	![Imgur app creation](http://i.imgur.com/cAAkBHl.png)
+            6. Solve the CAPTCHA and hit "Submit" on the bottom of the page. This will take you to the page where you can see your client ID and secret.
+            ![Imgur ID & secret](http://i.imgur.com/PUdSz6B.png)
+            7. Copy the Client ID and apply it to the `API_KEYS_IMGUR` option.
+    - Cleverbot
+	    - This API is used in conjuction with the `cleverbot` command to do cleverbot discussions.
+	    	1. Go to [cleverbot.io](https://cleverbot.io/keys) and login to get your API user and key.
+	    	2. After logging in, copy the contents of the "API User" and "API Key" fields and apply them to the options, API User to `API_KEYS_CLEVERBOT_USER` and API Key to `API_KEYS_CLEVERBOT_KEY`.
+			![Cleverbot Keys](http://i.imgur.com/Rn01Umh.png)
 
 When you're done configuring, hit Save below the environment variables.
 
@@ -215,5 +231,5 @@ Keep in mind, if you have further questions or need help, we're around over at o
 
 On the behalf of the WildBeast team, *we hope you enjoy your bot!*
 <p align="left">
-  <a href="https://discord.gg/0cFoiR5QVh5LZlQO"><img src="https://discordapp.com/api/guilds/110462143152803840/widget.png?style=banner2" alt="Discord server"></a>
+  <a href="https://discord.gg/wildbot"><img src="https://discordapp.com/api/guilds/110462143152803840/widget.png?style=banner2" alt="Discord server"></a>
 </p>
