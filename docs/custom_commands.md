@@ -66,7 +66,7 @@ Commands.isbot = {
   timeout: 30,
   // No overwrites or so forth, so not included
   aliases: ['bot'],
-  level: master,
+  level: 'master',
   fn: function(msg, suffix, bot) {
   	if (config.isbot === true) {
     	msg.channel.sendMessage('I am currently running on a bot account.')
