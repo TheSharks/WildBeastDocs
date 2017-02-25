@@ -1,14 +1,17 @@
 This is the command reference for WildBeast. You can find more elaborative information here on each of the commands currently implemented.
-  
+
 If you have need for any further info, you can send the message `{prefix}help <command>` to the bot to get info about timeouts and so forth. For lengthier explanations on the usage of the commands, check out #le-guide in [WildBot's Territory](https://discord.gg/wildbot).
-  
+
 The prefix is not specified in this reference. You have to apply your own prefix to the commands. If you don't know the prefix, type `@<botname> prefix` in the server you're using.
 
 ##Command reference
+###General commands
+
 Name | Description | Usage | Level
 ---- | ----------- | ----- | -----
-**General commands** |
+addrole | Add a role to a user. | addrole @User `<role name>` | 3, Manage Roles permission required
 ban | Ban a user from the server. | ban @User `<days of messages to delete>`| Ban permission required.
+colorrole | Change a role color to a hexadecimal value. Hashtag accepted but not required. | colorrole `<#FFFFFF/FFFFFF>` `<role name>` | 3, Manage Roles permission required
 customize | Customize the bot's behavior in the server. | See the table below. | 3
 eval | Evaluate Discordie code. | eval `<code>` | master
 hello | Make the bot greet you. |  | 0
@@ -23,14 +26,19 @@ plaineval | Same as eval, just with a different scope. | plaineval `<code>` | ma
 prefix | Make the bot return its current prefix. |  | 0
 purge | Delete a specified count of messages. | purge `<amount>` | Manage Messages permission required.
 rankup | Bump a user's permission level up by one notch. | rankup @User | 3
-say | Make the bot say something you specify. | say `<message>` | 0  
+say | Make the bot say something you specify. | say `<message>` | 0
 server-info | Print information on the server. |  | 0
 setlevel | Set the level of a user or role. | setlevel `<@User/@Role/@everyone>` `<-1/0/1/2/3>` | 3
 setnsfw | Change NSFW allowance in a channel. | setnsfw `<on/off>` | 3
 setstatus | Change the bot's playing status. | setstatus `<message>` | master
+takerole | Take a role from a user. | takerole @User `<role name>` | 3, Manage Roles permission required
 twitch | Return if a Twitch streamer is live or not. |  | 0
 userinfo | Print info on a user. |  | 0
-**Fun commands** |
+
+###Fun commands
+
+Name | Description | Usage | Level
+---- | ----------- | ----- | -----
 advice | Ask for some advice from the bot. |  | 0
 cleverbot | Talk to the bot, and it will respond. | cleverbot `<message>` | 0
 dice | Roll the dice. |  | 0
@@ -50,7 +58,11 @@ urbandictionary | Search for a definition from the Urban Dictionary. | urbandict
 xkcd | Search for XKCD comics. Use nothing for random, current for latest or a number to get that one. | xkcd `<(nothing)/current/(number)>` | 0
 yesno | Return a yes or no GIF. |  | 0
 yomomma | Yo momma is so fat that... You know the drill. |  | 0
-**Music commands** |
+
+###Music commands
+
+Name | Description | Usage | Level
+---- | ----------- | ----- | -----
 leave-voice | Leave the voice channel. |  | 1
 music | Pause or resume music playing. |  | 1
 playlist | Print the current playlist. If the delete subcommand is passed, remove a song from the playlist. Number specifies track to remove, all means queue wipe. | playlist **OR** playlist delete `<position>/all` | 0
@@ -59,14 +71,18 @@ shuffle | Shuffle the current playlist. |  | 2
 voice | Make the bot join the voice channel. |  | 1
 volume | Adjust player volume. | volume `<0-100>` | 1
 voteskip | Vote to skip a song. |  | 1
-**Tag commands** |
+
+###Tag commands
+
+Name | Description | Usage | Level
+---- | ----------- | ----- | -----
 tag | Base command for tags. Returns a tag if specified. | tag `<subcommand/name>` | 0 (Also subcommands)
 tag create | Create a tag. | tag create `<name>` `<content>` |
-tag edit | Edit an existing tag. | tag edit `<name>` `<newcontent>` |
-tag raw | Return the raw data of a tag. | tag raw `<name>` |
-tag owner | Return the owner of a tag. | tag owner `<name>` |
 tag delete | Delete a tag. | tag delete `<name>` |
+tag edit | Edit an existing tag. | tag edit `<name>` `<newcontent>` |
+tag owner | Return the owner of a tag. | tag owner `<name>` |
 tag random | Retrieve a random tag from the database. | tag random |
+tag raw | Return the raw data of a tag. | tag raw `<name>` |
 
 ##Customize command
 The customize command is a multifaceted command that needs its own table to illustrate how it works.
