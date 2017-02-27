@@ -124,6 +124,9 @@ imgflip | Your [imgflip](https://imgflip.com) login details. | Used in certain m
 google | For retrieving data from YouTube. | Refer to the "Editing the settings" section.
 mashape | For retrieving the Fortune Cow. | Refer to the "Editing the settings" section.
 twitchId | For retrieving status of whether a user on Twitch is streaming or not. | Refer to the "Editing the settings" section.
+imgur | For retrieving random memes from Imgur. | Refer to the "Editing the settings" section.
+cleverbot_user | Username to the cleverbot.io API, used in the cleverbot command. | Refer to the "Editing the settings" section.
+cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | Refer to the "Editing the settings" section.
 
 ##Editing the settings
 When performing the tasks instructed here, remember that when it is completed you need to apply what you've done (Usually paste) in the settings. This means that the progress needs to be put into the **Value** field. **DO NOT modify the names of the environment variables in the Key section or add anything there!**

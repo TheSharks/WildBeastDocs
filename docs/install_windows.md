@@ -174,6 +174,9 @@ imgflip | Your [imgflip](https://imgflip.com) login details. | Used in certain m
 google | For retrieving data from YouTube. | Refer to the "Making the config" section. |
 mashape | For retrieving the Fortune Cow. | Refer to the "Making the config" section. |
 twitchId | For retrieving status of whether a user on Twitch is streaming or not. | Refer to the "Making the config" section. |
+imgur | For retrieving random memes from Imgur. | Refer to the "Making the config" section. |
+cleverbot_user | Username to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
+cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
   
 ##Making the config
 - OAuth app

@@ -215,12 +215,15 @@ Notice: By default, when WildBeast joins a server it will set the owner's access
   
 ###API keys section
   
-Property | Explanation | Notes
--------- | ----------- | -----
-imgflip | Your [imgflip](https://imgflip.com) login details. | Used in certain meme commands.
-google | For retrieving data from YouTube. | Refer to the "Making the config" section.
-mashape | For retrieving the Fortune Cow. | Refer to the "Making the config" section.
-twitchId | For retrieving status of whether a user on Twitch is streaming or not. | Refer to the "Making the config" section.
+Property | Explanation | Notes |
+-------- | ----------- | ----- |
+imgflip | Your [imgflip](https://imgflip.com) login details. | Used in certain meme commands. |
+google | For retrieving data from YouTube. | Refer to the "Making the config" section. |
+mashape | For retrieving the Fortune Cow. | Refer to the "Making the config" section. |
+twitchId | For retrieving status of whether a user on Twitch is streaming or not. | Refer to the "Making the config" section. |
+imgur | For retrieving random memes from Imgur. | Refer to the "Making the config" section. |
+cleverbot_user | Username to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
+cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
   
 ##Making the config
 - OAuth app
@@ -285,7 +288,7 @@ twitchId | For retrieving status of whether a user on Twitch is streaming or not
 			3. Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".
 			![Twitch app management](https://s22.postimg.org/tjz4qes69/twitchappmanage.png)
 			4. Copy that character sequence and replace the "A twitch Client-ID" placeholder in the config with that ID.
-        - Imgur
+    - Imgur
 	    - This API is used in conjuction with the `randommeme` command to pull random memes from Imgur.
 	    	1. Go to the [Imgur App Registration](https://api.imgur.com/oauth2/addclient).
 	    	2. Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.
