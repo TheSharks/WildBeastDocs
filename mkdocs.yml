@@ -31,7 +31,7 @@ copyright: 'Copyright © 2016 TheSharks, "Discord", "Discord App", and any assoc
 
 # Extra options
 extra:
-  logo: 'img/thesharks_circular.png'
+  logo: 'img/wb-head-circle.png'
   palette:
     primary: 'indigo'
     accent: 'blue'
