@@ -42,6 +42,7 @@ Name | Description | Usage | Level
 advice | Ask for some advice from the bot. |  | 0
 cleverbot | Talk to the bot, and it will respond. | cleverbot `<message>` | 0
 dice | Roll the dice. |  | 0
+dogfact | Return a random dog fact. |  | 0
 e621 | Image searching from e621. | e621 `<searchwords>` | 0 (NSFW)
 fact | Return a random fact. |  | 0
 fancyinsult | Insult someone in a fancy manner. | fancyinsult `<name>` | 0
