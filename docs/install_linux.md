@@ -22,12 +22,14 @@ You will be asked for a password when doing the command, that's all that really 
 **Keep this in mind when setting up, so you don't waste our time with errors that stem from lacking permissions!**
 While you may think running the following commands as the root user is easy, we advice against it due to the security risks involved when using such a powerful user, instead please use `sudo`.
 ##Installing Node
-First off, we'll install Node.JS, the runtime WildBeast uses. The current 6.x.x version works fine.
+First off, we'll install Node.JS, the runtime WildBeast uses, with [n-install](https://github.com/mklement0/n-install) which installs [n](https://github.com/tj/n). ***Note:*** n installs node *per user* so if you have more than one user on your machine, they must also install n.
 ```bash
-sudo apt-get install -y curl
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo apt-get install -y build-essential
+# Install prerequisites
+sudo apt-get install -y curl make build-essential
+# Install n and node lts
+curl -L https://git.io/n-install | bash -s -- -y lts
+# Reload bash
+source ~/.bashrc	# ZSH users do 'source ~/.zshrc'.
 ```
 After that is completed, you can check your Node version by executing the following:
 ```bash
