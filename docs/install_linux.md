@@ -37,7 +37,7 @@ node -v
 ```
 The output should then be this or close to that.
 ```bash
-v6.9.1
+v6.10.2
 ```
 ##Retrieving WildBeast
 Now we'll retrieve the WildBeast files via Git. Install it with the following command:
