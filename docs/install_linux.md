@@ -22,7 +22,7 @@ You will be asked for a password when doing the command, that's all that really 
 **Keep this in mind when setting up, so you don't waste our time with errors that stem from lacking permissions!**
 While you may think running the following commands as the root user is easy, we advice against it due to the security risks involved when using such a powerful user, instead please use `sudo`.
 ##Installing Node
-First off, we'll install Node.JS, the runtime WildBeast uses, with [n-install](https://github.com/mklement0/n-install) which installs [n](https://github.com/tj/n). ***Note:*** n installs node *per user* so if you have more than one user on your machine, they must also install n.
+First off, we'll install Node.JS, the runtime WildBeast uses, with [n-install](https://github.com/mklement0/n-install) which installs [n](https://github.com/tj/n). **Note:** n installs node *per user* so if you have more than one user on your machine, they must also install n.
 ```bash
 # Install prerequisites
 sudo apt-get install -y curl make build-essential
