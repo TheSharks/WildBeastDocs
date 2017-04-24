@@ -5,6 +5,7 @@
 <p align="center">
 <a href="https://snap-ci.com/TheSharks/WildBeastDocs/branch/master"><img src="https://snap-ci.com/TheSharks/WildBeastDocs/branch/master/build_image" alt="Build Status"></a>
 </p>
+
 ---
 
 Welcome to the now open source WildBeast documentation!

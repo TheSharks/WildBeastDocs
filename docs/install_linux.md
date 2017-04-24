@@ -13,7 +13,7 @@ Welcome to the installation guide for WildBeast on Linux! In this guide, we'll w
 	- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io) or [Brackets](http://brackets.io/)
 
 ##Pre-setup
-We highly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04). When this is complete, you can proceed to the next step.
+We highly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/?q=ubuntu+server+setup&primary_filter=popular). When this is complete, you can proceed to the next step.
 
 ##Installation
 General note: During installation, some administrative tasks will be executed. For these to work (Especially installations), **you need to run these commands as sudo**! They might error if you don't.
@@ -22,12 +22,14 @@ You will be asked for a password when doing the command, that's all that really 
 **Keep this in mind when setting up, so you don't waste our time with errors that stem from lacking permissions!**
 While you may think running the following commands as the root user is easy, we advice against it due to the security risks involved when using such a powerful user, instead please use `sudo`.
 ##Installing Node
-First off, we'll install Node.JS, the runtime WildBeast uses. The current 6.x.x version works fine.
+First off, we'll install Node.JS, the runtime WildBeast uses, with [n-install](https://github.com/mklement0/n-install) which installs [n](https://github.com/tj/n). **Note:** n installs node *per user* so if you have more than one user on your machine, they must also install n.
 ```bash
-sudo apt-get install -y curl
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo apt-get install -y build-essential
+# Install prerequisites
+sudo apt-get install -y curl make build-essential
+# Install n and node lts
+curl -L https://git.io/n-install | bash -s -- -y lts
+# Reload bash
+source ~/.bashrc	# ZSH users source their ~/.zshrc file
 ```
 After that is completed, you can check your Node version by executing the following:
 ```bash
@@ -35,7 +37,7 @@ node -v
 ```
 The output should then be this or close to that.
 ```bash
-v6.9.1
+v6.10.2
 ```
 ##Retrieving WildBeast
 Now we'll retrieve the WildBeast files via Git. Install it with the following command:
@@ -215,12 +217,15 @@ Notice: By default, when WildBeast joins a server it will set the owner's access
   
 ###API keys section
   
-Property | Explanation | Notes
--------- | ----------- | -----
-imgflip | Your [imgflip](https://imgflip.com) login details. | Used in certain meme commands.
-google | For retrieving data from YouTube. | Refer to the "Making the config" section.
-mashape | For retrieving the Fortune Cow. | Refer to the "Making the config" section.
-twitchId | For retrieving status of whether a user on Twitch is streaming or not. | Refer to the "Making the config" section.
+Property | Explanation | Notes |
+-------- | ----------- | ----- |
+imgflip | Your [imgflip](https://imgflip.com) login details. | Used in certain meme commands. |
+google | For retrieving data from YouTube. | Refer to the "Making the config" section. |
+mashape | For retrieving the Fortune Cow. | Refer to the "Making the config" section. |
+twitchId | For retrieving status of whether a user on Twitch is streaming or not. | Refer to the "Making the config" section. |
+imgur | For retrieving random memes from Imgur. | Refer to the "Making the config" section. |
+cleverbot_user | Username to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
+cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
   
 ##Making the config
 - OAuth app
@@ -285,7 +290,7 @@ twitchId | For retrieving status of whether a user on Twitch is streaming or not
 			3. Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".
 			![Twitch app management](https://s22.postimg.org/tjz4qes69/twitchappmanage.png)
 			4. Copy that character sequence and replace the "A twitch Client-ID" placeholder in the config with that ID.
-        - Imgur
+    - Imgur
 	    - This API is used in conjuction with the `randommeme` command to pull random memes from Imgur.
 	    	1. Go to the [Imgur App Registration](https://api.imgur.com/oauth2/addclient).
 	    	2. Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.

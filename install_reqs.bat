@@ -1,7 +1,6 @@
-REM --> This file was shamelessly borrowed from SexualRhinoceros/MusicBot
-
 @ECHO off
 
+REM  --> This file was shamelessly borrowed from Just-Some-Bots/MusicBot
 REM  --> Check for permissions
     IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
 >nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system"
