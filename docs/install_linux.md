@@ -29,7 +29,7 @@ sudo apt-get install -y curl make build-essential
 # Install n and node lts
 curl -L https://git.io/n-install | bash -s -- -y lts
 # Reload bash
-source ~/.bashrc	# ZSH users do 'source ~/.zshrc'.
+source ~/.bashrc	# ZSH users source their ~/.zshrc file
 ```
 After that is completed, you can check your Node version by executing the following:
 ```bash
