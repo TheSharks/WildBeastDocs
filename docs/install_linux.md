@@ -13,7 +13,7 @@ Welcome to the installation guide for WildBeast on Linux! In this guide, we'll w
 	- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io) or [Brackets](http://brackets.io/)
 
 ##Pre-setup
-We highly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04). When this is complete, you can proceed to the next step.
+We highly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/?q=ubuntu+server+setup&primary_filter=popular). When this is complete, you can proceed to the next step.
 
 ##Installation
 General note: During installation, some administrative tasks will be executed. For these to work (Especially installations), **you need to run these commands as sudo**! They might error if you don't.
