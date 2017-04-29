@@ -2,17 +2,20 @@ This is the cheat sheet for the WildBeast command framework. Using these element
 
 **NOTE:** Do not come to us with questions on how to write custom commands, some basic JavaScript and programming knowledge is required. We won't give you assistance in writing your commands beyond what is listed on this page!
 
-##Custom Commands
+## Custom Commands
+
 Starting at version 3.0.0, WildBeast allows for the addition of user created .js files with commands, given that they are written in the **exact** same format as default files. This page provides you with the tools you need to create your own commands.
 
-##Important notes
+## Important notes
+
 1. Files need to declare commands to an array, and the array **needs** to be exported as `Commands`. 
 2. Your command files must be in the `custom` folder within the `commands` folder. The path would therefore be `WildBeast/runtime/commands/custom`.
 3. Commands are **objects** added to an **array**, not the other way around!
 4. Aliases **can not** be shared between commands, meaning that a custom command can't have the same alias as a default. The bot will stop itself from running and spit out an error if this happens for safety reasons.
 5. Any functions that use for instance config fields and so forth need to be imported in the format `../../file.ext` or `../file.ext` depending on what folder the file is in.
 
-##Property declaration
+## Property declaration
+
 Command objects consist of different properties which define how the command runs. There are mandatory properties and non-mandatory, divided into their own lists.
 
 The command callback name is decided by the `cmdname` placeholder in `Commands.cmdname`.
@@ -35,7 +38,8 @@ The command callback name is decided by the `cmdname` placeholder in `Commands.c
 - `aliases`: Array of hard coded aliases for this command. This means to say that the command will trigger from multiple names. Note that aliases can't be shared between commands as explained earlier!
 - `hidden`: If set to true, will hide the command from the help list.
 
-##Example structure
+## Example structure
+
 Example for plain text command:
 ```js
 var Commands = [] // Declaration of the command array
@@ -55,7 +59,9 @@ Commands.ping = {
 
 exports.Commands = Commands // Expose the commands to the commandcontrol module
 ```
+
 Example for command with import:
+
 ```js
 var Commands = [] // Declaration of the command array
 var config = require('../../config.json') // Import config

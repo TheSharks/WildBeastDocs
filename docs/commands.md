@@ -4,8 +4,9 @@ If you have need for any further info, you can send the message `{prefix}help <c
 
 The prefix is not specified in this reference. You have to apply your own prefix to the commands. If you don't know the prefix, type `@<botname> prefix` in the server you're using.
 
-##Command reference
-###General commands
+## Command reference
+
+### General commands
 
 Name | Description | Usage | Level
 ---- | ----------- | ----- | -----
@@ -35,7 +36,7 @@ takerole | Take a role from a user. | takerole @User `<role name>` | 3, Manage R
 twitch | Return if a Twitch streamer is live or not. |  | 0
 userinfo | Print info on a user. |  | 0
 
-###Fun commands
+### Fun commands
 
 Name | Description | Usage | Level
 ---- | ----------- | ----- | -----
@@ -60,7 +61,7 @@ xkcd | Search for XKCD comics. Use nothing for random, current for latest or a n
 yesno | Return a yes or no GIF. |  | 0
 yomomma | Yo momma is so fat that... You know the drill. |  | 0
 
-###Music commands
+### Music commands
 
 Name | Description | Usage | Level
 ---- | ----------- | ----- | -----
@@ -73,7 +74,7 @@ voice | Make the bot join the voice channel. |  | 1
 volume | Adjust player volume. | volume `<0-100>` | 1
 voteskip | Vote to skip a song. |  | 1
 
-###Tag commands
+### Tag commands
 
 Name | Description | Usage | Level
 ---- | ----------- | ----- | -----
@@ -85,7 +86,7 @@ tag owner | Return the owner of a tag. | tag owner `<name>` |
 tag random | Retrieve a random tag from the database. | tag random |
 tag raw | Return the raw data of a tag. | tag raw `<name>` |
 
-##Customize command
+## Customize command
 The customize command is a multifaceted command that needs its own table to illustrate how it works.
 
 The customize command makes changes to the server-specific database of WildBeast. It allows you to set a custom member join announcement and tweak some responses. You need a permission level of 3 to use the customize command.   

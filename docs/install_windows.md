@@ -1,5 +1,7 @@
 Welcome to the installation guide for WildBeast on Windows! In this guide, we'll walk you through the installation and deployment process for the WildBeast bot.
-##Prerequisites
+
+## Prerequisites
+
 - Windows system
 	- Most Windows systems can run this bot fine, unless you have a really low-end laptop.
 	- OS: Windows 7 and up
@@ -9,9 +11,12 @@ Welcome to the installation guide for WildBeast on Windows! In this guide, we'll
 	- These programs are required pre-setup:
 		- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io) or [Brackets](http://brackets.io/)
 
-##Installation
+## Installation
+
 General note: Quite a few steps in this guide will be using administrative permissions. Therefore we recommend that you are logged into an administrator account to not have to type the admin password every time you perform something.
-##Installing Node
+
+## Installing Node
+
 Go to [the NodeJS download page](https://nodejs.org/en/download/) and download the version relevant to your OS bit version.
 
 It's pretty straight forward, just make sure that the features tab looks like this.
@@ -19,7 +24,9 @@ It's pretty straight forward, just make sure that the features tab looks like th
 ![Node setup parts](https://s17.postimg.org/uyn914gq7/nodesetup.png)
 
 When that's installed, it's time to retrieve the WB repository.
-##Installing Git and retrieving WildBeast
+
+## Installing Git and retrieving WildBeast
+
 Next we'll install Git to be able to download WildBeast.
 Start off by going to [the Git download page](https://git-scm.com/downloads) and download the Windows installer.
 ![Git download](https://s14.postimg.org/97k1xob41/gitdl.png)
@@ -50,9 +57,11 @@ The answer is: No. We're making it easier for you in the future to update WildBe
 You'd want to figure out where you want the bot to be downloaded. Something simple like the root of the C:\ drive (Possibly some other drive, though **NOT A FLASH DRIVE**) or optionally your Desktop could be fine.
 When you've found the location of your choice, hit Shift+Right click and select `Git Bash here`. This will open the Git Bash console.
 Type the following command into Git Bash:
+
 ```bash
 git clone https://github.com/TheSharks/WildBeast.git -b master
 ```
+
 Let it clone the Git repository. When it's done, you should have the following output.
 
 ![Successfully cloned](https://s16.postimg.org/uyuqfkmj9/gitclone.png)
@@ -63,7 +72,9 @@ Now, why did we do it this way? The reason is simple: Ease of updating. If we ma
 That is the reason to why we use Git to download WildBeast.
 
 You have now successfully cloned the WildBeast Git repository!
-##Installing Python 2.7.12
+
+## Installing Python 2.7.12
+
 From WildBeast version 4.0.0 onwards, the fibers package is used in the bot. This package requires Python 2.7 to install, and hence we will also install that.
 
 [Click here](https://www.python.org/ftp/python/2.7.12/python-2.7.12.msi) to directly download the Python 2.7 installer. (Official source from python.org)
@@ -77,18 +88,23 @@ Open the installer. Other options don't matter that much, but these two screens 
 It is especially important that you have all the boxes ticked in the latter image in order for this to work properly. Once you have completed this, proceed to the next step.
 
 **Important note to anyone that is running Python 3.5:** The PATH variables will be duplicated but the one that was previously installed stays as the one that is referred to as `python`. So if you installed 3.5 before, you're cool. But if you intend on installing 3.5 and using it primarily after this, you need to make changes to the variables. If you want to do this and need help, you can come ask on our help server.
-##Installing the Node dependencies
+
+## Installing the Node dependencies
 
 Now it's time to install the Node dependencies for the bot. These are smaller packages that WildBeast relies on to run.
 Open a command prompt in the WildBeast folder (Shift+Right click) and select "Open command window here". This will open a command window.
 Next, type in the following command into the command prompt:
+
 ```bash
 npm install
 ```
+
 This will download the dependencies. Wait until it completes, and when you are able to execute commands again the install has completed. The output is too huge to provide an image of, so you'll have to do without.
 
 If you get errors that say `WARN` and yellow text, you can ignore those. If you however start getting red text, there might be a problem installing. Check that the WildBeast directory does not require admin permissions to execute stuff in. You may come and ask us [over at WildBot's Territory](https://discord.gg/wildbot) if you need help debugging these errors.
-##Installing RethinkDB and creating the DB
+
+## Installing RethinkDB and creating the DB
+
 As of WildBeast version 4.0.0, the bot uses RethinkDB to store server-specific data. This includes server owner, customize options and a whole bunch of other things.
 
 **Important note before starting:** Do not fiddle with RethinkDB options or execute commands outside of the ones we tell you to unless you understand RethinkDB and can unbork it yourself. We will not start solving your database if you messed it up.
@@ -96,21 +112,26 @@ As of WildBeast version 4.0.0, the bot uses RethinkDB to store server-specific d
 Click [this link](https://download.rethinkdb.com/windows/rethinkdb-2.3.5.zip) to download the RethinkDB executable. (No worries, that's the official download link)
 
 When the file has downloaded, extract rethinkdb.exe to someplace suitable. We'd recommend creating a new folder on your C:\ drive and naming it RethinkDB, then just put the file in there. (**NOTE: WildBeast and RethinkDB have to be on the same drive in order to work**) Browse to the directory you put the executable in, then hit Shift+Right click and select "Open command window here". In the command prompt, type in the following command:
+
 ```bash
 rethinkdb --bind all
 ```
+
 The RethinkDB server will start up and list some addresses plus other things. When the output resembles to the one displayed below, you're good to go. Just leave the command window open or the server will shut down.
 
 ![RethinkDB successful](https://s10.postimg.org/cjv2od0k9/rethinkdb.png)
 
-##Configuration
+## Configuration
+
 Find `config.example.json` on your PC and open it using Notepad++ or any other code editor. **Do not edit it with Windows Notepad, that will be a mess.**
-##The config file
+
+## The config file
+
 When opening the config file, you should have a file that looks like the [example config](https://github.com/TheSharks/WildBeast/blob/master/config.example.json) (The CSE is deprecated and likely to be removed, but the others are still needed)
 
 We'll now walk you through the different sections in the config and what they do.
   
-###Bot section
+### Bot section
   
 Property | Explanation | Notes |
 -------- | ----------- | ----- |
@@ -120,7 +141,7 @@ email | Email for normal user account that the bot will use. | **DO NOT** input 
 password | Password for the account mentioned above. | As above. |
 oauth | The OAuth URL for the bot. | Refer to the "Making the config" section. |
   
-###Database section
+### Database section
   
 Property | Explanation | Notes |
 -------- | ----------- | ----- |
@@ -129,7 +150,7 @@ port | Specifies which network port the RethinkDB server is running on. | As abo
 password | Password to RethinkDB user. | Admin account has no password by default. Don't set a password for the admin account unless you want to have to edit this. |
 user | RethinkDB user account to use for accessing the database. | Admin by default. Admin will have permission to all databases so it should stay like this. |
   
-###Settings section
+### Settings section
   
 Property | Explanation | Notes |
 -------- | ----------- | ----- |
@@ -139,7 +160,7 @@ deleteTimeout | The amount of time after which to delete the messages. | Insert 
 deleteTimeoutLong | Same as above, but for messages that have a longer timeout.  | For now only [this message](https://github.com/TheSharks/WildBeast/blob/master/runtime/internal/voice.js#L204) uses the long timeout. In milliseconds, default 6000. |
 maxvcslots | How many concurrent voice connections the bot can have until it won't join more. | Default limit is 10, depends on the beefyness of your system. |
   
-###Bezerk section
+### Bezerk section
   
 **IMPORTANT NOTE:** Unless you use Bezerk, the WildBeast WSM, **do not modify anything here as it's for advanced users only!**
   
@@ -148,7 +169,7 @@ Property | Explanation | Notes |
 use | Whether Bezerk shall be used or not. | Do not modify unless you use Bezerk. |
 uri | Specifies the websocket address for the Bezerk server. | As above. Default is `ws://localhost:1337` |
   
-###Elasticsearch section
+### Elasticsearch section
   
 **IMPORTANT NOTE:** Unless you use Elastic like we do, **don't modify this!** It's meant for large instances and hence advanced users only!
   
@@ -157,7 +178,7 @@ Property | Explanation | Notes |
 use | Whether Elastic shall be used or not. | Do not modify unless you use Elastic. |
 client/host | Specifies the address for the Elastic server. | As above. Default is `localhost:9200` |
   
-###Permissions section
+### Permissions section
   
 Property | Explanation | Notes |
 -------- | ----------- | ----- |
@@ -166,7 +187,7 @@ level1, level2, level3 | Settable access levels that give users access to certai
   
 Notice: By default, when WildBeast joins a server it will set the owner's access level to 5. This is to give them control over normal users. 
   
-###API keys section
+### API keys section
   
 Property | Explanation | Notes |
 -------- | ----------- | ----- |
@@ -178,7 +199,8 @@ imgur | For retrieving random memes from Imgur. | Refer to the "Making the confi
 cleverbot_user | Username to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
 cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
   
-##Making the config
+## Making the config
+
 - OAuth app
 	1. We'll start off by creating an OAuth application in Discord's developer interface so that the bot can login.
 		- Go to [the Discord Dev dashboard](https://discordapp.com/developers/applications/me) and create a new application.
@@ -260,16 +282,20 @@ cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | Re
 
 That's all, your config should now be ready to rock! Save it as `config.json` (**NOT** `config.example.json` as the bot will error if you do. TLDR: Don't hit Ctrl+S, hit Ctrl+Alt+S).
 
-##Running the bot
+## Running the bot
+
 Congratulations, your WildBeast instance should be ready to launch!
 
 WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, open a command prompt in the bot folder (Shift + Right Click -> Open Command Window here) and execute this:
+
 ```bash
 npm run-script dbcreate
 ```
+
 The script will create the required databases. Wait for it to complete before continuing.
 
 To start the bot after database creation, run the following command within the bot's folder:
+
 ```bash
 node DougBot.js
 ```
@@ -280,7 +306,8 @@ You can test simple functionality by running the `ping` command (With your desir
 
 Remember to keep the command window open, otherwise the bot will stop running! When you want to stop it, just close the command window.
 
-###And that's it! You are now ready to start using your very own WildBeast instance!
+**And that's it! You are now ready to start using your very own WildBeast instance!**
+
 Keep in mind, if you have further questions or need help, we're around over at our official server! Link below.
 
 On the behalf of the WildBeast team, *we hope you enjoy your bot!*

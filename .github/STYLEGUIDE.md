@@ -4,7 +4,7 @@ This document will provide you a style guide to follow when writing.
 
 Documents do not contain a main header. The page name is specified in mkdocs.yml before compiling. This will act as the main header.
 
-The general Markdown syntax is to be followed, but images that need to be centered are allowed to use the HMTL syntax.
+The general Markdown syntax is to be followed, but images that need to be centered are allowed to use the HMTL syntax. Additionally, markdownlint syntax should be followed.
 
 ## Headers
 
@@ -15,8 +15,8 @@ There is no space after the header markers.
 Example:
 
 ```bash
-##Section header
-###Sub header
+## Section header
+### Sub header
 ```
 
 ## Code blocks
