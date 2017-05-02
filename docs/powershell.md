@@ -18,8 +18,6 @@ You should be good to start hacking around in the registry now.
 
 ## Creating permission overrides
 
-### Main context menu
-
 Move to `HKEY_CLASSES_ROOT\Directory\shell\Powershell`. Then right-click the Powershell key in the bar to the left and select Permissions. In the window that opens, click Advanced which will open the permissions editor.
 
 ![Permissions 1](http://images.lwtechgaming.me/ozg74Ck.png)
@@ -34,3 +32,82 @@ Check the GIF below if you want to see how this should be done.
 
 ![Permissions GIF](http://images.lwtechgaming.me/topTnHl.gif)
 
+Now, in the permissions window, select Adminstrators and give them full control of the registry key.
+
+![Permissions](http://images.lwtechgaming.me/ayhGvXq.png)
+
+Then create a new string value in the key called `ProgrammaticAccessOnly`. Be sure to get the casing right!
+
+![String GIF](http://images.lwtechgaming.me/0YDIozz.gif)
+
+Repeat the process above for keys `HKEY_CLASSES_ROOT\Directory\Background\shell\Powershell` (Might not exist on all systems) and `HKEY_CLASSES_ROOT\Drive\Background\shell\Powershell`.
+
+## Extra fixes (Optional)
+
+Now, if you Shift+Right Click in a folder, you should be able to see "Open command window here" instead of PowerShell. If so, good! You're now done and can keep doing what you were intending to.
+
+If not, there are some extra fixes required. We'll walk you through that below.
+
+Download this ZIP file with a registry file in it: [http://lwtechgaming.me/files/ReinstateCMD.zip](http://lwtechgaming.me/files/ReinstateCMD.zip)
+
+If you just got sceptical, good! You're smart. Why should you trust this file?
+
+For real though, it's not intended for anything malicious. The only thing that ZIP contains is a .reg file with necessary tweaks. The registry file itself does not do anything malicious.
+
+For transparency, here is the registry file's contents. You can open it with a text editor and check if it matches (Trust me, it will).
+
+```ini
+Windows Registry Editor Version 5.00
+
+; Created by: Linus Willner
+; Created on: May 2nd 2017
+; Guide: http://docs.thesharks.xyz/powershell
+
+
+[HKEY_CLASSES_ROOT\Directory\shell\cmd2]
+@="@shell32.dll,-8506"
+"Extended"=""
+"Icon"="imageres.dll,-5323"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\cmd2\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\cmd2]
+@="@shell32.dll,-8506"
+"Extended"=""
+"Icon"="imageres.dll,-5323"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\cmd2\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+
+[HKEY_CLASSES_ROOT\Drive\shell\cmd2]
+@="@shell32.dll,-8506"
+"Extended"=""
+"Icon"="imageres.dll,-5323"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\cmd2\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+
+[HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\cmd2]
+@="@shell32.dll,-8506"
+"Extended"=""
+"Icon"="imageres.dll,-5323"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\cmd2\command]
+@="cmd.exe /s /k pushd \"%V\""
+```
+
+If you wish, backup your registry again now before making changes. When you've downloaded the ZIP file, double click the registry entry file inside it and allow it to alter the registry via the security prompts.
+
+And that's it! You should now be able to use CMD from the context menu again without PowerShell being in your face.
+
+If you still get issues, perhaps try Googling or coming over to our Discord server. We'll help you if you have questions. **Notice this though: We are NOT responsible for nor will we help you fix your broken registry if you break it - we will only tell you to restore the entries from a backup.**
+
+The link to our Discord server can be found from the homepage in the docs if you need it. Good luck in your future endeavours!
