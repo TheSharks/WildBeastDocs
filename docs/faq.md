@@ -1,6 +1,6 @@
 This page will provide solutions for most common installation issues for WildBeast. **Please read this before asking questions in our Discord server!**
 
-##Git issues
+## Git issues
 
 Q. `fatal: could not create work tree dir 'WildBeast': Permission denied`  
 
@@ -10,7 +10,7 @@ Q. Git complains about that local changes would be overwritten by a merge and wi
 
 A. You have most likely made changes to files that the merge would overwrite and therefore it will not do it as it protects your work from being destroyed. Do `git reset --hard` in the bot's folder and try again. **Note:** This will discard your local changes!
 
-##WildBeast issues
+## WildBeast issues
 
 Q. I get an error saying "No config file found, make one using the example and restart WildBeast", what should I do?
 

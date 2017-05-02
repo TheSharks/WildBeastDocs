@@ -1,7 +1,9 @@
 Welcome to the installation guide for WildBeast on Docker! In this guide, we'll walk you through the installation and deployment process for the WildBeast bot.
   
 This guide allows for WildBeast to be installed on a Windows or Mac system. We will be instructing this on Windows, but if you're Mac savvy you should be able to do it yourself.
-##Prerequisites
+
+## Prerequisites
+
 **Docker has very specific system requirements, be sure to check them out below before proceeding.**
 
 - Windows
@@ -19,16 +21,20 @@ This guide allows for WildBeast to be installed on a Windows or Mac system. We w
 	- These programs are required pre-setup:
 		- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io) or [Brackets](http://brackets.io/)
 
-##Preamble
+## Preamble
+
 Installing WildBeast on Docker is a suitable idea for someone that doesn't want to mess with the technical stuff a whole lot and just get it installed the easiest way possible. If this is your way, feel free to use this. If you want better control and modifiability, use the regular Windows installation guide!
-##Downloading Docker Toolbox & Hyper-V
+
+## Downloading Docker Toolbox & Hyper-V
+
 Go to [the Docker download site](https://www.docker.com/products/overview). Download the Windows version from the button you find by scrolling down. The installation is a one-click procedure, complete it.
 
 Allow Docker to launch from the installer or launch it from the start menu. You will be greeted by this screen if Microsoft Hyper-V isn't enabled. **Before you press OK however, read up on the next section and prepare to do it** as the Hyper-V enabling will result in the computer being restarted which enables you to do the next steps at the same time
 
 ![Docker Hyper-V](http://i.imgur.com/Imhdo5c.png)
 
-##Enabling BIOS features
+## Enabling BIOS features
+
 **The following steps are heavily variable due to differences in BIOS systems. We will not provide specific assistance on doing this via our support, you need to Google and find out specifics yourself.**
 
 Restart the computer and wait for the boot logo to come up. When it does, press the key specified in the lower-left corner of the screen to enter BIOS setup. You might have to Google around to find what key to press on your system to enter BIOS setup.
@@ -47,7 +53,8 @@ Then we hit Exit and saved the changes in the following dialog.
 
 When the computer boots up next time, Docker will autostart when the system starts. You will get a system notification when it's ready to use. In the meantime, you can go to the [Windows guide](install_windows.md) and follow the guide on installing Git there if it's not installed on your system already.
 
-##Retrieving WildBeast
+## Retrieving WildBeast
+
 When Docker announces it's ready to use, open Windows PowerShell. You can now retrieve the WildBeast repository. Type the following command into the terminal:
 ```bash
 git clone https://github.com/TheSharks/WildBeast.git
@@ -60,8 +67,10 @@ The Docker composition will take a good while so go make yourself a coffee or so
 
 When it completes, the system might start attempting to connect to the Discord gateway. Hit Ctrl+C when this happens to stop it, because that is for later. You still need to configure the bot.
 
-##Configuration
-##Installing Kitematic
+## Configuration
+
+## Installing Kitematic
+
 Check for the Docker icon in the taskbar, right click it and select "Open Kitematic". This will present you with an option to download Kitematic.
 
 ![Kitematic DL](http://i.imgur.com/3bydLyW.png)
@@ -74,12 +83,13 @@ After having logged in, you will see two containers on the left side of the scre
 
 ![Containers](http://i.imgur.com/IbhxzsA.png)
 
-##Configuring WildBeast in Kitematic
+## Configuring WildBeast in Kitematic
+
 We'll now go over configuration in Kitematic. Click on `wildbeast` in the sidebar and browse over to the Settings tab in the right corner.
 
 We'll now walk you through the different sections in the config and what they do. Settings on Docker are a bit different as their prefix tells what they relate to. They can be in a messy order, but configure them in the order explained later.
   
-###BOT options
+### BOT options
   
 Option | Explanation | Notes
 ------ | ----------- | -----
@@ -89,7 +99,7 @@ email | Email for normal user account that the bot will use. | **DO NOT** input 
 password | Password for the account mentioned above. | As above.
 oauth | The OAuth URL for the bot. | Refer to the "Editing the settings" section.
   
-###DATABASE options
+### DATABASE options
   
 Option | Explanation | Notes
 ------ | ----------- | -----
@@ -98,7 +108,7 @@ port | Specifies which network port the RethinkDB server is running on. | As abo
 password | Password to RethinkDB user. | Admin account has no password by default. Don't set a password for the admin account unless you want to have to edit this.
 user | RethinkDB user account to use for accessing the database. | Admin by default. Admin will have permission to all databases so it should stay like this.
   
-###SETTINGS options
+### SETTINGS options
   
 Option | Explanation | Notes
 ------ | ----------- | -----
@@ -108,7 +118,7 @@ deleteTimeout | The amount of time after which to delete the messages. | Insert 
 deleteTimeoutLong | Same as above, but for messages that have a longer timeout.  | For now only [this message](https://github.com/TheSharks/WildBeast/blob/master/runtime/internal/voice.js#L204) uses the long timeout. In milliseconds, default 6000.
 maxvcslots | How many concurrent voice connections the bot can have until it won't join more. | Default limit is 10, depends on the beefyness of your system.
   
-###PERMISSIONS options
+### PERMISSIONS options
   
 Option | Explanation | Notes
 ------ | ----------- | -----
@@ -116,7 +126,7 @@ master | The highest possible access level of 9. Full permissions. |  Only give 
 level1, level2, level3 | Settable access levels that give users access to certain commands. | Default access levels can be found in [command reference](http://docs.thesharks.xyz/commands/).
 Notice: By default, when WildBeast joins a server it will set the owner's access level to 5. This is to give them control over normal users.
   
-###API_KEYS options
+### API_KEYS options
   
 Option | Explanation | Notes
 ------ | ----------- | -----
@@ -128,7 +138,8 @@ imgur | For retrieving random memes from Imgur. | Refer to the "Editing the sett
 cleverbot_user | Username to the cleverbot.io API, used in the cleverbot command. | Refer to the "Editing the settings" section.
 cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | Refer to the "Editing the settings" section.
 
-##Editing the settings
+## Editing the settings
+
 When performing the tasks instructed here, remember that when it is completed you need to apply what you've done (Usually paste) in the settings. This means that the progress needs to be put into the **Value** field. **DO NOT modify the names of the environment variables in the Key section or add anything there!**
 
 **NOTE:** There are some environment variables in the settings which aren't explained here. If you stumble upon them, **DO NOT modify them** unless told to by WildBeast staff! This can cause unexpected behavior to the bot and you'll have to fix it yourself.
@@ -218,7 +229,7 @@ When you're done configuring, hit Save below the environment variables.
 
 ![Save](http://i.imgur.com/WLBk1mt.png)
 
-##Running the bot
+## Running the bot
 Congratulations, your WildBeast instance should be ready to launch! When installing, all required database tables and other prerequisistes to run the bot were installed so you are good to go out of the box.
 
 To start the bot, browse back to Kitematic. Click on `wildbeast-rethink` and hit Start in the top left corner. It is crucial to start it first as the database engine needs to be running before any actions are performed.
@@ -229,7 +240,8 @@ You can test simple functionality by running the `ping` command (With your desir
 
 When you want to stop the bot, you can browse back to Kitematic and stop `wildbeast`, subsequently stop `wildbeast-rethink`. **Remember to do it in this order to not cause corruptions or other issues with the database!**
 
-###And that's it! You are now ready to start using your very own WildBeast instance!
+**And that's it! You are now ready to start using your very own WildBeast instance!**
+
 Keep in mind, if you have further questions or need help, we're around over at our official server! Link below.
 
 On the behalf of the WildBeast team, *we hope you enjoy your bot!*

@@ -1,6 +1,7 @@
 Welcome to the installation guide for WildBeast on Linux! In this guide, we'll walk you through the installation and deployment process for the WildBeast bot.
 
-##Prerequisites
+## Prerequisites
+
 - A Linux server
 	-  Type: VPS is enough to run WB, dedicated is a bit overshooting unless you have something else running there as well.
 	-  OS: Ubuntu LTS or latest, optionally Debian 8
@@ -12,42 +13,62 @@ Welcome to the installation guide for WildBeast on Linux! In this guide, we'll w
 	- SFTP program, i.e. [FileZilla](https://filezilla-project.org/) or [WinSCP](https://winscp.net/eng/index.php) for quick editing and upload of files
 	- A code editor, i.e. [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io) or [Brackets](http://brackets.io/)
 
-##Pre-setup
-We highly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04). When this is complete, you can proceed to the next step.
+## Pre-setup
 
-##Installation
+We highly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the [Digital Ocean guide for initial server setup](https://www.digitalocean.com/community/tutorials/?q=ubuntu+server+setup&primary_filter=popular). When this is complete, you can proceed to the next step.
+
+## Installation
+
 General note: During installation, some administrative tasks will be executed. For these to work (Especially installations), **you need to run these commands as sudo**! They might error if you don't.
 Luckily, the process of executing as sudo isn't that complicated. Just put `sudo` ahead of every install command or other administrative equivalent.
 You will be asked for a password when doing the command, that's all that really is added.
 **Keep this in mind when setting up, so you don't waste our time with errors that stem from lacking permissions!**
 While you may think running the following commands as the root user is easy, we advice against it due to the security risks involved when using such a powerful user, instead please use `sudo`.
-##Installing Node
-First off, we'll install Node.JS, the runtime WildBeast uses. The current 6.x.x version works fine.
+
+## Installing Node
+First off, we'll install Node.JS, the runtime WildBeast uses, with [n-install](https://github.com/mklement0/n-install) which installs [n](https://github.com/tj/n). **Note:** n installs node *per user* so if you have more than one user on your machine, they must also install n.
+
+**Do not include the # marked lines, they are only descriptive of the commands.**
+
 ```bash
-sudo apt-get install -y curl
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo apt-get install -y build-essential
+# Install prerequisites
+sudo apt-get install -y curl make build-essential
+# Install n and node lts
+curl -L https://git.io/n-install | bash -s -- -y lts
+# Reload bash
+source ~/.bashrc	# ZSH users source their ~/.zshrc file
 ```
+
 After that is completed, you can check your Node version by executing the following:
+
 ```bash
 node -v
 ```
+
 The output should then be this or close to that.
+
 ```bash
-v6.9.1
+v6.10.2
 ```
-##Retrieving WildBeast
+
+## Retrieving WildBeast
+
 Now we'll retrieve the WildBeast files via Git. Install it with the following command:
+
 ```bash
 sudo apt-get install -y git
 ```
+
 When the install completes, the following set of commands will download the necessary files to run WildBeast and change into the newly created directory.
+
 ```bash
 git clone https://github.com/TheSharks/WildBeast.git && cd WildBeast
 ```
+
 If you mess something up during the installation process, you can delete the directory with `rm -d -f -r ~/WildBeast` and reclone the Git repo.
-##Installing additional dependencies
+
+## Installing additional dependencies
+
 Now it's time to install the rest of the dependencies for WildBeast.
 
 Next, we will install FFMPEG. **This is a crucial step if you want to use music playback, so pay attention!**
@@ -88,10 +109,13 @@ sudo apt-get update && sudo apt-get install -y ffmpeg
   </p></details>
 
 Without changing workdir, we'll now install the Node modules required for usage in WildBeast. Execute the following:
+
 ```bash
 npm install
 ```
+
 This will likely take a while as it has a lot to retrieve. If you get warns (Yellow text) you can ignore them as long as the output resembles to the following.
+
 ```bash
 WildBeast@4.0.0 /home/(yourhomedir)
 +-- cleverbot-node@0.2.2
@@ -101,7 +125,8 @@ WildBeast@4.0.0 /home/(yourhomedir)
 ...
 ```
 
-##Installing RethinkDB and creating the DB
+## Installing RethinkDB and creating the DB
+
 As of WildBeast version 4.0.0, RethinkDB is used to store server-specific data. This includes server owner, customize options and a whole bunch of other things.
 
 **Important note before starting:** Do not fiddle with RethinkDB options or execute commands outside of the ones we tell you to unless you understand RethinkDB and can unbork it yourself. We will not start solving your database if you messed it up.
@@ -131,13 +156,17 @@ sudo apt-get install rethinkdb
   </p></details>
 
 When RethinkDB has installed, run the following command. Keep in mind if you restart your server you will need to run this again to start the database service:
+
 ```bash
 rethinkdb --daemon
 ```
+
 If RethinkDB runs without errors, you should be good to go.
 
-##Configuration
-##Setting up SFTP
+## Configuration
+
+## Setting up SFTP
+
 Next we'll make a config file for WildBeast. Unless you love your command line and editing stuff that way, this is the step where we'd advise you to bring out FileZilla. Using this program, you can transfer files from and to the server. This speeds up the editing process.
 
 Start up FileZilla and open the server manager by hitting Ctrl+S. Click "New Site" and name it whatever you prefer. Then fill in the server's IP address. By default, SFTP (SSH File Transfer Protocol) connections go to port 22.
@@ -149,16 +178,20 @@ Unless you know what you are doing, **don't touch the rest of the tabs**. They a
 Your site should be something like the example below.
 
 ![FileZilla site](https://s22.postimg.org/75w8ta65d/filezilla.png)
-##Retrieving the example config
+
+## Retrieving the example config
+
 Connect to the server in FileZilla. You should now see the so-called remote site in FileZilla. Open the WildBeast directory. In here you can find a file named `config.example.json`.
 Right click that file and select "Download". This will download the file to your computer for editing. On the left-hand side of the screen, you can see where the file was downloaded.
 Find `config.example.json` on your PC and open it using Notepad++ or any other code editor. **Do not edit it with Windows Notepad, that will be a mess.**
-##The config file
+
+## The config file
+
 When opening the config file, you should have a file that looks like the [example config](https://github.com/TheSharks/WildBeast/blob/master/config.example.json) (The CSE is deprecated and likely to be removed, but the others are still needed)
 
 We'll now walk you through the different sections in the config and what they do.
   
-###Bot section
+### Bot section
   
 Property | Explanation | Notes
 -------- | ----------- | -----
@@ -168,7 +201,7 @@ email | Email for normal user account that the bot will use. | **DO NOT** input 
 password | Password for the account mentioned above. | As above.
 oauth | The OAuth URL for the bot. | Refer to the "Making the config" section.
   
-###Database section
+### Database section
   
 Property | Explanation | Notes
 -------- | ----------- | -----
@@ -177,7 +210,7 @@ port | Specifies which network port the RethinkDB server is running on. | As abo
 password | Password to RethinkDB user. | Admin account has no password by default. Don't set a password for the admin account unless you want to have to edit this.
 user | RethinkDB user account to use for accessing the database. | Admin by default. Admin will have permission to all databases so it should stay like this.
   
-###Settings section
+### Settings section
   
 Property | Explanation | Notes |
 -------- | ----------- | ----- |
@@ -187,7 +220,7 @@ deleteTimeout | The amount of time after which to delete the messages. | Insert 
 deleteTimeoutLong | Same as above, but for messages that have a longer timeout.  | For now only [this message](https://github.com/TheSharks/WildBeast/blob/master/runtime/internal/voice.js#L204) uses the long timeout. In milliseconds, default 6000. |
 maxvcslots | How many concurrent voice connections the bot can have until it won't join more. | Default limit is 10, depends on the beefyness of your system. |
   
-###Bezerk section
+### Bezerk section
   
 **IMPORTANT NOTE:** Unless you use Bezerk, the WildBeast WSM, **do not modify anything here as it's for advanced users only!**
   
@@ -196,7 +229,7 @@ Property | Explanation | Notes |
 use | Whether Bezerk shall be used or not. | Do not modify unless you use Bezerk. |
 uri | Specifies the websocket address for the Bezerk server. | As above. Default is `ws://localhost:1337` |
   
-###Elasticsearch section
+### Elasticsearch section
   
 **IMPORTANT NOTE:** Unless you use Elastic like we do, **don't modify this!** It's meant for large instances and hence advanced users only!
   
@@ -205,7 +238,7 @@ Property | Explanation | Notes |
 use | Whether Elastic shall be used or not. | Do not modify unless you use Elastic. |
 client/host | Specifies the address for the Elastic server. | As above. Default is `localhost:9200` |
   
-###Permissions section
+### Permissions section
   
 Property | Explanation | Notes
 -------- | ----------- | -----
@@ -213,7 +246,7 @@ master | The highest possible access level of 9. Full permissions. |  Only give 
 level1, level2, level3 | Settable access levels that give users access to certain commands. | Default access levels can be found in [command reference](http://docs.thesharks.xyz/commands/).
 Notice: By default, when WildBeast joins a server it will set the owner's access level to 5. This is to give them control over normal users.
   
-###API keys section
+### API keys section
   
 Property | Explanation | Notes |
 -------- | ----------- | ----- |
@@ -225,7 +258,8 @@ imgur | For retrieving random memes from Imgur. | Refer to the "Making the confi
 cleverbot_user | Username to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
 cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | Refer to the "Making the config" section. |
   
-##Making the config
+## Making the config
+
 - OAuth app
 	1. We'll start off by creating an OAuth application in Discord's developer interface so that the bot can login.
 		- Go to https://discordapp.com/developers/applications/me and create a new application.
@@ -307,7 +341,8 @@ cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | Re
 
 That's all, your config should now be ready to rock! Save it as `config.json` (**NOT** `config.example.json` as the bot will error if you do. TLDR: Don't hit Ctrl+S, hit Ctrl+Alt+S) and upload it to the server via FileZilla.
 
-##Running the bot
+## Running the bot
+
 Congratulations, your WildBeast instance should be ready to launch!
 
 WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, execute this:
@@ -325,7 +360,8 @@ If the bot runs without any errors, you have had success so far!
 
 You can test simple functionality by running the `ping` command (With your desired prefix) in a text channel that the bot can see. If it answers "Pong!", then congratulations, *you have successfully set up WildBeast!*
 
-##RethinkDB Dashboard
+## RethinkDB Dashboard
+
 **The following information is for those who need to access the RethinkDB web interface to create, delete or edit the database contents. This is for users that want maximum control and are familiar with database engines, so skip this if you don't meet those criteria.**
 
 Should you need to access the RethinkDB dashboard remotely to create, delete or edit the information stored within.
@@ -337,13 +373,16 @@ Fill in the IP or FQDN in the "Host name (or IP address)" field or load an alrea
 
 ![RethinkDB Dashboard](http://i.imgur.com/OFSk91K.png)
 
-##Background running WildBeast
+## Background running WildBeast
+
 With the current system that we described above, the bot will run until the SSH session is closed or an error occurs that ends the process. How can we combat this? The answer is: PM2!
 
 PM2, short of Process Manager 2, is a Node app intended to run and manage multiple apps running on one account in a Linux environment, which enables more than one process running at a time.
 
 Our official instance, namely WildBot uses PM2, so this resource is a good one to use!
-##Installing PM2 and starting the bot
+
+## Installing PM2 and starting the bot
+
 Before doing this, hit Ctrl+C (Close command) to shut down WildBeast if it's still running.
 
 You can install PM2 by using the following command:
@@ -358,7 +397,8 @@ It should then start the process and return a small process table with DougBot.j
 
 You can find out more about PM2 by typing `pm2` into the console.
 
-###And that's it! You are now ready to start using your very own WildBeast instance!
+**And that's it! You are now ready to start using your very own WildBeast instance!**
+
 Keep in mind, if you have further questions or need help, we're around over at our official server! Link below.
 
 On the behalf of the WildBeast team, *we hope you enjoy your bot!*
