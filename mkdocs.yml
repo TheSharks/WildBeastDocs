@@ -16,6 +16,7 @@ pages:
   - FAQ: 'faq.md'
   - Custom Command Framework: 'custom_commands.md'
   - Gateway Sharding System: 'sharding.md'
+  - Replace PowerShell with CMD: 'powershell.md'
 
 # Theme
 theme: 'material'
