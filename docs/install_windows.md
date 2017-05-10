@@ -103,6 +103,25 @@ This will download the dependencies. Wait until it completes, and when you are a
 
 If you get errors that say `WARN` and yellow text, you can ignore those. If you however start getting red text, there might be a problem installing. Check that the WildBeast directory does not require admin permissions to execute stuff in. You may come and ask us [over at WildBot's Territory](https://discord.gg/wildbot) if you need help debugging these errors.
 
+**NOTE:** The `fibers` package requires node-gyp to build. Node-gyp may fail on building `fibers` if a GCC compiler isn't installed on the system. If you get an error that resembles to this, you are having this issue.
+
+```bash
+gyp ERR! build error
+gyp ERR! stack Error: C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe failed with exit code: 1
+gyp ERR! stack     at ChildProcess.onExit (C:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\lib\build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:106:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:194:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+gyp ERR! System Windows_NT 10.0.14393
+gyp ERR! command "C:\Program Files\nodejs\node.exe" "C:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js" "rebuild" "--release"
+gyp ERR! cwd %WildBeastDirectory%\node_modules\fibers
+gyp ERR! node -v %NodeVersion%
+gyp ERR! node-gyp -v %Node-gypVersion%
+gyp ERR! not ok
+```
+
+To fix this, run `npm install --global --production windows-build-tools`, then run `npm install` again.
+
 ## Installing RethinkDB and creating the DB
 
 As of WildBeast version 4.0.0, the bot uses RethinkDB to store server-specific data. This includes server owner, customize options and a whole bunch of other things.
