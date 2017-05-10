@@ -120,7 +120,7 @@ gyp ERR! node-gyp -v %Node-gypVersion%
 gyp ERR! not ok
 ```
 
-To fix this, run `npm install --global --production windows-build-tools`, then run `npm install` again.
+To fix this, open an administrative command prompt (Start Menu -> Type 'cmd' -> Right click and Run as administrator) and run `npm install --global --production windows-build-tools`. After that do `npm install` again.
 
 ## Installing RethinkDB and creating the DB
 
