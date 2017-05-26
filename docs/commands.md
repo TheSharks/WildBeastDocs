@@ -29,7 +29,7 @@ purge | Delete a specified count of messages. | purge `<amount>` | Manage Messag
 rankup | Bump a user's permission level up by one notch. | rankup @User | 3
 say | Make the bot say something you specify. | say `<message>` | 0
 server-info | Print information on the server. |  | 0
-setlevel | Set the level of a user or role. | setlevel `<@User/@Role/@everyone>` `<-1/0/1/2/3>` | 3
+setlevel | Set the level of a user or role. | setlevel `<-1/0/1/2/3>` `<@User/@Role/@everyone>` | 3
 setnsfw | Change NSFW allowance in a channel. | setnsfw `<on/off>` | 3
 setstatus | Change the bot's playing status. | setstatus `<message>` | master
 takerole | Take a role from a user. | takerole @User `<role name>` | 3, Manage Roles permission required
