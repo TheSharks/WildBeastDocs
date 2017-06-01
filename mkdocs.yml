@@ -28,7 +28,7 @@ repo_name: 'GitHub'
 repo_url: 'https://github.com/TheSharks/WildBeast'
 
 # Copyright
-copyright: 'Copyright © 2016 TheSharks, "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.'
+copyright: 'Copyright © 2016-2017 TheSharks, "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.'
 
 # Extra options
 extra:
