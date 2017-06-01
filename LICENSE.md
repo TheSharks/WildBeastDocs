@@ -1,4 +1,4 @@
-Copyright © 2016-2017 TheSharks
+Copyright © 2016-present TheSharks
 http://thesharks.xyz/
   
 All rights reserved.
