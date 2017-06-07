@@ -48,11 +48,10 @@ Commands.ping = {
   name: 'ping',
   help: 'Check if I still live.'
   timeout: 10,
-  usage: '<pong>', // Avoid alias duplication
-  overwrite: true, // WildBeast already has a command called ping, will overwrite with this
+  overwrite: true, // WildBeast already has a comman called ping, will overwrite with this
   aliases: ['pong'],
   level: 0,
-  fn: function(msg, suffix, bot) {
+  fn: function(msg) {
     msg.channel.sendMessage('I LIVE')
   }
 }
@@ -66,20 +65,14 @@ Example for command with import:
 var Commands = [] // Declaration of the command array
 var config = require('../../config.json') // Import config
 
-Commands.isbot = {
-  name: 'isbot',
-  help: 'Retrieve if bot is running with token.'
+Commands.prefix = {
+  name: 'prefix',
+  help: 'Ask the bot what the configured prefix is.'
   timeout: 30,
-  // No overwrites or so forth, so not included
-  aliases: ['bot'],
+  overwrite: true,
   level: 'master',
-  fn: function(msg, suffix, bot) {
-  	if (config.isbot === true) {
-    	msg.channel.sendMessage('I am currently running on a bot account.')
-	}
-	else {
-		msg.channel.sendMessage('I am currently not running on a bot account.')
-	}
+  fn: function(msg) {
+  	msg.channel.sendMessage('My prefix is ' + config.prefix)
   }
 }
 
