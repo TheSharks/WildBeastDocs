@@ -90,6 +90,8 @@ We'll now go over configuration in Kitematic. Click on `wildbeast` in the sideba
 We'll now walk you through the different sections in the config and what they do. Settings on Docker are a bit different as their prefix tells what they relate to. They can be in a messy order, but configure them in the order explained later.
   
 ### BOT options
+
+**Note**: User account support with this bot is deprecated and will be removed soon.
   
 Option | Explanation | Notes
 ------ | ----------- | -----
@@ -162,8 +164,8 @@ With the danger zone clarified, let's proceed to configuration.
 		- You can also open the URL and add your bot to the server at this point, so you don't forget it. It will have the permissions it wants precalculated due to the number after the `permissions` property. Just select your server from the dropdown list and add it. The bot won't do anything at this stage because we're not finished yet.
 		- If you can't select your server, it might be that you lack Manage Server permissions.
 - Prefix and other settings
-	- Setting the command prefix isn't really [rocket science](http://takeb1nzyto.space). This can be any special character, for instance `/`, `?` and so forth. When you have decided what prefix you want, just apply it to the `SETTINGS_PREFIX` option.
-	- You can also use multiple characters as a prefix, for instance `!!` and `++`.
+	- Setting the command prefix isn't really [rocket science](http://takeb1nzyto.space). This can be any special character, for instance `%`, `&` and so forth.
+	- You can also use multiple characters as a prefix, for instance `!!` and `//`. Avoid common single-character prefixes like `!` and `/` to avoid initial prefix conflicts. These can however be resolved with `customize` and changing the prefix for the server.
 	- Note that there is always a so-called global prefix: A mention. Saying `@BotName` in chat will function as a prefix as well. **This doesn't need to be specified in the options as it's always active.**
 	- The rest of the `SETTINGS` options are straight forward. `SETTINGS_AUTODELETEMSG` can be true or false, the message deletion times (`SETTINGS_DELETE_TIMEOUT` and `SETTINGS_DELETE_TIMEOUT_LONG`)can be whatever you want in milliseconds and `SETTINGS_MAXVCSLOTS` is just a number.
 - Permissions
@@ -179,18 +181,18 @@ With the danger zone clarified, let's proceed to configuration.
 		- **Therefore it is imperative that you keep this to yourself.**
 		- WildBeast maintainers will **NEVER** ask for your login details or API keys. Only show the options to trusted WildBeast maintainers with the `Staff` role in WildBot's Territory.
 	- imgflip
-		- The procedure for getting this isn't tricky. Just go to https://imgflip.com, create an account and input your username and password into the `API_KEYS_IMGFLIP_USERNAME` and `API_KEYS_IMGFLIP_PASSWORD` options.
+		- The procedure for getting this isn't tricky. Just go to [https://imgflip.com](https://imgflip.com), create an account and input your username and password into the `API_KEYS_IMGFLIP_USERNAME` and `API_KEYS_IMGFLIP_PASSWORD` options.
     - Google
     	- This API is used to retrieve data from YouTube, related to music playback.
-    		1. Go to https://console.developers.google.com and create a new project. Name it whatever you fancy. Nothing else needs to be changed unless you want to change the project ID or the app engine location.
+    		1. Go to [https://console.developers.google.com](the Google Developer Console) and create a new project. Name it whatever you fancy. Nothing else needs to be changed unless you want to change the project ID or the app engine location.
     		2. Wait a while as the project is being created.
     		3. When the creation process is completed, you'll get taken to the Dashboard screen of the project. In the sidebar on the left, click "Library".
     		4. This will take you to the API library. Select "YouTube Data API" as highlighted below.
 			![YT Data API](https://s10.postimg.org/86fmqm6kp/googleapi_lib.png)
-    		5. When the API page opens, click the "Enable" button in the top bar. Then you will get a notification saying that you need to create creditentials. That's exactly what we will do.
-    		6. Click the "Go to creditentials" button. In the next dropdowns, make them look like following.
-			![Creditentials](https://s21.postimg.org/ajmb4jah3/ytapi.png)
-    		7. Hit "What creditentials do I need?" and the page will generate a Google API key for you. Copy the API key and apply it to the `API_KEYS_GOOGLE` option.
+    		5. When the API page opens, click the "Enable" button in the top bar. Then you will get a notification saying that you need to create credentials. That's exactly what we will do.
+    		6. Click the "Go to credentials" button. In the next dropdowns, make them look like following.
+			![Credentials](https://s21.postimg.org/ajmb4jah3/ytapi.png)
+    		7. Hit "What credentials do I need?" and the page will generate a Google API key for you. Copy the API key and apply it to the `API_KEYS_GOOGLE` option.
     - Mashape
     	- This API is used with the `fortunecow` command.
 		1. Go to [the Mashape site](https://market.mashape.com/login) and login as you prefer, GitHub login is supported.
