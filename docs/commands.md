@@ -55,6 +55,7 @@ leetspeak | Encode a message to 1337sp3ak. | leetspeak `<message>` | 0
 magic8ball | Ask for a decision from the magic 8 ball. |  | 0
 meme | Make a meme. [Meme types here](https://github.com/TheSharks/WildBeast/blob/master/runtime/commands/memes.json) | meme `<memetype>` `"<Upper line>"` `"<Bottom line>"` | 0
 randomcat | Return a random cat picture. |  | 0
+randommeme | Return a random meme. |  | 0 
 rip | Posts a ripme.xyz about someone. | rip `<name>` | 0
 rule34 | Search for an image via rule34. | rule34 `<searchwords>` | 0 (NSFW)
 stroke | Stroke someone's ego. | stroke `<name>` | 0
@@ -89,6 +90,7 @@ tag random | Retrieve a random tag from the database. | tag random |
 tag raw | Return the raw data of a tag. | tag raw `<name>` |
 
 ## Customize command
+
 The customize command is a multifaceted command that needs its own table to illustrate how it works.
 
 The customize command makes changes to the server-specific database of WildBeast. It allows you to set a custom member join announcement and tweak some responses. You need a permission level of 3 to use the customize command.   
