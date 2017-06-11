@@ -8,38 +8,40 @@ The prefix is not specified in this reference. You have to apply your own prefix
 
 ### General commands
 
-Name | Description | Usage | Level
----- | ----------- | ----- | -----
-addrole | Add a role to a user. | addrole @User `<role name>` | 3, Manage Roles permission required
-ban | Ban a user from the server. | ban @User `<days of messages to delete>`| Ban permission required.
-colorrole | Change a role color to a hexadecimal value. Hashtag accepted but not required. | colorrole `<#FFFFFF/FFFFFF>` `<role name>` | 3, Manage Roles permission required
+Name | Description | Usage | Level/Required permission
+---- | ----------- | ----- | -------------------------
+addrole | Add a role to a user. | addrole @User `<role name>` | 3, Manage Roles
+ban | Ban a user from the server. | ban @User `<days of messages to delete>`| Ban Members
+colorrole | Change a role color to a hexadecimal value. Hashtag accepted but not required. | colorrole `<#FFFFFF/FFFFFF>` `<role name>` | 3, Manage Roles
 customize | Customize the bot's behavior in the server. | See the table below. | 3
 eval | Evaluate Discordie code. | eval `<code>` | master
+hackban | Ban a member that is not a member of the server (By ID). | hackban `<userid/multiple-ids>` `<reason>` | Ban Members
 hello | Make the bot greet you. |  | 0
 info | Print information on the bot. |  | 0
 join-server | Tell the bot to join a server. | join-server `<invite-link>` | 0
-kick | Kick a user from the server. | kick @User | Kick permission required.
+kick | Kick a user from the server. | kick @User | Kick Members
 killswitch | Close the bot process. |  | master
 leave-server | Leave a server. |  | 3
 namechanges | Detect name changes from a user. | namechanges @User | 0
 ping | Ping the bot to test responsiveness. |  | 0
 plaineval | Same as eval, just with a different scope. | plaineval `<code>` | master
 prefix | Make the bot return its current prefix. |  | 0
-purge | Delete a specified count of messages. | purge `<amount>` | Manage Messages permission required.
+purge | Delete a specified count of messages. | purge `<amount>` | Manage Messages
 rankup | Bump a user's permission level up by one notch. | rankup @User | 3
 say | Make the bot say something you specify. | say `<message>` | 0
 server-info | Print information on the server. |  | 0
 setlevel | Set the level of a user or role. | setlevel `<-1/0/1/2/3>` `<@User/@Role/@everyone>` | 3
 setnsfw | Change NSFW allowance in a channel. | setnsfw `<on/off>` | 3
 setstatus | Change the bot's playing status. | setstatus `<message>` | master
+softban | Ban and immediately unban a member, deleting their messages in the process. | softban `<mention/userid>` `<reason>` | Ban Members
 takerole | Take a role from a user. | takerole @User `<role name>` | 3, Manage Roles permission required
 twitch | Return if a Twitch streamer is live or not. |  | 0
 userinfo | Print info on a user. |  | 0
 
 ### Fun commands
 
-Name | Description | Usage | Level
----- | ----------- | ----- | -----
+Name | Description | Usage | Level/Required permission
+---- | ----------- | ----- | -------------------------
 advice | Ask for some advice from the bot. |  | 0
 cleverbot | Talk to the bot, and it will respond. | cleverbot `<message>` | 0
 dice | Roll the dice. |  | 0
@@ -63,8 +65,8 @@ yomomma | Yo momma is so fat that... You know the drill. |  | 0
 
 ### Music commands
 
-Name | Description | Usage | Level
----- | ----------- | ----- | -----
+Name | Description | Usage | Level/Required permission
+---- | ----------- | ----- | -------------------------
 leave-voice | Leave the voice channel. |  | 1
 music | Pause or resume music playing. |  | 1
 playlist | Print the current playlist. If the delete subcommand is passed, remove a song from the playlist. Number specifies track to remove, all means queue wipe. | playlist **OR** playlist delete `<position>/all` | 0
@@ -76,8 +78,8 @@ voteskip | Vote to skip a song. |  | 1
 
 ### Tag commands
 
-Name | Description | Usage | Level
----- | ----------- | ----- | -----
+Name | Description | Usage | Level/Required permission
+---- | ----------- | ----- | -------------------------
 tag | Base command for tags. Returns a tag if specified. | tag `<subcommand/name>` | 0 (Also subcommands)
 tag create | Create a tag. | tag create `<name>` `<content>` |
 tag delete | Delete a tag. | tag delete `<name>` |
