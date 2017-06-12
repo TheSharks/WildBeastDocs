@@ -1,38 +1,88 @@
-This is a fairly concise document on gateway sharding with WildBeast.
+This is a quick document about Discord gateway sharding and how WildBeast uses this technology to it's advantage.
 
-**NOTE:** Shard mode is an advanced feature and is only meant for larger bots. If you don't understand the Discord gateway sharding system properly, don't continue!
+**Note:** Shard mode with WildBeast is an advanced feature and only intended for bots with over 2500 guilds. If you aren't proficient with Discord's gateway sharding and websocket technologies, don't attempt to use this feature!
 
+## Terminology
 Quick terminology table:
 
 Term | Definition
---- | ---
-Shard | Partial WildBeast instance
-Guild | Server
+---- | ----------
+Shard | A partial WildBeast instance.
+Guild | A Discord server.
+g/s | Shorthand for "guilds per shard".
    
-## Sharding
+## What is sharding?
 
-The Discord gateway allows you to split your guilds off into multiple 'shards'. Using this you can balance gateway load better and greatly increase performance.
+### The metaphorical viewpoint
 
-What this in practice means is that if you run 22 shards for 2500 guilds, those guilds would be distributed over those shards. This would mean an approximate of 114 guilds/shard.
-    
-With shard mode activated, the distribution of guilds is calculated with the function `(guild_id >> 22) % num_shards == shard_id`. Guilds that are not on your shard will not appear in the shard list, meaning they will not show up in the `guilds` object in the ready packet. You won't in addition receive any events for guilds not on your shard.
+You can think of sharding like this: You have a big glass ball that is sending power to a recipient. If a certain amount and more of power is being sent at one time, the recipient will be overwhelmed with data. But if you shatter the ball and let the pieces (Shards) send smaller amounts of power each, the load will be distributed better.
 
-## Enabling sharding
+This example really is shitty, but it's best I could come up with...
 
-**Notes:**
-`num_shards` must be greater than 2. Even numbers are good to have. (Having 1 shard is pointless as that is the default operation mode)    
-`shard_id` must not exceed or be equal to `num_shards`, and should start at 0.    
+### The technical viewpoint
 
-To start WildBeast in shard mode, change your start-up command to this.
+In practice, the Discord gateway allows you to split your guilds off into multiple shards. Using the logic above you can decrease gateway load and greatly increase bot performance. Discord also enforces gateway sharding on bots with more than 2500 guilds.
+
+Example: Your bot is on 10000 servers. Theoretically, the lowest possible shard count is 5 as that gives 2500 g/s. It is however in practice impossible since it leaves no lee-way for guild additions.
+
+A better idea is running 10 shards to have about 1000 g/s. 1000 g/s should be something to strive for but it's not a requirement. That leaves space for guild count growth and balances your load evenly.
+
+### Maths with sharding
+
+#### Shard count
+
+The guild distribution is calculated like this:
+
+`guildCount / desiredGps = shardCount`
+
+Element    | Explanation
+---------- | -----------
+guildCount | The amount of guilds the bot is on.
+desiredGps | Desired guilds per shard ratio.
+shardCount | The amount of shards you will need.
+
+Example: `10000 / 1000 = 10`
+
+#### Shard ID
+
+This is a bit more complex calculation. If you are receiving events from a guild, you can "trace" the shard the events come from without additional logging.
+
+The formula is the following:
+
+`(guildId >> 22) % shardCount = shardNumber`
+
+Element | Explanation
+------- | -----------
+guildId | The server ID tyou want to fidn the shard for.
+shardCount | The amount of shards you have in total.
+shardNumber | The shard which the guild is on. (Also referred to as shard ID)
+
+You will not receive events from guilds that are not on your current shard (As in the instance you're viewing in logs, for instance). They will not appear in `guilds` object in the READY packet either.
+
+## Sharding with WildBeast
+
+### Enabling sharding
+
+To start WildBeast in shard mode, you need to use the following format.
 
 ```bash
-node DougBot.js --shardmode --shardcount=<num_shards> --shardid=<shard_id>
+node DougBot.js --shardmode --shardcount=<shardCount> --shardid=<shardNumber>
 ```
 
-In which you replace the `<num_shards>` placeholder with the desired number of shards and the `<shard_id>` as described above.
+**Some notes:**
 
-You need to start exactly the same amount of processes as you are requesting the gateway to propagate (`num_shards`), and `shard_id` must be unique for each process. 
+`shardCount` must be > 2. You should have an even number of shards and the integer should naturally be unsigned. Having 1 shard is pointless as this is the default mode.
 
-**IMPORTANT NOTE:** Starting September 30th 2016, Discord will roll out *enforced gateway sharding for bots with over 2500 guilds* to balance their gateway load. More info: https://github.com/hammerandchisel/discord-api-docs/issues/17
+`shardNumber` must not exceed or be equal to `shardCount`, and should start at 0.
 
-You can read more about the gateway sharding system from the link above as well.
+You need to start exactly the same amount of processes as you are requesting the gateway to propagate (`shardCount`), and `shardId` must be unique for each process.
+
+### Starting in shard mode
+
+To start WildBeast in shard mode, run the startup command as described above. Example with the values we used above:
+
+```bash
+node DougBot.js --shardmode --shardcount=10 --shardid=0
+```
+
+That in a nutshell is how Discord gateway sharding works and how to use it with WildBeast.
