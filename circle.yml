@@ -11,8 +11,6 @@ test:
 compile:
   override:
     - mkdocs build
-    - touch site/CNAME
-    - echo "docs.thesharks.xyz" > site/CNAME
 deployment:
   production:
     branch: master
