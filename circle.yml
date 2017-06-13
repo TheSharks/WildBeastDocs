@@ -11,12 +11,4 @@ deployment:
   production:
     branch: master
     commands: 
-    - cd ./site
-    - git init
-    - git checkout -b "gh-pages"
-    - git config user.name "CircleCI"
-    - git config user.email "circleci@thesharks.xyz"
-    - git add . -A
-    - git commit -m "[chore] Compile new documentation"
-    - git remote add prod https://github.com/TheSharks/WildBeast.git
-    - git push prod gh-pages
+    - mkdocs gh-deploy
