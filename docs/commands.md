@@ -1,8 +1,9 @@
 This is the command reference for WildBeast. You can find more elaborative information here on each of the commands currently implemented.
 
-If you have need for any further info, you can send the message `{prefix}help <command>` to the bot to get info about timeouts and so forth. For lengthier explanations on the usage of the commands, check out #le-guide in [WildBot's Territory](https://discord.gg/wildbot).
+!!! tip
+    If you have need for any further info, you can send the message `{prefix}help <command>` to the bot to get info about timeouts and so forth. For lengthier explanations on the usage of the commands, check out `#le-guide` in [WildBot's Territory](https://discord.gg/wildbot).
 
-The prefix is not specified in this reference. You have to apply your own prefix to the commands. If you don't know the prefix, type `@<botname> prefix` in the server you're using.
+The prefix is not specified in this reference. You have to apply your own prefix to the commands. If you don't know the prefix, type `@<BotName> prefix` in the server you're using.
 
 ## Command reference
 

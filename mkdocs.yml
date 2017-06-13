@@ -1,37 +1,44 @@
-# MkDocs config options
+##### MkDocs configuration #####
 
 # Meta
 site_name: 'WildBeast Documentation'
 site_description: 'Welcome to the WB documentation'
 site_author: 'TheSharks'
+site_url: 'https://docs.thesharks.xyz'
+site_favicon: 'img/favicon.ico'
 
 # Sitemap
 pages:
   - Home: 'index.md'
-  - Command reference: 'commands.md'
-  - Windows Guide: 'install_windows.md'
-  - Linux Guide: 'install_linux.md'
-  - Docker Guide: 'install_docker.md'
-  - Updating: 'updating.md'
-  - FAQ: 'faq.md'
-  - Custom Command Framework: 'custom_commands.md'
-  - Gateway Sharding System: 'sharding.md'
-  - Replace PowerShell with CMD: 'powershell.md'
+  - Commands:
+    - Command reference: 'commands.md'
+    - Custom commands: 'custom_commands.md'
+  - Installation:
+    - Linux installation: 'install_linux.md'
+    - Windows installation: 'install_windows.md'
+    - Docker installation: 'install_docker.md'
+  - Selfhosters:
+    - Updating: 'updating.md'
+    - Sharding: 'sharding.md'
+    - PowerShell to CMD: 'powershell.md'
+  - Credits: 'credits.md'
 
 # Theme
 theme: 'material'
 
-# Material config options
+##### Material configuration #####
 
 # Repo
-repo_name: 'GitHub'
-repo_url: 'https://github.com/TheSharks/WildBeast'
+repo_name: 'TheSharks/WildBeastDocs'
+repo_url: 'https://github.com/TheSharks/WildBeastDocs'
 
 # Copyright
 copyright: 'Copyright © 2016-2017 TheSharks, "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.'
 
-# Extra options
+# Additional options
 extra:
+  feature:
+    tabs: true
   logo: 'img/wb-head-circle.png'
   palette:
     primary: 'indigo'
@@ -39,6 +46,13 @@ extra:
   font:
     text: 'Droid Sans'
     font: 'Droid Sans Mono'
-  author:
-    github: 'TheSharks'
-    twitter: 'Dougley35'
+  social:
+    - type: 'github'
+      link: 'https://github.com/TheSharks'
+
+# Markdown extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.critic
+  - pymdownx.inlinehilite
