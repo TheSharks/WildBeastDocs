@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Welcome to the WB documentation">
+      
+      
+      
+        <meta name="author" content="TheSharks">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.4">
+    
+    
+      
+        <title>Gateway Sharding System - WildBeast Documentation</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-e2807e330f.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid Sans:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="WildBeast Documentation" class="md-logo md-header-nav__button">
+            <img src="../img/wb-head-circle.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Gateway Sharding System
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/TheSharks/WildBeast" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../img/wb-head-circle.png">
+      </i>
+    
+    WildBeast Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/TheSharks/WildBeast" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../commands/" title="Command reference" class="md-nav__link">
+      Command reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_windows/" title="Windows Guide" class="md-nav__link">
+      Windows Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_linux/" title="Linux Guide" class="md-nav__link">
+      Linux Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_docker/" title="Docker Guide" class="md-nav__link">
+      Docker Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../updating/" title="Updating" class="md-nav__link">
+      Updating
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../custom_commands/" title="Custom Command Framework" class="md-nav__link">
+      Custom Command Framework
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Gateway Sharding System
+      </label>
+    
+    <a href="./" title="Gateway Sharding System" class="md-nav__link md-nav__link--active">
+      Gateway Sharding System
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" title="Terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-sharding" title="What is sharding?" class="md-nav__link">
+    What is sharding?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-metaphorical-viewpoint" title="The metaphorical viewpoint" class="md-nav__link">
+    The metaphorical viewpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-technical-viewpoint" title="The technical viewpoint" class="md-nav__link">
+    The technical viewpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maths-with-sharding" title="Maths with sharding" class="md-nav__link">
+    Maths with sharding
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shard-count" title="Shard count" class="md-nav__link">
+    Shard count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shard-id" title="Shard ID" class="md-nav__link">
+    Shard ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharding-with-wildbeast" title="Sharding with WildBeast" class="md-nav__link">
+    Sharding with WildBeast
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-sharding" title="Enabling sharding" class="md-nav__link">
+    Enabling sharding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-in-shard-mode" title="Starting in shard mode" class="md-nav__link">
+    Starting in shard mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../powershell/" title="Replace PowerShell with CMD" class="md-nav__link">
+      Replace PowerShell with CMD
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" title="Terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-sharding" title="What is sharding?" class="md-nav__link">
+    What is sharding?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-metaphorical-viewpoint" title="The metaphorical viewpoint" class="md-nav__link">
+    The metaphorical viewpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-technical-viewpoint" title="The technical viewpoint" class="md-nav__link">
+    The technical viewpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maths-with-sharding" title="Maths with sharding" class="md-nav__link">
+    Maths with sharding
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shard-count" title="Shard count" class="md-nav__link">
+    Shard count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shard-id" title="Shard ID" class="md-nav__link">
+    Shard ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharding-with-wildbeast" title="Sharding with WildBeast" class="md-nav__link">
+    Sharding with WildBeast
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-sharding" title="Enabling sharding" class="md-nav__link">
+    Enabling sharding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-in-shard-mode" title="Starting in shard mode" class="md-nav__link">
+    Starting in shard mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/TheSharks/WildBeast/edit/master/docs/sharding.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Gateway Sharding System</h1>
+                
+                <p>This is a quick document about Discord gateway sharding and how WildBeast uses this technology to it's advantage.</p>
+<p><strong>Note:</strong> Shard mode with WildBeast is an advanced feature and only intended for bots with over 2500 guilds. If you aren't proficient with Discord's gateway sharding and websocket technologies, don't attempt to use this feature!</p>
+<h2 id="terminology">Terminology</h2>
+<p>Quick terminology table:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shard</td>
+<td>A partial WildBeast instance.</td>
+</tr>
+<tr>
+<td>Guild</td>
+<td>A Discord server.</td>
+</tr>
+<tr>
+<td>g/s</td>
+<td>Shorthand for "guilds per shard".</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-sharding">What is sharding?</h2>
+<h3 id="the-metaphorical-viewpoint">The metaphorical viewpoint</h3>
+<p>You can think of sharding like this: You have a big glass ball that is sending power to a recipient. If a certain amount and more of power is being sent at one time, the recipient will be overwhelmed with data. But if you shatter the ball and let the pieces (Shards) send smaller amounts of power each, the load will be distributed better.</p>
+<p>This example really is shitty, but it's best I could come up with...</p>
+<h3 id="the-technical-viewpoint">The technical viewpoint</h3>
+<p>In practice, the Discord gateway allows you to split your guilds off into multiple shards. Using the logic above you can decrease gateway load and greatly increase bot performance. Discord also enforces gateway sharding on bots with more than 2500 guilds.</p>
+<p>Example: Your bot is on 10000 servers. Theoretically, the lowest possible shard count is 5 as that gives 2500 g/s. It is however in practice impossible since it leaves no lee-way for guild additions.</p>
+<p>A better idea is running 10 shards to have about 1000 g/s. 1000 g/s should be something to strive for but it's not a requirement. That leaves space for guild count growth and balances your load evenly.</p>
+<h3 id="maths-with-sharding">Maths with sharding</h3>
+<h4 id="shard-count">Shard count</h4>
+<p>The guild distribution is calculated like this:</p>
+<p><code>guildCount / desiredGps = shardCount</code></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>guildCount</td>
+<td>The amount of guilds the bot is on.</td>
+</tr>
+<tr>
+<td>desiredGps</td>
+<td>Desired guilds per shard ratio.</td>
+</tr>
+<tr>
+<td>shardCount</td>
+<td>The amount of shards you will need.</td>
+</tr>
+</tbody>
+</table>
+<p>Example: <code>10000 / 1000 = 10</code></p>
+<h4 id="shard-id">Shard ID</h4>
+<p>This is a bit more complex calculation. If you are receiving events from a guild, you can "trace" the shard the events come from without additional logging.</p>
+<p>The formula is the following:</p>
+<p><code>(guildId &gt;&gt; 22) % shardCount = shardNumber</code></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>guildId</td>
+<td>The server ID tyou want to fidn the shard for.</td>
+</tr>
+<tr>
+<td>shardCount</td>
+<td>The amount of shards you have in total.</td>
+</tr>
+<tr>
+<td>shardNumber</td>
+<td>The shard which the guild is on. (Also referred to as shard ID)</td>
+</tr>
+</tbody>
+</table>
+<p>You will not receive events from guilds that are not on your current shard (As in the instance you're viewing in logs, for instance). They will not appear in <code>guilds</code> object in the READY packet either.</p>
+<h2 id="sharding-with-wildbeast">Sharding with WildBeast</h2>
+<h3 id="enabling-sharding">Enabling sharding</h3>
+<p>To start WildBeast in shard mode, you need to use the following format.</p>
+<pre><code class="bash">node DougBot.js --shardmode --shardcount=&lt;shardCount&gt; --shardid=&lt;shardNumber&gt;
+</code></pre>
+
+<p><strong>Some notes:</strong></p>
+<p><code>shardCount</code> must be &gt; 2. You should have an even number of shards and the integer should naturally be unsigned. Having 1 shard is pointless as this is the default mode.</p>
+<p><code>shardNumber</code> must not exceed or be equal to <code>shardCount</code>, and should start at 0.</p>
+<p>You need to start exactly the same amount of processes as you are requesting the gateway to propagate (<code>shardCount</code>), and <code>shardId</code> must be unique for each process.</p>
+<h3 id="starting-in-shard-mode">Starting in shard mode</h3>
+<p>To start WildBeast in shard mode, run the startup command as described above. Example with the values we used above:</p>
+<pre><code class="bash">node DougBot.js --shardmode --shardcount=10 --shardid=0
+</code></pre>
+
+<p>That in a nutshell is how Discord gateway sharding works and how to use it with WildBeast.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../custom_commands/" title="Custom Command Framework" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Custom Command Framework
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../powershell/" title="Replace PowerShell with CMD" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Replace PowerShell with CMD
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2016-2017 TheSharks, "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-06a3e72efd.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

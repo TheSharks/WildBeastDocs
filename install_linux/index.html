@@ -1,0 +1,1340 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Welcome to the WB documentation">
+      
+      
+      
+        <meta name="author" content="TheSharks">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.4">
+    
+    
+      
+        <title>Linux Guide - WildBeast Documentation</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-e2807e330f.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid Sans:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="WildBeast Documentation" class="md-logo md-header-nav__button">
+            <img src="../img/wb-head-circle.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Linux Guide
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/TheSharks/WildBeast" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../img/wb-head-circle.png">
+      </i>
+    
+    WildBeast Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/TheSharks/WildBeast" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../commands/" title="Command reference" class="md-nav__link">
+      Command reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_windows/" title="Windows Guide" class="md-nav__link">
+      Windows Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Linux Guide
+      </label>
+    
+    <a href="./" title="Linux Guide" class="md-nav__link md-nav__link--active">
+      Linux Guide
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-setup" title="Pre-setup" class="md-nav__link">
+    Pre-setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-node" title="Installing Node" class="md-nav__link">
+    Installing Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-wildbeast" title="Retrieving WildBeast" class="md-nav__link">
+    Retrieving WildBeast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-additional-dependencies" title="Installing additional dependencies" class="md-nav__link">
+    Installing additional dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-rethinkdb-and-creating-the-db" title="Installing RethinkDB and creating the DB" class="md-nav__link">
+    Installing RethinkDB and creating the DB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-sftp" title="Setting up SFTP" class="md-nav__link">
+    Setting up SFTP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-the-example-config" title="Retrieving the example config" class="md-nav__link">
+    Retrieving the example config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-config-file" title="The config file" class="md-nav__link">
+    The config file
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bot-section" title="Bot section" class="md-nav__link">
+    Bot section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-section" title="Database section" class="md-nav__link">
+    Database section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings-section" title="Settings section" class="md-nav__link">
+    Settings section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bezerk-section" title="Bezerk section" class="md-nav__link">
+    Bezerk section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch-section" title="Elasticsearch section" class="md-nav__link">
+    Elasticsearch section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-section" title="Permissions section" class="md-nav__link">
+    Permissions section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-keys-section" title="API keys section" class="md-nav__link">
+    API keys section
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-the-config" title="Making the config" class="md-nav__link">
+    Making the config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-bot" title="Running the bot" class="md-nav__link">
+    Running the bot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rethinkdb-dashboard" title="RethinkDB Dashboard" class="md-nav__link">
+    RethinkDB Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-running-wildbeast" title="Background running WildBeast" class="md-nav__link">
+    Background running WildBeast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-pm2-and-starting-the-bot" title="Installing PM2 and starting the bot" class="md-nav__link">
+    Installing PM2 and starting the bot
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_docker/" title="Docker Guide" class="md-nav__link">
+      Docker Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../updating/" title="Updating" class="md-nav__link">
+      Updating
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../custom_commands/" title="Custom Command Framework" class="md-nav__link">
+      Custom Command Framework
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sharding/" title="Gateway Sharding System" class="md-nav__link">
+      Gateway Sharding System
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../powershell/" title="Replace PowerShell with CMD" class="md-nav__link">
+      Replace PowerShell with CMD
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-setup" title="Pre-setup" class="md-nav__link">
+    Pre-setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-node" title="Installing Node" class="md-nav__link">
+    Installing Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-wildbeast" title="Retrieving WildBeast" class="md-nav__link">
+    Retrieving WildBeast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-additional-dependencies" title="Installing additional dependencies" class="md-nav__link">
+    Installing additional dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-rethinkdb-and-creating-the-db" title="Installing RethinkDB and creating the DB" class="md-nav__link">
+    Installing RethinkDB and creating the DB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-sftp" title="Setting up SFTP" class="md-nav__link">
+    Setting up SFTP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-the-example-config" title="Retrieving the example config" class="md-nav__link">
+    Retrieving the example config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-config-file" title="The config file" class="md-nav__link">
+    The config file
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bot-section" title="Bot section" class="md-nav__link">
+    Bot section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-section" title="Database section" class="md-nav__link">
+    Database section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings-section" title="Settings section" class="md-nav__link">
+    Settings section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bezerk-section" title="Bezerk section" class="md-nav__link">
+    Bezerk section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch-section" title="Elasticsearch section" class="md-nav__link">
+    Elasticsearch section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-section" title="Permissions section" class="md-nav__link">
+    Permissions section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-keys-section" title="API keys section" class="md-nav__link">
+    API keys section
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-the-config" title="Making the config" class="md-nav__link">
+    Making the config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-bot" title="Running the bot" class="md-nav__link">
+    Running the bot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rethinkdb-dashboard" title="RethinkDB Dashboard" class="md-nav__link">
+    RethinkDB Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-running-wildbeast" title="Background running WildBeast" class="md-nav__link">
+    Background running WildBeast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-pm2-and-starting-the-bot" title="Installing PM2 and starting the bot" class="md-nav__link">
+    Installing PM2 and starting the bot
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/TheSharks/WildBeast/edit/master/docs/install_linux.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Linux Guide</h1>
+                
+                <p>Welcome to the installation guide for WildBeast on Linux! In this guide, we'll walk you through the installation and deployment process for the WildBeast bot.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A Linux server<ul>
+<li>Type: VPS is enough to run WB, dedicated is a bit overshooting unless you have something else running there as well.</li>
+<li>OS: Ubuntu LTS or latest, optionally Debian 8</li>
+<li>RAM: May work on 256 MB, 512MB is recommended. If you plan on having it on just a few servers. Scale up if necessary.</li>
+<li>Processor: Single core @ 2.60 GHz or higher will work just fine, as above.</li>
+<li>SSH access to the server.</li>
+</ul>
+</li>
+<li>Programs<ul>
+<li>SSH client, i.e. <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a> or <a href="https://www.bitvise.com/ssh-client-download">BitVise</a> for executing commands on the server</li>
+<li>SFTP program, i.e. <a href="https://filezilla-project.org/">FileZilla</a> or <a href="https://winscp.net/eng/index.php">WinSCP</a> for quick editing and upload of files</li>
+<li>A code editor, i.e. <a href="https://notepad-plus-plus.org/">Notepad++</a> or <a href="https://atom.io">Atom</a> or <a href="http://brackets.io/">Brackets</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="pre-setup">Pre-setup</h2>
+<p>We highly recommend that you go through a basic Linux server setup before starting this, which includes adding a new user, disabling root login (If you feel so) and adding key authentication for logins. If you have no idea what we mean by this, see the <a href="https://www.digitalocean.com/community/tutorials/?q=ubuntu+server+setup&amp;primary_filter=popular">Digital Ocean guide for initial server setup</a>. When this is complete, you can proceed to the next step.</p>
+<h2 id="installation">Installation</h2>
+<p>General note: During installation, some administrative tasks will be executed. For these to work (Especially installations), <strong>you need to run these commands as sudo</strong>! They might error if you don't.
+Luckily, the process of executing as sudo isn't that complicated. Just put <code>sudo</code> ahead of every install command or other administrative equivalent.
+You will be asked for a password when doing the command, that's all that really is added.
+<strong>Keep this in mind when setting up, so you don't waste our time with errors that stem from lacking permissions!</strong>
+While you may think running the following commands as the root user is easy, we advice against it due to the security risks involved when using such a powerful user, instead please use <code>sudo</code>.</p>
+<h2 id="installing-node">Installing Node</h2>
+<p>First off, we'll install Node.JS, the runtime WildBeast uses, with <a href="https://github.com/mklement0/n-install">n-install</a> which installs <a href="https://github.com/tj/n">n</a>. <strong>Note:</strong> n installs node <em>per user</em> so if you have more than one user on your machine, they must also install n.</p>
+<p><strong>Do not include the # marked lines, they are only descriptive of the commands.</strong></p>
+<pre><code class="bash"># Install prerequisites
+sudo apt-get install -y curl make build-essential
+# Install n and node lts
+curl -L https://git.io/n-install | bash -s -- -y lts
+# Reload bash
+source ~/.bashrc    # ZSH users source their ~/.zshrc file
+</code></pre>
+
+<p>After that is completed, you can check your Node version by executing the following:</p>
+<pre><code class="bash">node -v
+</code></pre>
+
+<p>The output should then be this or close to that.</p>
+<pre><code class="bash">v6.10.2
+</code></pre>
+
+<h2 id="retrieving-wildbeast">Retrieving WildBeast</h2>
+<p>Now we'll retrieve the WildBeast files via Git. Install it with the following command:</p>
+<pre><code class="bash">sudo apt-get install -y git
+</code></pre>
+
+<p>When the install completes, the following set of commands will download the necessary files to run WildBeast and change into the newly created directory.</p>
+<pre><code class="bash">git clone https://github.com/TheSharks/WildBeast.git &amp;&amp; cd WildBeast
+</code></pre>
+
+<p>If you mess something up during the installation process, you can delete the directory with <code>rm -d -f -r ~/WildBeast</code> and reclone the Git repo.</p>
+<h2 id="installing-additional-dependencies">Installing additional dependencies</h2>
+<p>Now it's time to install the rest of the dependencies for WildBeast.</p>
+<p>Next, we will install FFMPEG. <strong>This is a crucial step if you want to use music playback, so pay attention!</strong></p>
+<p><details>
+ <summary><strong>Commands to install FFMPEG on Ubuntu 14.04</strong> (click here)</summary><p></p>
+<pre><code class="bash">sudo add-apt-repository ppa:mc3man/trusty-media &amp;&amp; sudo apt-get update &amp;&amp; sudo apt-get install ffmpeg -y
+</code></pre>
+
+<p></p></details></p>
+<p><details>
+ <summary><strong>Commands to install FFMPEG on Ubuntu 16.04</strong> (click here)</summary><p></p>
+<pre><code class="bash">sudo apt-get install -y ffmpeg
+</code></pre>
+
+<p></p></details></p>
+<p><details>
+  <summary><strong>Commands to install FFMPEG on Debian 8</strong> (click here)</summary><p>
+Edit <strong>/etc/apt/sources.list</strong> from the terminal using vi or nano, this will require the use of <code>sudo</code>. Alternatively edit this file using SFTP with the methods described later in this guide.
+Enable the non-free repo by finding and changing the following or similar line: </p>
+<pre><code class="bash">deb http://mirror.us.leaseweb.net/debian/ jessie main
+</code></pre>
+
+<p>to look like this now: </p>
+<pre><code class="bash">deb http://mirror.us.leaseweb.net/debian/ jessie main non-free
+</code></pre>
+
+<p>Enable the backports repo by adding this line at the bottom of the file: </p>
+<pre><code class="bash">deb http://mirror.us.leaseweb.net/debian/ jessie-backports main contrib non-free
+</code></pre>
+
+<p>Now run the following commands to update the repo information and install FFMPEG</p>
+<pre><code class="bash">sudo apt-get update &amp;&amp; sudo apt-get install -y ffmpeg
+</code></pre>
+
+<p></p></details></p>
+<p>Without changing workdir, we'll now install the Node modules required for usage in WildBeast. Execute the following:</p>
+<pre><code class="bash">npm install
+</code></pre>
+
+<p>This will likely take a while as it has a lot to retrieve. If you get warns (Yellow text) you can ignore them as long as the output resembles to the following.</p>
+<pre><code class="bash">WildBeast@4.0.0 /home/(yourhomedir)
++-- cleverbot-node@0.2.2
+| +-- crypto@0.0.3
+| `-- http@0.0.0
++-- discordie@0.8.1
+...
+</code></pre>
+
+<h2 id="installing-rethinkdb-and-creating-the-db">Installing RethinkDB and creating the DB</h2>
+<p>As of WildBeast version 4.0.0, RethinkDB is used to store server-specific data. This includes server owner, customize options and a whole bunch of other things.</p>
+<p><strong>Important note before starting:</strong> Do not fiddle with RethinkDB options or execute commands outside of the ones we tell you to unless you understand RethinkDB and can unbork it yourself. We will not start solving your database if you messed it up.</p>
+<p>Run the following commands one at a time.</p>
+<p>NOTE: The first command is <strong>a single command</strong>. If it takes up multiple lines here in the docs, that is due to physical screen size. <strong>Make sure to paste it in as a whole!</strong></p>
+<p><details>
+ <summary><strong>Commands to install RethinkDB on Ubuntu</strong> (click here)</summary><p></p>
+<pre><code class="bash">source /etc/lsb-release &amp;&amp; echo &quot;deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main&quot; | sudo tee /etc/apt/sources.list.d/rethinkdb.list
+wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install rethinkdb
+</code></pre>
+
+<p></p></details></p>
+<p><details>
+ <summary><strong>Commands to install RethinkDB on Debian</strong> (click here)</summary><p></p>
+<pre><code class="bash">echo &quot;deb http://download.rethinkdb.com/apt `lsb_release -cs` main&quot; | sudo tee /etc/apt/sources.list.d/rethinkdb.list
+wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install rethinkdb
+</code></pre>
+
+<p></p></details></p>
+<p>When RethinkDB has installed, run the following command. Keep in mind if you restart your server you will need to run this again to start the database service:</p>
+<pre><code class="bash">rethinkdb --daemon
+</code></pre>
+
+<p>If RethinkDB runs without errors, you should be good to go.</p>
+<h2 id="configuration">Configuration</h2>
+<h2 id="setting-up-sftp">Setting up SFTP</h2>
+<p>Next we'll make a config file for WildBeast. Unless you love your command line and editing stuff that way, this is the step where we'd advise you to bring out FileZilla. Using this program, you can transfer files from and to the server. This speeds up the editing process.</p>
+<p>Start up FileZilla and open the server manager by hitting Ctrl+S. Click "New Site" and name it whatever you prefer. Then fill in the server's IP address. By default, SFTP (SSH File Transfer Protocol) connections go to port 22.
+In the dropdown menu below, select SFTP. <strong>Using normal FTP will initiate <a href="https://cdn.discordapp.com/attachments/196995089858297857/209314092844974080/1468724776872.jpg">maximum borkdrive</a> so don't use that.</strong>
+In the field below, you'll be setting the login method. Depending on the level of privacy or ease you want, you can select either <em>Normal</em> or <em>Ask for password</em>. Fill in your login details accordingly.</p>
+<p>Unless you know what you are doing, <strong>don't touch the rest of the tabs</strong>. They are fine as they are.</p>
+<p>Your site should be something like the example below.</p>
+<p><img alt="FileZilla site" src="https://s22.postimg.org/75w8ta65d/filezilla.png" /></p>
+<h2 id="retrieving-the-example-config">Retrieving the example config</h2>
+<p>Connect to the server in FileZilla. You should now see the so-called remote site in FileZilla. Open the WildBeast directory. In here you can find a file named <code>config.example.json</code>.
+Right click that file and select "Download". This will download the file to your computer for editing. On the left-hand side of the screen, you can see where the file was downloaded.
+Find <code>config.example.json</code> on your PC and open it using Notepad++ or any other code editor. <strong>Do not edit it with Windows Notepad, that will be a mess.</strong></p>
+<h2 id="the-config-file">The config file</h2>
+<p>When opening the config file, you should have a file that looks like the <a href="https://github.com/TheSharks/WildBeast/blob/master/config.example.json">example config</a> (The CSE is deprecated and likely to be removed, but the others are still needed)</p>
+<p>We'll now walk you through the different sections in the config and what they do.</p>
+<h3 id="bot-section">Bot section</h3>
+<p><strong>Note</strong>: User account support with this bot is deprecated and will be removed soon.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Explanation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isbot</td>
+<td>If an OAuth bot account should be used.</td>
+<td>Recommended to be true due to <a href="https://discordapp.com/developers/docs/topics/oauth2#bot-vs-user-accounts">Discord bot rules</a>.</td>
+</tr>
+<tr>
+<td>token</td>
+<td>OAuth token for the bot.</td>
+<td>Refer to the "Making the config" section.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Email for normal user account that the bot will use.</td>
+<td><strong>DO NOT</strong> input your personal login details here.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Password for the account mentioned above.</td>
+<td>As above.</td>
+</tr>
+<tr>
+<td>oauth</td>
+<td>The OAuth URL for the bot.</td>
+<td>Refer to the "Making the config" section.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="database-section">Database section</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Explanation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>Points to WildBeast's database, localhost by default.</td>
+<td>Don't modify unless you have a remote database set up.</td>
+</tr>
+<tr>
+<td>port</td>
+<td>Specifies which network port the RethinkDB server is running on.</td>
+<td>As above. Default is 28015.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Password to RethinkDB user.</td>
+<td>Admin account has no password by default. Don't set a password for the admin account unless you want to have to edit this.</td>
+</tr>
+<tr>
+<td>user</td>
+<td>RethinkDB user account to use for accessing the database.</td>
+<td>Admin by default. Admin will have permission to all databases so it should stay like this.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="settings-section">Settings section</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Explanation</th>
+<th>Notes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefix</td>
+<td>The command prefix the bot will use.</td>
+<td>Can be a special character like <code>/</code> etc.</td>
+<td></td>
+</tr>
+<tr>
+<td>autodeletemsg</td>
+<td>Automatically delete music-related messages after a while.</td>
+<td>The time for this is possible to configure. Boolean.</td>
+<td></td>
+</tr>
+<tr>
+<td>deleteTimeout</td>
+<td>The amount of time after which to delete the messages.</td>
+<td>Insert time in milliseconds, default 3000.</td>
+<td></td>
+</tr>
+<tr>
+<td>deleteTimeoutLong</td>
+<td>Same as above, but for messages that have a longer timeout.</td>
+<td>For now only <a href="https://github.com/TheSharks/WildBeast/blob/master/runtime/internal/voice.js#L204">this message</a> uses the long timeout. In milliseconds, default 6000.</td>
+<td></td>
+</tr>
+<tr>
+<td>maxvcslots</td>
+<td>How many concurrent voice connections the bot can have until it won't join more.</td>
+<td>Default limit is 10, depends on the beefyness of your system.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bezerk-section">Bezerk section</h3>
+<p><strong>IMPORTANT NOTE:</strong> Unless you use Bezerk, the WildBeast WSM, <strong>do not modify anything here as it's for advanced users only!</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Explanation</th>
+<th>Notes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>use</td>
+<td>Whether Bezerk shall be used or not.</td>
+<td>Do not modify unless you use Bezerk.</td>
+<td></td>
+</tr>
+<tr>
+<td>uri</td>
+<td>Specifies the websocket address for the Bezerk server.</td>
+<td>As above. Default is <code>ws://localhost:1337</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="elasticsearch-section">Elasticsearch section</h3>
+<p><strong>IMPORTANT NOTE:</strong> Unless you use Elastic like we do, <strong>don't modify this!</strong> It's meant for large instances and hence advanced users only!</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Explanation</th>
+<th>Notes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>use</td>
+<td>Whether Elastic shall be used or not.</td>
+<td>Do not modify unless you use Elastic.</td>
+<td></td>
+</tr>
+<tr>
+<td>client/host</td>
+<td>Specifies the address for the Elastic server.</td>
+<td>As above. Default is <code>localhost:9200</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="permissions-section">Permissions section</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Explanation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>master</td>
+<td>The highest possible access level of 9. Full permissions.</td>
+<td>Only give this to yourself and maybe others you really trust.</td>
+</tr>
+<tr>
+<td>level1, level2, level3</td>
+<td>Settable access levels that give users access to certain commands.</td>
+<td>Default access levels can be found in <a href="http://docs.thesharks.xyz/commands/">command reference</a>.</td>
+</tr>
+<tr>
+<td>Notice: By default, when WildBeast joins a server it will set the owner's access level to 5. This is to give them control over normal users.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="api-keys-section">API keys section</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Explanation</th>
+<th>Notes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>imgflip</td>
+<td>Your <a href="https://imgflip.com">imgflip</a> login details.</td>
+<td>Used in certain meme commands.</td>
+<td></td>
+</tr>
+<tr>
+<td>google</td>
+<td>For retrieving data from YouTube.</td>
+<td>Refer to the "Making the config" section.</td>
+<td></td>
+</tr>
+<tr>
+<td>mashape</td>
+<td>For retrieving the Fortune Cow.</td>
+<td>Refer to the "Making the config" section.</td>
+<td></td>
+</tr>
+<tr>
+<td>twitchId</td>
+<td>For retrieving status of whether a user on Twitch is streaming or not.</td>
+<td>Refer to the "Making the config" section.</td>
+<td></td>
+</tr>
+<tr>
+<td>imgur</td>
+<td>For retrieving random memes from Imgur.</td>
+<td>Refer to the "Making the config" section.</td>
+<td></td>
+</tr>
+<tr>
+<td>cleverbot_user</td>
+<td>Username to the cleverbot.io API, used in the cleverbot command.</td>
+<td>Refer to the "Making the config" section.</td>
+<td></td>
+</tr>
+<tr>
+<td>cleverbot_key</td>
+<td>Key to the cleverbot.io API, used in the cleverbot command.</td>
+<td>Refer to the "Making the config" section.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="making-the-config">Making the config</h2>
+<ul>
+<li>OAuth app<ol>
+<li>We'll start off by creating an OAuth application in Discord's developer interface so that the bot can login.<ul>
+<li>Go to https://discordapp.com/developers/applications/me and create a new application.</li>
+<li>Name it whatever you prefer and give it a fancy picture. Fill in a description if you want to, then click "Create application".</li>
+<li>Now you'll have a more full-fledged app page. Click "Add Bot User" and confirm to make it a bot.</li>
+<li>Here you'll get a Client ID and a token. Reveal the token (<strong>Not the secret</strong>) and replace "Bot token" with that in the config.</li>
+</ul>
+</li>
+<li>If you completed the step above and want to comply with Discord rules, skip the email/password section and leave them be.</li>
+<li>Next we'll make an OAuth URL for the bot so it can be added to the server.<ul>
+<li>Just put this placeholder URL somewhere for now, <em>don't open it as it will not work</em>.
+<code>https://discordapp.com/oauth2/authorize?&amp;client_id=CLIENTID&amp;scope=bot&amp;permissions=536345655</code></li>
+<li>Go back to the app page, and copy the Client ID.</li>
+<li>Replace the <code>CLIENTID</code> placeholder in the URL above with the ID you just copied. You can open the URL to test that you did it right.</li>
+<li>If the URL works as intended, copy it and replace "URL" in the config with the one you copied.</li>
+<li>You can also open the URL and add your bot to the server at this point, so you don't forget it. It will have the permissions it wants precalculated due to the number after the <code>permissions</code> property. Just select your server from the dropdown list and add it. The bot won't do anything at this stage because we're not finished yet.</li>
+<li>If you can't select your server, it might be that you lack Manage Server permissions.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Prefix and other settings<ul>
+<li>Setting the command prefix isn't really <a href="http://takeb1nzyto.space">rocket science</a>. This can be any special character, for instance <code>%</code>, <code>&amp;</code> and so forth.</li>
+<li>You can also use multiple characters as a prefix, for instance <code>!!</code> and <code>//</code>. Avoid common single-character prefixes like <code>!</code> and <code>/</code> to avoid initial prefix conflicts. These can however be resolved with <code>customize</code> and changing the prefix for the server.</li>
+<li>Note that there is always a so-called global prefix: A mention. Saying <code>@BotName</code> in chat will function as a prefix as well. <strong>This doesn't need to be specified in the config as it's always active.</strong></li>
+<li>The rest of the options are straight forward. <code>autodeletemsg</code> can be true or false, the message deletion times can be whatever you fancy in milliseconds and <code>maxvcslots</code> is just a number.</li>
+</ul>
+</li>
+<li>Permissions<ul>
+<li>This is a section that has a very interesting gimmick to it.<ul>
+<li>WildBeast has a command named <code>setlevel</code> which will set the level of a user. <strong>However</strong>, that is written into a server-specific config. Which means that if you set the level of someone to 2 in Server1, they will not be level 2 in Server2, for example.</li>
+<li>The permissions fields here are so-called <strong>global permissions</strong>, and will apply unless a server-specific level is set.</li>
+<li>Use this to add technicians and others who need permissions regardless of where the bot is.</li>
+</ul>
+</li>
+<li>You can specify users here by adding their IDs into the fields. Only the master field is mandatory.<ul>
+<li>You can get the ID of a user by either "backlash mentioning" them, which means to say typing <code>\@User</code> in chat or by enabling Developer Mode (Personal Settings -&gt; Appearance -&gt; Enable Developer Mode) and right-clicking on someone, subsequently selecting Copy ID from the list and pasting it in between the quotes.</li>
+<li>Remember to follow the example syntax in the master field when adding multiple users!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>API keys<ul>
+<li>General notice: Anything within these fields is sensitive and could do much harm if revealed to the public.<ul>
+<li><strong>Therefore it is imperative that you keep this to yourself.</strong></li>
+<li>WildBeast maintainers will <strong>NEVER</strong> ask for your login details or API keys. Only show the config to trusted WildBeast maintainers with the <code>Staff</code> role in WildBot's Territory.</li>
+</ul>
+</li>
+<li>imgflip<ul>
+<li>The procedure for getting this isn't tricky. Just go to <a href="https://imgflip.com">https://imgflip.com</a>, create an account and input your username and password into the fields.</li>
+</ul>
+</li>
+<li>Google<ul>
+<li>This API is used to retrieve data from YouTube, related to music playback.<ol>
+<li>Go to <a href="../the Google Developer Console">https://console.developers.google.com</a> and create a new project. Name it whatever you fancy. Nothing else needs to be changed unless you want to change the project ID or the app engine location.</li>
+<li>Wait a while as the project is being created.</li>
+<li>When the creation process is completed, you'll get taken to the Dashboard screen of the project. In the sidebar on the left, click "Library".</li>
+<li>This will take you to the API library. Select "YouTube Data API" as highlighted below.
+<img alt="YT Data API" src="https://s10.postimg.org/86fmqm6kp/googleapi_lib.png" /></li>
+<li>When the API page opens, click the "Enable" button in the top bar. Then you will get a notification saying that you need to create credentials. That's exactly what we will do.</li>
+<li>Click the "Go to credentials" button. In the next dropdowns, make them look like following.
+<img alt="Credentials" src="https://s21.postimg.org/ajmb4jah3/ytapi.png" /></li>
+<li>Hit "What credentials do I need?" and the page will generate a Google API key for you. Copy the API key and replace the "A google key" placeholder with that key in the config.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Mashape<ul>
+<li>This API is used with the <code>fortunecow</code> command.</li>
+<li>Go to <a href="https://market.mashape.com/login">the Mashape site</a> and login as you prefer, GitHub login is supported.</li>
+<li>Navigate to the <a href="https://market.mashape.com/dashboard">Mashape APIs dashboard</a> and add a new application. Name it as you wish.</li>
+<li>Once the app is created, click "Add API to your application" and search for <code>fortunecow</code>.</li>
+<li>Open the fortunecow API page and in one of the dropdowns on the left, change it to the application you just created and hit "Test Endpoint" on any you wish to test. Only one is required.</li>
+<li>This will add the API to your application. Navigate back to the dashboard and click on the app itself. It should now have an appearance that resembles to this.
+<img alt="Mashape App Page" src="https://s4.postimg.org/oounhvvj1/mashapeapp.png" /></li>
+<li>Hit "Get the keys" in the top-right corner. In the drop-down menu that is opened, select "Production". This will be your Mashape API key for that application. Copy that and replace the "A mashape key" placeholder in the config with that key.</li>
+</ul>
+</li>
+<li>Twitch<ul>
+<li>This API is used with the <code>twitch</code> command. This will be the client ID the bot passes to Twitch when retrieving stream status.<ol>
+<li>Go to the <a href="https://www.twitch.tv/settings/connections">Twitch Connections page</a>, scroll down to the bottom and click "Register new application".</li>
+<li>Fill in the fields. Name should be your app name, and set the Redirect URI to <code>http://localhost</code> unless you want something to function differently. Set the app type to "Chat Bot" as that's what you're basically doing here.
+<img alt="Twitch app" src="https://s4.postimg.org/gpvrfsebx/twitchapp.png" /></li>
+<li>Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".
+<img alt="Twitch app management" src="https://s22.postimg.org/tjz4qes69/twitchappmanage.png" /></li>
+<li>Copy that character sequence and replace the "A twitch Client-ID" placeholder in the config with that ID.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Imgur<ul>
+<li>This API is used in conjuction with the <code>randommeme</code> command to pull random memes from Imgur.<ol>
+<li>Go to the <a href="https://api.imgur.com/oauth2/addclient">Imgur App Registration</a>.</li>
+<li>Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.</li>
+<li>Fill in the email you fancy to receive notifications about this app in.</li>
+<li>Description... Well, anything you find useful there.</li>
+<li>You should end up with the below view.
+<img alt="Imgur app creation" src="http://i.imgur.com/cAAkBHl.png" /></li>
+<li>Solve the CAPTCHA and hit "Submit" on the bottom of the page. This will take you to the page where you can see your client ID and secret.
+<img alt="Imgur ID &amp; secret" src="http://i.imgur.com/PUdSz6B.png" /></li>
+<li>Copy the Client ID and replace the "A Imgur Client-ID" placeholder with that value.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Cleverbot<ul>
+<li>This API is used in conjuction with the <code>cleverbot</code> command to do cleverbot discussions.<ol>
+<li>Go to <a href="https://cleverbot.io/keys">cleverbot.io</a> and login to get your API user and key.</li>
+<li>After logging in, copy the contents of the "API User" and "API Key" fields and paste them into the appropriate fields in the config, API User to cleverbot_user and API Key to cleverbot_key.
+<img alt="Cleverbot Keys" src="http://i.imgur.com/Rn01Umh.png" /></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>That's all, your config should now be ready to rock! Save it as <code>config.json</code> (<strong>NOT</strong> <code>config.example.json</code> as the bot will error if you do. TLDR: Don't hit Ctrl+S, hit Ctrl+Alt+S) and upload it to the server via FileZilla.</p>
+<h2 id="running-the-bot">Running the bot</h2>
+<p>Congratulations, your WildBeast instance should be ready to launch!</p>
+<p>WildBeast has a system built in to create the required databases and tables for you without extra effort. To do this, execute this:</p>
+<pre><code class="bash">npm run-script dbcreate
+</code></pre>
+
+<p>After this has finished, it will tell you if the necessary database and tables have been created or already existed. To test if you've done everything correctly, you can do a "test run" with the bot. This means not making it permanently available, just testing if any errors are spat out when running.</p>
+<p>Run the following command within the bot's folder:</p>
+<pre><code class="bash">node DougBot.js
+</code></pre>
+
+<p>If the bot runs without any errors, you have had success so far!</p>
+<p>You can test simple functionality by running the <code>ping</code> command (With your desired prefix) in a text channel that the bot can see. If it answers "Pong!", then congratulations, <em>you have successfully set up WildBeast!</em></p>
+<h2 id="rethinkdb-dashboard">RethinkDB Dashboard</h2>
+<p><strong>The following information is for those who need to access the RethinkDB web interface to create, delete or edit the database contents. This is for users that want maximum control and are familiar with database engines, so skip this if you don't meet those criteria.</strong></p>
+<p>Should you need to access the RethinkDB dashboard remotely to create, delete or edit the information stored within.
+You may create a tunnel using SSH to forward traffic from your browser to the server or run RethinkDB using the <code>--bind all</code> option with firewall rules to only allow your IP address to connect. This guide will not provide the required information to do this.</p>
+<p>To create an SSH tunnel in PuTTY follow these steps.
+Fill in the IP or FQDN in the "Host name (or IP address)" field or load an already saved profile by clicking on it once then the load button. Under the category box you will see <code>Connection</code>, go to SSH and click the <code>+</code> sign, under this go to <code>Tunnels</code>. <code>Source port</code> can be anything but this guide assumes 8080. <code>Destination</code> is <code>127.0.0.1:8080</code>, the radio buttons below are <code>Local</code> and <code>Auto</code>, it should look like the following <a href="http://i.imgur.com/NBIxQzh.png">example image</a>. Now you must click on the <code>Add</code> button then click Open to start the SSH session. You will be prompted for your server's username and password. Now open your favorite browser and go to <code>http://127.0.0.1:8080</code> and this should open the RethinkDB dashboard.</p>
+<p><img alt="RethinkDB Dashboard" src="http://i.imgur.com/OFSk91K.png" /></p>
+<h2 id="background-running-wildbeast">Background running WildBeast</h2>
+<p>With the current system that we described above, the bot will run until the SSH session is closed or an error occurs that ends the process. How can we combat this? The answer is: PM2!</p>
+<p>PM2, short of Process Manager 2, is a Node app intended to run and manage multiple apps running on one account in a Linux environment, which enables more than one process running at a time.</p>
+<p>Our official instance, namely WildBot uses PM2, so this resource is a good one to use!</p>
+<h2 id="installing-pm2-and-starting-the-bot">Installing PM2 and starting the bot</h2>
+<p>Before doing this, hit Ctrl+C (Close command) to shut down WildBeast if it's still running.</p>
+<p>You can install PM2 by using the following command:</p>
+<pre><code class="bash">sudo npm install pm2 -g
+</code></pre>
+
+<p>When PM2 is installed, navigate to the WildBeast install directory (<code>cd ~/Wildbeast</code> if you are in the server root). Then execute the following command:</p>
+<pre><code class="bash">pm2 start DougBot.js
+</code></pre>
+
+<p>It should then start the process and return a small process table with DougBot.js listed. The bot should now be online in your server as well.</p>
+<p>You can find out more about PM2 by typing <code>pm2</code> into the console.</p>
+<p><strong>And that's it! You are now ready to start using your very own WildBeast instance!</strong></p>
+<p>Keep in mind, if you have further questions or need help, we're around over at our official server! Link below.</p>
+<p>On the behalf of the WildBeast team, <em>we hope you enjoy your bot!</em>
+<p align="left">
+  <a href="https://discord.gg/wildbot"><img src="https://discordapp.com/api/guilds/110462143152803840/widget.png?style=banner2" alt="Discord server"></a>
+</p></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../install_windows/" title="Windows Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Windows Guide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../install_docker/" title="Docker Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Docker Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2016-2017 TheSharks, "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-06a3e72efd.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

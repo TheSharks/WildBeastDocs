@@ -1,0 +1,1067 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Welcome to the WB documentation">
+      
+      
+      
+        <meta name="author" content="TheSharks">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.4">
+    
+    
+      
+        <title>Command reference - WildBeast Documentation</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-e2807e330f.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid Sans:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="WildBeast Documentation" class="md-logo md-header-nav__button">
+            <img src="../img/wb-head-circle.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Command reference
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/TheSharks/WildBeast" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../img/wb-head-circle.png">
+      </i>
+    
+    WildBeast Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/TheSharks/WildBeast" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Command reference
+      </label>
+    
+    <a href="./" title="Command reference" class="md-nav__link md-nav__link--active">
+      Command reference
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#command-reference" title="Command reference" class="md-nav__link">
+    Command reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-commands" title="General commands" class="md-nav__link">
+    General commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fun-commands" title="Fun commands" class="md-nav__link">
+    Fun commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#music-commands" title="Music commands" class="md-nav__link">
+    Music commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag-commands" title="Tag commands" class="md-nav__link">
+    Tag commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-command" title="Customize command" class="md-nav__link">
+    Customize command
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_windows/" title="Windows Guide" class="md-nav__link">
+      Windows Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_linux/" title="Linux Guide" class="md-nav__link">
+      Linux Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_docker/" title="Docker Guide" class="md-nav__link">
+      Docker Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../updating/" title="Updating" class="md-nav__link">
+      Updating
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../custom_commands/" title="Custom Command Framework" class="md-nav__link">
+      Custom Command Framework
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sharding/" title="Gateway Sharding System" class="md-nav__link">
+      Gateway Sharding System
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../powershell/" title="Replace PowerShell with CMD" class="md-nav__link">
+      Replace PowerShell with CMD
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#command-reference" title="Command reference" class="md-nav__link">
+    Command reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-commands" title="General commands" class="md-nav__link">
+    General commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fun-commands" title="Fun commands" class="md-nav__link">
+    Fun commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#music-commands" title="Music commands" class="md-nav__link">
+    Music commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag-commands" title="Tag commands" class="md-nav__link">
+    Tag commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-command" title="Customize command" class="md-nav__link">
+    Customize command
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/TheSharks/WildBeast/edit/master/docs/commands.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Command reference</h1>
+                
+                <p>This is the command reference for WildBeast. You can find more elaborative information here on each of the commands currently implemented.</p>
+<p>If you have need for any further info, you can send the message <code>{prefix}help &lt;command&gt;</code> to the bot to get info about timeouts and so forth. For lengthier explanations on the usage of the commands, check out #le-guide in <a href="https://discord.gg/wildbot">WildBot's Territory</a>.</p>
+<p>The prefix is not specified in this reference. You have to apply your own prefix to the commands. If you don't know the prefix, type <code>@&lt;botname&gt; prefix</code> in the server you're using.</p>
+<h2 id="command-reference">Command reference</h2>
+<h3 id="general-commands">General commands</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Usage</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>addrole</td>
+<td>Add a role to a user.</td>
+<td>addrole @User <code>&lt;role name&gt;</code></td>
+<td>3, Manage Roles permission required</td>
+</tr>
+<tr>
+<td>ban</td>
+<td>Ban a user from the server.</td>
+<td>ban @User <code>&lt;days of messages to delete&gt;</code></td>
+<td>Ban permission required.</td>
+</tr>
+<tr>
+<td>colorrole</td>
+<td>Change a role color to a hexadecimal value. Hashtag accepted but not required.</td>
+<td>colorrole <code>&lt;#FFFFFF/FFFFFF&gt;</code> <code>&lt;role name&gt;</code></td>
+<td>3, Manage Roles permission required</td>
+</tr>
+<tr>
+<td>customize</td>
+<td>Customize the bot's behavior in the server.</td>
+<td>See the table below.</td>
+<td>3</td>
+</tr>
+<tr>
+<td>eval</td>
+<td>Evaluate Discordie code.</td>
+<td>eval <code>&lt;code&gt;</code></td>
+<td>master</td>
+</tr>
+<tr>
+<td>hello</td>
+<td>Make the bot greet you.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>info</td>
+<td>Print information on the bot.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>join-server</td>
+<td>Tell the bot to join a server.</td>
+<td>join-server <code>&lt;invite-link&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>kick</td>
+<td>Kick a user from the server.</td>
+<td>kick @User</td>
+<td>Kick permission required.</td>
+</tr>
+<tr>
+<td>killswitch</td>
+<td>Close the bot process.</td>
+<td></td>
+<td>master</td>
+</tr>
+<tr>
+<td>leave-server</td>
+<td>Leave a server.</td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>namechanges</td>
+<td>Detect name changes from a user.</td>
+<td>namechanges @User</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ping</td>
+<td>Ping the bot to test responsiveness.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>plaineval</td>
+<td>Same as eval, just with a different scope.</td>
+<td>plaineval <code>&lt;code&gt;</code></td>
+<td>master</td>
+</tr>
+<tr>
+<td>prefix</td>
+<td>Make the bot return its current prefix.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>purge</td>
+<td>Delete a specified count of messages.</td>
+<td>purge <code>&lt;amount&gt;</code></td>
+<td>Manage Messages permission required.</td>
+</tr>
+<tr>
+<td>rankup</td>
+<td>Bump a user's permission level up by one notch.</td>
+<td>rankup @User</td>
+<td>3</td>
+</tr>
+<tr>
+<td>say</td>
+<td>Make the bot say something you specify.</td>
+<td>say <code>&lt;message&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>server-info</td>
+<td>Print information on the server.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>setlevel</td>
+<td>Set the level of a user or role.</td>
+<td>setlevel <code>&lt;-1/0/1/2/3&gt;</code> <code>&lt;@User/@Role/@everyone&gt;</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td>setnsfw</td>
+<td>Change NSFW allowance in a channel.</td>
+<td>setnsfw <code>&lt;on/off&gt;</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td>setstatus</td>
+<td>Change the bot's playing status.</td>
+<td>setstatus <code>&lt;message&gt;</code></td>
+<td>master</td>
+</tr>
+<tr>
+<td>takerole</td>
+<td>Take a role from a user.</td>
+<td>takerole @User <code>&lt;role name&gt;</code></td>
+<td>3, Manage Roles permission required</td>
+</tr>
+<tr>
+<td>twitch</td>
+<td>Return if a Twitch streamer is live or not.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>userinfo</td>
+<td>Print info on a user.</td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fun-commands">Fun commands</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Usage</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>advice</td>
+<td>Ask for some advice from the bot.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>cleverbot</td>
+<td>Talk to the bot, and it will respond.</td>
+<td>cleverbot <code>&lt;message&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>dice</td>
+<td>Roll the dice.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>dogfact</td>
+<td>Return a random dog fact.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>e621</td>
+<td>Image searching from e621.</td>
+<td>e621 <code>&lt;searchwords&gt;</code></td>
+<td>0 (NSFW)</td>
+</tr>
+<tr>
+<td>fact</td>
+<td>Return a random fact.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>fancyinsult</td>
+<td>Insult someone in a fancy manner.</td>
+<td>fancyinsult <code>&lt;name&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>fortunecow</td>
+<td>Return a fortune cow.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>gif</td>
+<td>Search for a GIF.</td>
+<td>gif <code>&lt;searchwords&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>leetspeak</td>
+<td>Encode a message to 1337sp3ak.</td>
+<td>leetspeak <code>&lt;message&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>magic8ball</td>
+<td>Ask for a decision from the magic 8 ball.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>meme</td>
+<td>Make a meme. <a href="https://github.com/TheSharks/WildBeast/blob/master/runtime/commands/memes.json">Meme types here</a></td>
+<td>meme <code>&lt;memetype&gt;</code> <code>"&lt;Upper line&gt;"</code> <code>"&lt;Bottom line&gt;"</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>randomcat</td>
+<td>Return a random cat picture.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>rip</td>
+<td>Posts a ripme.xyz about someone.</td>
+<td>rip <code>&lt;name&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>rule34</td>
+<td>Search for an image via rule34.</td>
+<td>rule34 <code>&lt;searchwords&gt;</code></td>
+<td>0 (NSFW)</td>
+</tr>
+<tr>
+<td>stroke</td>
+<td>Stroke someone's ego.</td>
+<td>stroke <code>&lt;name&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>urbandictionary</td>
+<td>Search for a definition from the Urban Dictionary.</td>
+<td>urbandictionary <code>&lt;searchwords&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>xkcd</td>
+<td>Search for XKCD comics. Use nothing for random, current for latest or a number to get that one.</td>
+<td>xkcd <code>&lt;(nothing)/current/(number)&gt;</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>yesno</td>
+<td>Return a yes or no GIF.</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>yomomma</td>
+<td>Yo momma is so fat that... You know the drill.</td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="music-commands">Music commands</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Usage</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>leave-voice</td>
+<td>Leave the voice channel.</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>music</td>
+<td>Pause or resume music playing.</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>playlist</td>
+<td>Print the current playlist. If the delete subcommand is passed, remove a song from the playlist. Number specifies track to remove, all means queue wipe.</td>
+<td>playlist <strong>OR</strong> playlist delete <code>&lt;position&gt;/all</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>request</td>
+<td>Request a song to add to the playlist.</td>
+<td>request <code>&lt;url/searchwords&gt;</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td>shuffle</td>
+<td>Shuffle the current playlist.</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>voice</td>
+<td>Make the bot join the voice channel.</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>volume</td>
+<td>Adjust player volume.</td>
+<td>volume <code>&lt;0-100&gt;</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td>voteskip</td>
+<td>Vote to skip a song.</td>
+<td></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tag-commands">Tag commands</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Usage</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tag</td>
+<td>Base command for tags. Returns a tag if specified.</td>
+<td>tag <code>&lt;subcommand/name&gt;</code></td>
+<td>0 (Also subcommands)</td>
+</tr>
+<tr>
+<td>tag create</td>
+<td>Create a tag.</td>
+<td>tag create <code>&lt;name&gt;</code> <code>&lt;content&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>tag delete</td>
+<td>Delete a tag.</td>
+<td>tag delete <code>&lt;name&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>tag edit</td>
+<td>Edit an existing tag.</td>
+<td>tag edit <code>&lt;name&gt;</code> <code>&lt;newcontent&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>tag owner</td>
+<td>Return the owner of a tag.</td>
+<td>tag owner <code>&lt;name&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>tag random</td>
+<td>Retrieve a random tag from the database.</td>
+<td>tag random</td>
+<td></td>
+</tr>
+<tr>
+<td>tag raw</td>
+<td>Return the raw data of a tag.</td>
+<td>tag raw <code>&lt;name&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="customize-command">Customize command</h2>
+<p>The customize command is a multifaceted command that needs its own table to illustrate how it works.</p>
+<p>The customize command makes changes to the server-specific database of WildBeast. It allows you to set a custom member join announcement and tweak some responses. You need a permission level of 3 to use the customize command.   </p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Usage</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customize</td>
+<td>Base command for the customizer.</td>
+<td>customize <code>&lt;method&gt;</code> <code>&lt;parameter/content&gt;</code></td>
+<td>See below for the methods.</td>
+</tr>
+<tr>
+<td>prefix</td>
+<td>Change the command prefix. Enclose the prefix in double quotes.</td>
+<td>customize prefix "<code>&lt;prefix&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>permissions</td>
+<td>Change response given when users don't have permissions to execute a command.</td>
+<td>customize permissions <code>&lt;message&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Change response given when a command is still on cooldown.</td>
+<td>customize timeout <code>&lt;message&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>welcoming</td>
+<td>Changes whether the bot should send a welcome message when a new member joins.</td>
+<td>customize welcoming <code>&lt;off/channel/private&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>welcome</td>
+<td>Changes the welcome message specified above.</td>
+<td>customize welcome <code>&lt;message&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>nsfw</td>
+<td>Change the response given when a channel doesn't have NSFW commands allowed.</td>
+<td>customize nsfw <code>&lt;message&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>volume</td>
+<td>Change the default volume WildBot will assume when joining voice.</td>
+<td>customize volume <code>&lt;number&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>All commands except for the option-based ones (<code>welcoming</code> and <code>prefix</code>) support certain variables in the messages. The variables start with <code>%</code> and are the following.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Usable responses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user</td>
+<td>Username of the user that triggered the response.</td>
+<td>All</td>
+</tr>
+<tr>
+<td>server</td>
+<td>Name of the server.</td>
+<td>All</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>Name of the channel the response was triggered in.</td>
+<td>All except <code>welcome</code></td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Amount of seconds the command is on cooldown.</td>
+<td>Only <code>timeout</code></td>
+</tr>
+<tr>
+<td>ulevel</td>
+<td>Short of user level, the user's current permission level.</td>
+<td>Only <code>permissions</code></td>
+</tr>
+<tr>
+<td>nlevel</td>
+<td>Short of need level, permission level required to execute the command.</td>
+<td>Only <code>permissions</code></td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../install_windows/" title="Windows Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Windows Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2016-2017 TheSharks, "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-06a3e72efd.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
