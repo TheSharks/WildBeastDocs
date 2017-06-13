@@ -13,6 +13,7 @@ Please follow these rules when making contributions to this repository.
 ## General contribution rules
 
 * All pull requests go to the `review` branch.
+* **Do not** commit to the `gh-pages` branch. That branch is handled by our automated systems.
 * You must have good written English skills, pulls with grammar errors will get change requests.
 * Follow the overall format in the docs. You can check the styleguide from [STYLEGUIDE.md](STYLEGUIDE.md).
 * Leave image embedding to the official writers.
