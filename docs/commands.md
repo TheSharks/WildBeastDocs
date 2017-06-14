@@ -1,9 +1,9 @@
 This is the command reference for WildBeast. You can find more elaborative information here on each of the commands currently implemented.
 
 !!! tip
-    If you have need for any further info, you can send the message `{prefix}help <command>` to the bot to get info about timeouts and so forth. For lengthier explanations on the usage of the commands, check out `#le-guide` in [WildBot's Territory](https://discord.gg/wildbot).
+    If you have a need for any further info, you can send the message `{prefix}help <command>` to the bot to get info about timeouts and so forth. For lengthier explanations on the usage of the commands, check out `#le-guide` in [WildBot's Territory](https://discord.gg/wildbot).
 
-The prefix is not specified in this reference. You have to apply your own prefix to the commands. If you don't know the prefix, type `@<BotName> prefix` in the server you're using.
+The prefix is not specified in this reference. You have to apply your own prefix to the commands. If you don't know the prefix, type `@BotName prefix` in the server you're using.
 
 ## Command reference
 
@@ -35,7 +35,7 @@ setlevel | Set the level of a user or role. | setlevel `<-1/0/1/2/3>` `<@User/@R
 setnsfw | Change NSFW allowance in a channel. | setnsfw `<on/off>` | 3
 setstatus | Change the bot's playing status. | setstatus `<message>` | master
 softban | Ban and immediately unban a member, deleting their messages in the process. | softban `<mention/userid>` `<reason>` | Ban Members
-takerole | Take a role from a user. | takerole @User `<role name>` | 3, Manage Roles permission required
+takerole | Take a role from a user. | takerole @User `<role name>` | 3, Manage Roles
 twitch | Return if a Twitch streamer is live or not. |  | 0
 userinfo | Print info on a user. |  | 0
 
@@ -99,7 +99,7 @@ The customize command makes changes to the server-specific database of WildBeast
 Name | Description | Usage | Note
 ---- | ----------- | ----- | -----
 customize | Base command for the customizer. | customize `<method>` `<parameter/content>` | See below for the methods.
-prefix | Change the command prefix. Enclose the prefix in double quotes. | customize prefix "`<prefix>` |
+prefix | Change the command prefix. Enclose the prefix in double quotes. | customize prefix "`<prefix>`" |
 permissions | Change response given when users don't have permissions to execute a command. | customize permissions `<message>` |
 timeout | Change response given when a command is still on cooldown. | customize timeout `<message>` |
 welcoming| Changes whether the bot should send a welcome message when a new member joins. | customize welcoming `<off/channel/private>` |

@@ -82,10 +82,10 @@ It is particularly important that you have all the boxes described in the latter
 
 Now it's time to install the Node dependencies for the bot. Open a command prompt in the WildBeast folder (Shift+Right click) and select "Open command window here". Run `npm install` and wait for the process to complete.
 
-!!! note
+!!! warning "Issues with npm install"
     If you get errors that say `WARN` and use  yellow text, you can ignore them. If you however start getting red text, there might be a problem installing.
     
-    Check that the WildBeast directory does not require administrator permissions to execute commands in. You may come and ask us [over at WildBot's Territory](https://discord.gg/wildbot) if you need help fixing thes errors.
+    Check that the WildBeast directory does not require administrator permissions to execute commands in. You may come and ask us [over at WildBot's Territory](https://discord.gg/wildbot) if you need help fixing these errors.
 
 #### Node-gyp and npm install
 

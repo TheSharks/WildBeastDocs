@@ -7,6 +7,14 @@ site_author: 'TheSharks'
 site_url: 'https://docs.thesharks.xyz'
 site_favicon: 'img/favicon.ico'
 
+# Repository configuration
+repo_name: 'TheSharks/WildBeastDocs'
+repo_url: 'https://github.com/TheSharks/WildBeastDocs'
+edit_uri: edit/review/docs/
+
+# Copyright
+copyright: 'Copyright © 2016-2017 TheSharks, "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.'
+
 # Sitemap
 pages:
   - Home: 'index.md'
@@ -28,14 +36,7 @@ theme: 'material'
 
 ##### Material configuration #####
 
-# Repo
-repo_name: 'TheSharks/WildBeastDocs'
-repo_url: 'https://github.com/TheSharks/WildBeastDocs'
-
-# Copyright
-copyright: 'Copyright © 2016-2017 TheSharks, "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.'
-
-# Additional options
+# Material features
 extra:
   feature:
     tabs: true

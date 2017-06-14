@@ -3,7 +3,7 @@ This is the cheat sheet for the WildBeast command framework. Using these element
 !!! failure "What not to do"
     Do not come to us with questions on how to write custom commands, some basic JavaScript and programming knowledge is required. We won't give you assistance in writing your commands beyond what is listed on this page!
 
-## Custom Commands
+## Intro
 
 Starting at version 3.0.0, WildBeast allows for the addition of user created JavaScript files with commands, given that they are written in the exact same format as default files. This page provides you with the tools you need to create your own commands.
 
@@ -36,7 +36,7 @@ Command objects consist of different properties which define how the command run
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | noDM | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether to allow usage in direct messages. Default true. |
-| timeout | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) | Unsigned integer that defines how long a command will be on timeout before it's usable again. |
+| timeout | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) | Unsigned integer that defines how long a command will be on timeout before it's usable again. The number represents seconds. |
 | usage | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The example of how the command is used when `help <command>` is called on the command. |
 | ovewrite | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether to accept this command instead of the default one, in case the callback name is the same. Default false. |
 | aliases | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> | Hardcoded aliases to call this command with in addition to the default callback name. |

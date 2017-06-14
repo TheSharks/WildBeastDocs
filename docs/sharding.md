@@ -5,11 +5,11 @@ This is a quick document about Discord gateway sharding and how WildBeast uses t
 ## Terminology
 Quick terminology table:
 
-Term | Definition
----- | ----------
-Shard | A partial WildBeast instance.
-Guild | A Discord server.
-g/s | Shorthand for "guilds per shard".
+| Term | Definition |
+| ---- | ---------- | 
+| Shard | A partial WildBeast instance. | 
+| Guild | A Discord server. | 
+| g/s | Shorthand for "guilds per shard". | 
    
 ## What is sharding?
 
@@ -35,11 +35,11 @@ The guild distribution is calculated like this:
 
 `guildCount / desiredGps = shardCount`
 
-Element    | Explanation
----------- | -----------
-guildCount | The amount of guilds the bot is on.
-desiredGps | Desired guilds per shard ratio.
-shardCount | The amount of shards you will need.
+| Element    | Explanation |
+| ---------- | ----------- |
+| guildCount | The amount of guilds the bot is on. |
+| desiredGps | Desired guilds per shard ratio. |
+| shardCount | The amount of shards you will need. |
 
 Example: `10000 / 1000 = 10`
 
@@ -51,11 +51,11 @@ The formula is the following:
 
 `(guildId >> 22) % shardCount = shardNumber`
 
-Element | Explanation
-------- | -----------
-guildId | The server ID tyou want to fidn the shard for.
-shardCount | The amount of shards you have in total.
-shardNumber | The shard which the guild is on. (Also referred to as shard ID)
+| Element | Explanation |
+| ------- | ----------- |
+| guildId | The server ID tyou want to fidn the shard for. |
+| shardCount | The amount of shards you have in total. |
+| shardNumber | The shard which the guild is on. (Also referred to as shard ID) |
 
 You will not receive events from guilds that are not on your current shard (As in the instance you're viewing in logs, for instance). They will not appear in `guilds` object in the READY packet either.
 
@@ -69,13 +69,12 @@ To start WildBeast in shard mode, you need to use the following format.
 node DougBot.js --shardmode --shardcount=<shardCount> --shardid=<shardNumber>
 ```
 
-**Some notes:**
+!!! warning "Shard mode requirements"
+    `shardCount` must be > 2. You should have an even number of shards and the integer should naturally be unsigned. Having 1 shard is pointless as this is the default mode.
 
-`shardCount` must be > 2. You should have an even number of shards and the integer should naturally be unsigned. Having 1 shard is pointless as this is the default mode.
+    `shardNumber` must not exceed or be equal to `shardCount`, and should start at 0.
 
-`shardNumber` must not exceed or be equal to `shardCount`, and should start at 0.
-
-You need to start exactly the same amount of processes as you are requesting the gateway to propagate (`shardCount`), and `shardId` must be unique for each process.
+    You need to start exactly the same amount of processes as you are requesting the gateway to propagate (shardCount), and `shardId` must be unique for each process.
 
 ### Starting in shard mode
 
@@ -84,5 +83,36 @@ To start WildBeast in shard mode, run the startup command as described above. Ex
 ```bash
 node DougBot.js --shardmode --shardcount=10 --shardid=0
 ```
+
+Repeat this command until 10 shard processes are running. Using something like a PM2 process list in JSON format is recommended. Example (File is processes.json):
+
+```json
+{
+  "apps": [
+    {
+      "name": "Shard 0",
+      "script": "./WildBeast/DougBot.js",
+      "cwd": "/home/youraccountname/WildBeast",
+      "args": "--shardmode --shardcount=10 --shardid=0",
+    },
+    {
+      "name": "Shard 1",
+      "script": "./WildBeast/DougBot.js",
+      "cwd": "/home/youraccountname/WildBeast",
+      "args": "--shardmode --shardcount=10 --shardid=1",
+    },
+    {
+      "name": "Shard 2",
+      "script": "./WildBeast/DougBot.js",
+      "cwd": "/home/youraccountname/WildBeast",
+      "args": "--shardmode --shardcount=10 --shardid=2",
+    }
+  ]
+}
+```
+
+Extend the above until all shards are covered. Then just pass the file to PM2 in order to start it. This can be done with `pm2 start processes.json`.
+
+Additional reading about PM2 process files: [http://pm2.keymetrics.io/docs/usage/application-declaration](http://pm2.keymetrics.io/docs/usage/application-declaration/)
 
 That in a nutshell is how Discord gateway sharding works and how to use it with WildBeast.

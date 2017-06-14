@@ -40,7 +40,9 @@ curl -L https://git.io/n-install | bash -s -- -y lts
 source ~/.bashrc
 ```
 
-Note to those using ZSH, you need to source your `~/.zshrc` instead of `~/.bashrc`. Now you can check your Node version from the console by running `node -v` which should be `v6.10.2` at the time of writing.
+(ZSH users need to source `~/.zshrc` instead of `~/.bashrc`)
+
+Now you can check your Node version from the console by running `node -v` which should be `v6.10.2` at the time of writing.
 
 ### Retrieving WildBeast
 
@@ -112,9 +114,6 @@ As of WildBeast version 4.0.0, RethinkDB is used to store server-specific data. 
     Do not change RethinkDB options or execute commands outside of the ones we tell you to unless you understand RethinkDB and can fix it yourself in case you mess up.
 
 Run the following commands one at a time.
-
-!!! note
-    The first command is **a single command**. If it takes up multiple lines here in the docs, that is due to physical screen size. **Make sure to paste it in as a whole!**
 
  <details>
  <summary>**Commands to install RethinkDB on Ubuntu** (click here)</summary><p>
