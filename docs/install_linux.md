@@ -27,22 +27,17 @@ As in, it will yell at you for trying to do something administrative without sud
 
 ### Installing Node
 
-First off, we'll install Node.js, the runtime WildBeast uses, with [n-install](https://github.com/mklement0/n-install) which installs [n](https://github.com/tj/n).
-
-!!! note 
-    n installs node **per user**, so if you have more than one user on your machine, they must also install n.
-
-Run these commands sequentially:
+First off, we'll install Node.js, the runtime WildBeast uses. Run these commands sequentially.
 
 ```bash
-sudo apt-get install -y curl make build-essential
-curl -L https://git.io/n-install | bash -s -- -y lts
-source ~/.bashrc
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs build-essential
 ```
 
-(ZSH users need to source `~/.zshrc` instead of `~/.bashrc`)
-
 Now you can check your Node version from the console by running `node -v` which should be `v6.10.2` at the time of writing.
+
+!!! failure "-bash: curl: command not found"
+    Curl may not come preinstalled on all Ubuntu and/or Debian OS's. If this is the case, just run `sudo apt-get install curl` and try again.
 
 ### Retrieving WildBeast
 
@@ -303,7 +298,7 @@ We'll now walk you through the different sections in the config and what they do
         - This API is used with the `twitch` command. This will be the client ID the bot passes to Twitch when retrieving stream status.
 			1. Go to the [Twitch Connections page](https://www.twitch.tv/settings/connections), scroll down to the bottom and click "Register new application".
 			2. Fill in the fields. Name should be your app name, and set the Redirect URI to `http://localhost` unless you want something to function differently. Set the app type to "Chat Bot" as that's what you're basically doing here.
-			![Twitch app](screenshotstwitchapp.png)
+			![Twitch app](screenshots/twitchapp.png)
 			3. Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".
 			![Twitch app management](screenshots/twitchappmanage.png)
 			4. Copy that character sequence and replace the "A twitch Client-ID" placeholder in the config with that ID.
