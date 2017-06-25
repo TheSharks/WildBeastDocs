@@ -1,4 +1,4 @@
-Welcome to the installation guide for WildBeast on Windows! In this guide, we'll walk you through the installation and deployment process for the WildBeast bot on Windows.
+Welcome to the installation guide for WildBeast on Windows! In this guide, we'll walk you through the installation and deployment process for WildBeast on Windows.
 
 ## Prerequisites
 
@@ -140,7 +140,7 @@ When the file has downloaded, extract rethinkdb.exe to the WildBeast directory. 
 Find `config.example.json` on your PC and open it using Notepad++ or any other code editor.
 
 !!! failure "What not to do"
-    Don't open the file with Windows Notepad. This will cause a bucketload of issues that just complicate the install process. Use a modern text editor!
+    Don't open the file with Windows Notepad. This will cause a bucketload of issues that just complicate the install process. Use a modern text editor like [Notepad++](https://notepad-plus-plus.org/).
 
 ### The config file
 
@@ -198,7 +198,7 @@ We'll now walk you through the different sections in the config and what they do
 
 | Property | Explanation | Type |
 | -------- | ----------- | ---- |
-| master | The highest possible access level of 9. Full permissions. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> |
+| master | The highest possible access level of Infinity. Full permissions. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> |
 | level1, level2, level3 | Settable access levels that give users access to certain commands. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> |
 
 !!! note

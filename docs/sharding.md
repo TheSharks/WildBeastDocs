@@ -111,6 +111,8 @@ Repeat this command until 10 shard processes are running. Using something like a
 }
 ```
 
+You could as an additional safeguard apply the `"force": true` flag in order to suppress PM2 warnings regarding a process being started multiple times.
+
 Extend the above until all shards are covered. Then just pass the file to PM2 in order to start it. This can be done with `pm2 start processes.json`.
 
 Additional reading about PM2 process files: [http://pm2.keymetrics.io/docs/usage/application-declaration](http://pm2.keymetrics.io/docs/usage/application-declaration/)

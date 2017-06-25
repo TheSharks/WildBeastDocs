@@ -1,4 +1,4 @@
-Welcome to the installation guide for WildBeast on Docker! In this guide, we'll walk you through the installation and deployment process for the WildBeast bot on Docker.
+Welcome to the installation guide for WildBeast on Docker! In this guide, we'll walk you through the installation and deployment process for WildBeast on Docker.
   
 This guide allows for WildBeast to be installed on a Windows or Mac system. We will be instructing this on Windows, but if you're Mac savvy you should be able to do it yourself.
 
@@ -59,7 +59,9 @@ When the computer boots up next time, Docker will autostart when the system star
 When Docker announces it's ready to use, open Windows PowerShell. You can now retrieve the WildBeast repository. Type the following commands into the terminal:
 
 ```bash
-git clone https://github.com/TheSharks/WildBeast.git && cd WildBeast && docker-compose up
+git clone https://github.com/TheSharks/WildBeast.git
+cd WildBeast
+docker-compose up
 ```
 
 !!! tip
@@ -124,7 +126,7 @@ Settings on Docker are a bit different as their prefix tells what they relate to
   
 | Option | Explanation | Type |
 | ------ | ----------- | ---- |
-| master | The highest possible access level of 9. Full permissions. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> |
+| master | The highest possible access level of Infinity. Full permissions. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> |
 | level1, level2, level3 | Settable access levels that give users access to certain commands. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> |
 
 !!! note

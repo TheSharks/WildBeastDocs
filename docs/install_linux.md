@@ -1,4 +1,4 @@
-Welcome to the installation guide for WildBeast on Linux! In this guide, we'll walk you through the installation and deployment process for the WildBeast bot on Linux.
+Welcome to the installation guide for WildBeast on Linux! In this guide, we'll walk you through the installation and deployment process for WildBeast on Linux.
 
 ## Prerequisites
 
@@ -93,12 +93,12 @@ Without changing working directory, we'll now install the Node modules required 
 This will likely take a while as it has a lot to retrieve. If you get warns (Yellow text) you can ignore them as long as the output resembles to the following.
 
 ```bash
-WildBeast@4.2.1 /home/(yourhomedir)
+WildBeast@4.3.0 /home/(yourhomedir)
 +-- cleverbot-node@0.2.2
 | +-- crypto@0.0.3
 | `-- http@0.0.0
 +-- discordie@0.8.1
-...
+(...)
 ```
 
 ### Installing RethinkDB and creating the DB
@@ -216,7 +216,7 @@ We'll now walk you through the different sections in the config and what they do
 
 | Property | Explanation | Type |
 | -------- | ----------- | ---- |
-| master | The highest possible access level of 9. Full permissions. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> |
+| master | The highest possible access level of Infinity. Full permissions. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> |
 | level1, level2, level3 | Settable access levels that give users access to certain commands. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> |
 
 !!! note

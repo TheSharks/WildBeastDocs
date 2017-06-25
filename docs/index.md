@@ -9,7 +9,7 @@ WildBeast is a multifunction Discord bot system intended to be able to perform v
 WildBeast was originally written by 3 avid coders in 2015. Since then many devs have come and gone, years have rolled and the bot has continuously matured. It's currently being constantly developed and improved by a multinational team of 11 developers, moderators and other personnel at the time of writing. Check out the team [here](http://thesharks.xyz/team.html)!
 
 !!! tip
-    For those interested in the technical bits, WildBeast is written in JavaScript Node.js. It uses the `discordie` library to interact with the Discord API.
+    For those interested in the technical bits, WildBeast is written in JavaScript utilizing Node.js. It uses the `discordie` library to interact with the Discord API.
 
 ## Main features
 

@@ -38,4 +38,4 @@ When all the above give you a green light, you can consider yourself free to mak
 
 ----
 
-**NOTE:** Pull requests that break the rules provided above **will be disapproved and/or rejected until changes are made!**
+**NOTE:** Pull requests that break the rules provided above **will be rejected until changes are made!**
