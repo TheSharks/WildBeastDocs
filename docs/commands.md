@@ -5,6 +5,8 @@ This is the command reference for WildBeast. You can find more elaborative infor
 
 The prefix is not specified in this reference. You have to apply your own prefix to the commands. If you don't know the prefix, type `@BotName prefix` in the server you're using.
 
+Another thing to note is that some commands will have an empty `Usage` field on this page. This means that the command takes no arguments and is accepted as such.
+
 ## Command reference
 
 ### General commands
