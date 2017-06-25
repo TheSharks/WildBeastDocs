@@ -22,8 +22,8 @@ pages:
     - Command reference: 'commands.md'
     - Custom commands: 'custom_commands.md'
   - Installation:
-    - Linux installation: 'install_linux.md'
     - Windows installation: 'install_windows.md'
+    - Linux installation: 'install_linux.md'
     - Docker installation: 'install_docker.md'
   - Selfhosters:
     - Updating: 'updating.md'

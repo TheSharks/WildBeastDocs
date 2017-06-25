@@ -9,86 +9,88 @@ The prefix is not specified in this reference. You have to apply your own prefix
 
 ### General commands
 
-Name | Description | Usage | Level/Required permission
----- | ----------- | ----- | -------------------------
-addrole | Add a role to a user. | addrole @User `<role name>` | 3, Manage Roles
-ban | Ban a user from the server. | ban @User `<days of messages to delete>`| Ban Members
-colorrole | Change a role color to a hexadecimal value. Hashtag accepted but not required. | colorrole `<#FFFFFF/FFFFFF>` `<role name>` | 3, Manage Roles
-customize | Customize the bot's behavior in the server. | See the table below. | 3
-eval | Evaluate Discordie code. | eval `<code>` | master
-hackban | Ban a member that is not a member of the server (By ID). | hackban `<userid/multiple-ids>` `<reason>` | Ban Members
-hello | Make the bot greet you. |  | 0
-info | Print information on the bot. |  | 0
-join-server | Tell the bot to join a server. | join-server `<invite-link>` | 0
-kick | Kick a user from the server. | kick @User | Kick Members
-killswitch | Close the bot process. |  | master
-leave-server | Leave a server. |  | 3
-namechanges | Detect name changes from a user. | namechanges @User | 0
-ping | Ping the bot to test responsiveness. |  | 0
-plaineval | Same as eval, just with a different scope. | plaineval `<code>` | master
-prefix | Make the bot return its current prefix. |  | 0
-purge | Delete a specified count of messages. | purge `<amount>` | Manage Messages
-rankup | Bump a user's permission level up by one notch. | rankup @User | 3
-say | Make the bot say something you specify. | say `<message>` | 0
-server-info | Print information on the server. |  | 0
-setlevel | Set the level of a user or role. | setlevel `<-1/0/1/2/3>` `<@User/@Role/@everyone>` | 3
-setnsfw | Change NSFW allowance in a channel. | setnsfw `<on/off>` | 3
-setstatus | Change the bot's playing status. | setstatus `<message>` | master
-softban | Ban and immediately unban a member, deleting their messages in the process. | softban `<mention/userid>` `<reason>` | Ban Members
-takerole | Take a role from a user. | takerole @User `<role name>` | 3, Manage Roles
-twitch | Return if a Twitch streamer is live or not. |  | 0
-userinfo | Print info on a user. |  | 0
+| Name | Description | Usage | Level/Required permission |
+| ---- | ----------- | ----- | ------------------------- |
+| addrole | Add a role to a user. | addrole @User @User2 `<role name>` | 3, Manage Roles |
+| ban | Ban a user from the server. | ban `<days of messages to delete>` @User @User2 `<reason>` | Ban Members |
+| colorrole | Change a role color to a hexadecimal value. Hashtag accepted but not required. | colorrole `<#FFFFFF/FFFFFF>` `<role name>` | 3, Manage Roles |
+| customize | Customize the bot's behavior in the server. | See the table at the bottom of the page. | 3 |
+| eval | Evaluate JavaScript code. | eval `<code>` | master |
+| hackban | Ban a member that is not a member of the server (By ID). | hackban `<userid/multiple-ids>` `<reason>` | Ban Members |
+| hello | Make the bot greet you. |  | 0 |
+| info | Print information on the bot. |  | 0 |
+| join-server | Return the OAuth URL for the bot. |  | 0 |
+| kick | Kick a user from the server. | kick @User `<reason>` | Kick Members |
+| killswitch | Close the bot process. |  | master |
+| leave-server | Leave a server. |  | 3 |
+| namechanges | Detect name changes from a user. | namechanges @User | 0 |
+| ping | Ping the bot to test responsiveness. |  | 0 |
+| plaineval | Same as eval, just with a different scope. | plaineval `<code>` | master |
+| prefix | Make the bot return its current prefix. |  | 0 |
+| purge | Delete a specified count of messages. | purge `<amount>` | Manage Messages |
+| rankup | Bump a user's permission level up by one notch. | rankup @User | 3 |
+| say | Make the bot say something you specify. | say `<message>` | 0 |
+| server-info | Print information on the server. |  | 0 |
+| setlevel | Set the level of a user or role. | setlevel `<-1/0/1/2/3>` `<@User/@Role/@everyone>` | 3 |
+| setnsfw | Change NSFW allowance in a channel. | setnsfw `<on/off>` | 3 |
+| setstatus | Change the bot's playing status. | setstatus `<message>` | master |
+| softban | Ban and immediately unban a member, deleting their messages in the process. | softban @User/`<userid>` `<reason>` | Ban Members |
+| takerole | Take a role from a user. | takerole @User `<role name>` | 3, Manage Roles |
+| twitch | Return if a Twitch streamer is live or not. |  | 0 |
+| userinfo | Print info on a user. |  | 0 |
 
 ### Fun commands
 
-Name | Description | Usage | Level/Required permission
----- | ----------- | ----- | -------------------------
-advice | Ask for some advice from the bot. |  | 0
-cleverbot | Talk to the bot, and it will respond. | cleverbot `<message>` | 0
-dice | Roll the dice. |  | 0
-dogfact | Return a random dog fact. |  | 0
-e621 | Image searching from e621. | e621 `<searchwords>` | 0 (NSFW)
-fact | Return a random fact. |  | 0
-fancyinsult | Insult someone in a fancy manner. | fancyinsult `<name>` | 0
-fortunecow | Return a fortune cow. |  | 0
-gif | Search for a GIF. | gif `<searchwords>` | 0
-leetspeak | Encode a message to 1337sp3ak. | leetspeak `<message>` | 0
-magic8ball | Ask for a decision from the magic 8 ball. |  | 0
-meme | Make a meme. [Meme types here](https://github.com/TheSharks/WildBeast/blob/master/runtime/commands/memes.json) | meme `<memetype>` `"<Upper line>"` `"<Bottom line>"` | 0
-randomcat | Return a random cat picture. |  | 0
-randommeme | Return a random meme. |  | 0 
-rip | Posts a ripme.xyz about someone. | rip `<name>` | 0
-rule34 | Search for an image via rule34. | rule34 `<searchwords>` | 0 (NSFW)
-stroke | Stroke someone's ego. | stroke `<name>` | 0
-urbandictionary | Search for a definition from the Urban Dictionary. | urbandictionary `<searchwords>` | 0
-xkcd | Search for XKCD comics. Use nothing for random, current for latest or a number to get that one. | xkcd `<(nothing)/current/(number)>` | 0
-yesno | Return a yes or no GIF. |  | 0
-yomomma | Yo momma is so fat that... You know the drill. |  | 0
+| Name | Description | Usage | Level/Required permission |
+| ---- | ----------- | ----- | ------------------------- |
+| advice | Ask for some advice from the bot. |  | 0 |
+| cleverbot | Talk to the bot, and it will respond. | cleverbot `<message>` | 0 |
+| dice | Roll the dice. |  | 0 |
+| dogfact | Return a random dog fact. |  | 0 |
+| e621 | Image searching from e621. | e621 `<searchwords>` | 0 (NSFW) |
+| fact | Return a random fact. |  | 0 |
+| fancyinsult | Insult someone in a fancy manner. | fancyinsult `<name>` | 0 |
+| fortunecow | Return a fortune cow. |  | 0 |
+| gif | Search for a GIF. | gif `<searchwords>` | 0 |
+| leetspeak | Encode a message to 1337sp3ak. | leetspeak `<message>` | 0 |
+| magic8ball | Ask for a decision from the magic 8 ball. |  | 0 |
+| meme | Make a meme. [Meme types here](https://github.com/TheSharks/WildBeast/blob/master/runtime/commands/memes.json) | meme `<memetype>` `"<Upper line>"` `"<Bottom line>"` | 0 |
+| randomcat | Return a random cat picture. |  | 0 |
+| randomdog | Return a random dog picture. |  | 0 |
+| randommeme | Return a random meme. |  | 0  |
+| rip | Posts a ripme.xyz about someone. | rip `<name>` | 0 |
+| rule34 | Search for an image via rule34. | rule34 `<searchwords>` | 0 (NSFW) |
+| shorten | Shorten an URL using goo.gl. | shorten `<url>` | 0 |
+| stroke | Stroke someone's ego. | stroke `<name>` | 0 |
+| urbandictionary | Search for a definition from the Urban Dictionary. | urbandictionary `<searchwords>` | 0 |
+| xkcd | Search for XKCD comics. Use nothing for random, current for latest or a number to get that one. | xkcd `<(nothing)/current/(number)>` | 0 |
+| yesno | Return a yes or no GIF. |  | 0 |
+| yomomma | Yo momma is so fat that... You know the drill. |  | 0 |
 
 ### Music commands
 
-Name | Description | Usage | Level/Required permission
----- | ----------- | ----- | -------------------------
-leave-voice | Leave the voice channel. |  | 1
-music | Pause or resume music playing. |  | 1
-playlist | Print the current playlist. If the delete subcommand is passed, remove a song from the playlist. Number specifies track to remove, all means queue wipe. | playlist **OR** playlist delete `<position>/all` | 0
-request | Request a song to add to the playlist. | request `<url/searchwords>` | 1
-shuffle | Shuffle the current playlist. |  | 2
-voice | Make the bot join the voice channel. |  | 1
-volume | Adjust player volume. | volume `<0-100>` | 1
-voteskip | Vote to skip a song. |  | 1
+| Name | Description | Usage | Level/Required permission |
+| ---- | ----------- | ----- | ------------------------- |
+| leave-voice | Leave the voice channel. |  | 1 |
+| music | Pause or resume music playing. |  | 1 |
+| playlist | Print the current playlist. If the delete subcommand is passed, remove a song from the playlist. Number specifies track to | remove, all means queue wipe. | playlist **OR** playlist delete `<position>/all` | 0 |
+| request | Request a song to add to the playlist. | request `<url/searchwords>` | 1 |
+| shuffle | Shuffle the current playlist. |  | 2 |
+| voice | Make the bot join the voice channel. |  | 1 |
+| volume | Adjust player volume. | volume `<0-100>` | 1 |
+| voteskip | Vote to skip a song. |  | 1 |
 
 ### Tag commands
 
-Name | Description | Usage | Level/Required permission
----- | ----------- | ----- | -------------------------
-tag | Base command for tags. Returns a tag if specified. | tag `<subcommand/name>` | 0 (Also subcommands)
-tag create | Create a tag. | tag create `<name>` `<content>` |
-tag delete | Delete a tag. | tag delete `<name>` |
-tag edit | Edit an existing tag. | tag edit `<name>` `<newcontent>` |
-tag owner | Return the owner of a tag. | tag owner `<name>` |
-tag random | Retrieve a random tag from the database. | tag random |
-tag raw | Return the raw data of a tag. | tag raw `<name>` |
+| Name | Description | Usage | Level/Required permission |
+| ---- | ----------- | ----- | ------------------------- |
+| tag | Base command for tags. Returns a tag if specified. | tag `<subcommand/name>` | 0 (Also subcommands) |
+| tag create | Create a tag. | tag create `<name>` `<content>` |
+| tag delete | Delete a tag. | tag delete `<name>` |
+| tag edit | Edit an existing tag. | tag edit `<name>` `<newcontent>` |
+| tag owner | Return the owner of a tag. | tag owner `<name>` |
+| tag random | Retrieve a random tag from the database. | tag random |
+| tag raw | Return the raw data of a tag. | tag raw `<name>` |
 
 ## Customize command
 
