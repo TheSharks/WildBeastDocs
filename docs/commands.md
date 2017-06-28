@@ -20,7 +20,7 @@ Another thing to note is that some commands will have an empty `Usage` field on 
 | eval | Evaluate JavaScript code. | eval `<code>` | master |
 | hackban | Ban a member that is not a member of the server (By ID). | hackban `<userid/multiple-ids>` `<reason>` | Ban Members |
 | hello | Make the bot greet you. |  | 0 |
-| info | Print information on the bot. |  | 0 |
+| info | Print information about the bot. |  | 0 |
 | join-server | Return the OAuth URL for the bot. |  | 0 |
 | kick | Kick a user from the server. | kick @User `<reason>` | Kick Members |
 | killswitch | Close the bot process. |  | master |
@@ -35,8 +35,8 @@ Another thing to note is that some commands will have an empty `Usage` field on 
 | server-info | Print information on the server. |  | 0 |
 | setlevel | Set the level of a user or role. | setlevel `<-1/0/1/2/3>` `<@User/@Role/@everyone>` | 3 |
 | setnsfw | Change NSFW allowance in a channel. | setnsfw `<on/off>` | 3 |
-| setstatus | Change the bot's playing status. | setstatus `<message>` | master |
-| softban | Ban and immediately unban a member, deleting their messages in the process. | softban @User/`<userid>` `<reason>` | Ban Members |
+| setstatus | Change the bot's playing status. | setstatus `<online/idle/dnd/invisible>` `<message>` | master |
+| softban | Ban and immediately unban a member, deleting their messages in the process. | softban @User1 @User2/`<userid/multiple-ids>` `<reason>` | Ban Members |
 | takerole | Take a role from a user. | takerole @User `<role name>` | 3, Manage Roles |
 | twitch | Return if a Twitch streamer is live or not. |  | 0 |
 | userinfo | Print info on a user. |  | 0 |
@@ -59,7 +59,7 @@ Another thing to note is that some commands will have an empty `Usage` field on 
 | meme | Make a meme. [Meme types here](https://github.com/TheSharks/WildBeast/blob/master/runtime/commands/memes.json) | meme `<memetype>` `"<Upper line>"` `"<Bottom line>"` | 0 |
 | randomcat | Return a random cat picture. |  | 0 |
 | randomdog | Return a random dog picture. |  | 0 |
-| randommeme | Return a random meme. |  | 0  |
+| randommeme | Return a random meme. |  | 0 (NSFW)  |
 | rip | Posts a ripme.xyz about someone. | rip `<name>` | 0 |
 | rule34 | Search for an image via rule34. | rule34 `<searchwords>` | 0 (NSFW) |
 | shorten | Shorten an URL using goo.gl. | shorten `<url>` | 0 |
@@ -109,7 +109,7 @@ timeout | Change response given when a command is still on cooldown. | customize
 welcoming| Changes whether the bot should send a welcome message when a new member joins. | customize welcoming `<off/channel/private>` |
 welcome | Changes the welcome message specified above. | customize welcome `<message>` |
 nsfw | Change the response given when a channel doesn't have NSFW commands allowed. | customize nsfw `<message>` |
-volume | Change the default volume WildBot will assume when joining voice. | customize volume `<number>` |
+volume | Change the default volume WildBot will assume when joining a voice channel. | customize volume `<number>` |
 
 All commands except for the option-based ones (`welcoming` and `prefix`) support certain variables in the messages. The variables start with `%` and are the following.
 

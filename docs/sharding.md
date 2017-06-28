@@ -53,11 +53,11 @@ The formula is the following:
 
 | Element | Explanation |
 | ------- | ----------- |
-| guildId | The server ID tyou want to fidn the shard for. |
+| guildId | The server ID you want to find the shard for. |
 | shardCount | The amount of shards you have in total. |
 | shardNumber | The shard which the guild is on. (Also referred to as shard ID) |
 
-You will not receive events from guilds that are not on your current shard (As in the instance you're viewing in logs, for instance). They will not appear in `guilds` object in the READY packet either.
+You will not receive events from guilds that are not on your current shard (As in the instance you're viewing in logs, for example). They will not appear in `guilds` object in the READY packet either.
 
 ## Sharding with WildBeast
 

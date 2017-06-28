@@ -18,7 +18,7 @@ Welcome to the installation guide for WildBeast on Linux! In this guide, we'll w
 
 ## Installation
 
-During installation, some administrative tasks will be performed. For those tasks to work (Especially installations), you need to run them in sudo mode. We'll let you know when that's necessary, and even if we fail to do so, Linux will probably gladly let you know that `sudo` is required.
+During installation, some administrative tasks will be performed. For those tasks to work (Especially installations), you need to run them in sudo mode. We'll let you know when that's necessary, and even if we fail to do so, Linux will gladly let you know that `sudo` is required.
 
 As in, it will yell at you for trying to do something administrative without sudo. Loud. Like really, really loud.
 
@@ -237,7 +237,7 @@ We'll now walk you through the different sections in the config and what they do
 
 - OAuth app
 	- We'll start off by creating an OAuth application in Discord's developer interface so that the bot can login.
-		1. Go to [the Discord Dev dashboard](https://discordapp.com/developers/applications/me) and create a new application.
+		1. Go to [the Discord Developer dashboard](https://discordapp.com/developers/applications/me) and create a new application.
 		2. Name it whatever you prefer and give it a fancy picture. Fill in a description if you want to, then click "Create application".
 		3. Now you'll have a more full-fledged app page. Click "Add Bot User" and confirm to make it a bot.
 		4. Here you'll get a Client ID and a token. Reveal the token (**Not the secret**) and replace "Bot token" with that in the config.
@@ -286,7 +286,7 @@ We'll now walk you through the different sections in the config and what they do
 			![Twitch app management](screenshots/twitchappmanage.png)
 			4. Copy that character sequence and replace the "A twitch Client-ID" placeholder in the config with that ID.
 	- Imgur
-		- This API is used in conjuction with the `randommeme` command to pull random memes from Imgur.
+		- This API is used in conjunction with the `randommeme` command to pull random memes from Imgur.
 			1. Go to the [Imgur App Registration](https://api.imgur.com/oauth2/addclient).
 			2. Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.
 			3. Fill in the email you fancy to receive notifications about this app in.
@@ -344,7 +344,7 @@ Open your favorite browser and go to `http://127.0.0.1:8080`. You should have yo
 
 With the current system that we described above, the bot will run until the SSH session is closed or an error occurs that ends the process. How can we combat this? The answer is: PM2!
 
-PM2, short of Process Manager 2, is a Node app intended to run and manage multiple apps running on one account in a Linux environment, which enables more than one process running at a time.
+PM2, short for Process Manager 2, is a Node app intended to run and manage multiple apps running on one account in a Linux environment, which enables more than one process running at a time.
 
 !!! tip
     Our official WildBeast instance, WildBot, uses PM2!
