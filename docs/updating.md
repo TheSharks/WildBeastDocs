@@ -19,7 +19,7 @@ When updating the bot, run `git pull` in a terminal with the working directory p
 
 ## Updating the dependencies
 
-Dependencies, or deps for short, are utilities that WildBeast relies on to work. These come in form of Node modules, external dependcies like FFMPEG and so forth.
+Dependencies, or deps for short, are utilities that WildBeast relies on to work. These come in form of Node modules, external dependencies like FFMPEG and so forth.
 
 The retrieving and installation of these packages has been largely automated due to the existence of `package.json`. This file specifies what to retrieve and update when the need arises. You can update the bot's dependencies at will, but doing so at regular intervals is recommended.
 
