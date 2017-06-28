@@ -43,7 +43,7 @@ Now you can check your Node version from the console by running `node -v` which 
 
 Now we'll retrieve the WildBeast source code via Git.
 
-If you don't have Git installed already, run `sudo apt-get install git`. Clone the Git repository with `#!bash git clone https://github.com/TheSharks/WildBeast && cd WildBeast`.
+If you don't have Git installed already, run `sudo apt-get install git`. Clone the Git repository with `#!bash git clone https://github.com/TheSharks/WildBeast.git && cd WildBeast`.
 
 If you encounter big problems during installation, you can delete the directory with `rm -d -f -r ~/WildBeast` and reclone the repository.
 

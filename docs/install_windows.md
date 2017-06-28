@@ -54,7 +54,7 @@ In text:
 
 If you followed through correctly, you've got Git set up in a way that allows you to perform setup and future maintenance without hitches.
 
-Now, you'd want to figure out where you want the bot to be downloaded. Something simple where you can find it is good, AKA not in the system internals (Possibly some other drive, though **NOT A FLASH DRIVE**) or optionally your Desktop could be fine. When you've found the location of your choice, Shift+Right Click in that particular location and select "Open command window here". Then clone the WildBeast Git repository with `#!bash git clone https://github.com/TheSharks/WildBeast && cd WildBeast`.
+Now, you'd want to figure out where you want the bot to be downloaded. Something simple where you can find it is good, AKA not in the system internals (Possibly some other drive, though **NOT A FLASH DRIVE**) or optionally your Desktop could be fine. When you've found the location of your choice, Shift+Right Click in that particular location and select "Open command window here". Then clone the WildBeast Git repository with `#!bash git clone https://github.com/TheSharks/WildBeast.git && cd WildBeast`.
 
 !!! tip "Why to download with Git"
     We're instructing you to use Git for downloading WildBeast to make future updating processes easier. If you were to download the ZIP package, you'd need to redownload it every time you want to update. For more info, see [Updating](updating.md).
