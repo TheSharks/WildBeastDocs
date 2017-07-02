@@ -157,7 +157,7 @@ With the danger zone clarified, let's proceed to configuration.
 
 - OAuth app
 	- We'll start off by creating an OAuth application in Discord's developer interface so that the bot can login.
-		1. Go to [the Discord Dev dashboard](https://discordapp.com/developers/applications/me) and create a new application.
+		1. Go to [the Discord Developer dashboard](https://discordapp.com/developers/applications/me) and create a new application.
 		2. Name it whatever you prefer and give it a fancy picture. Fill in a description if you want to, then click "Create application".
 		3. Now you'll have a more full-fledged app page. Click "Add Bot User" and confirm to make it a bot.
 		4. Here you'll get a Client ID and a token. Reveal the token (**Not the secret**) and apply it to the `BOT_TOKEN` option.
@@ -206,7 +206,7 @@ With the danger zone clarified, let's proceed to configuration.
 			![Twitch app management](screenshots/twitchappmanage.png)
 			4. Copy that character sequence and apply it to the `API_KEYS_TWITCH_ID` option.
 	- Imgur
-		- This API is used in conjuction with the `randommeme` command to pull random memes from Imgur.
+		- This API is used in conjunction with the `randommeme` command to pull random memes from Imgur.
 			1. Go to the [Imgur App Registration](https://api.imgur.com/oauth2/addclient).
 			2. Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.
 			3. Fill in the email you fancy to receive notifications about this app in.

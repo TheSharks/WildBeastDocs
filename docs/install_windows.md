@@ -219,7 +219,7 @@ We'll now walk you through the different sections in the config and what they do
 
 - OAuth app
 	- We'll start off by creating an OAuth application in Discord's developer interface so that the bot can login.
-		1. Go to [the Discord Dev dashboard](https://discordapp.com/developers/applications/me) and create a new application.
+		1. Go to [the Discord Developer dashboard](https://discordapp.com/developers/applications/me) and create a new application.
 		2. Name it whatever you prefer and give it a fancy picture. Fill in a description if you want to, then click "Create application".
 		3. Now you'll have a more full-fledged app page. Click "Add Bot User" and confirm to make it a bot.
 		4. Here you'll get a Client ID and a token. Reveal the token (**Not the secret**) and replace "Bot token" with that in the config.
@@ -279,7 +279,7 @@ We'll now walk you through the different sections in the config and what they do
 			![Imgur ID & secret](screenshots/PUdSz6B.png)
 			7. Copy the Client ID and replace the "A Imgur Client-ID" placeholder with that value.
 	- Cleverbot
-		- This API is used in conjuction with the `cleverbot` command to do cleverbot discussions.
+		- This API is used in conjunction with the `cleverbot` command to do cleverbot discussions.
 			1. Go to [cleverbot.io](https://cleverbot.io/keys) and login to get your API user and key.
 			2. After logging in, copy the contents of the "API User" and "API Key" fields and paste them into the appropriate fields in the config, API User to cleverbot_user and API Key to cleverbot_key.
 			![Cleverbot Keys](screenshots/Rn01Umh.png)

@@ -30,4 +30,4 @@ To update the dependencies, run `npm install` with the working directory pointed
 
 If the bot breaks and won't function as it should, try updating the bot and the dependencies before coming to our Discord server with questions on fixing it. If it stays broken after this, feel free to come and ask questions then.
 
-**With these resources, your bot should be all fine as long as it's up to date!**
+**With these resources, your bot should be fine as long as it's up to date!**

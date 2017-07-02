@@ -5,7 +5,7 @@ No worries though! We don't like this either and are hence instructing you how t
 ## First steps
 
 !!! danger "Before you begin"
-    What you're going to start altering is potentially destructive if misused. The registry editor has a lot of power and can properly screw up your computer if you do this wrong. If technology isn't your strong suit, be sure to follow very carefully. In case somebody else is using your computer or governing over it, perhaps ask them for permission to tweak the registry before you proceed.
+    What you're going to start altering is potentially destructive if misused. The registry editor has a lot of power and can screw up your computer if you do this wrong. If technology isn't your strong suit, be sure to follow very carefully. In case somebody else is using your computer or governing over it, perhaps ask them for permission to tweak the registry before you proceed.
 
     We in TheSharks are not responsible for issues caused by your actions in the registry!
 
@@ -50,7 +50,7 @@ If not, there are some extra fixes required. We'll walk you through that below.
 
 Download this ZIP file with a registry file in it: [http://lwtechgaming.me/files/ReinstateCMD.zip](http://lwtechgaming.me/files/ReinstateCMD.zip)
 
-If you just got sceptical, good! You're smart. Why should you trust this file? Well, it's not intended for anything malicious. The only thing that ZIP contains is a .reg file with necessary tweaks. The registry file itself does not do anything malicious.
+If you just got skeptical, good! You're smart. Why should you trust this file? Well, it's not intended for anything malicious. The only thing that ZIP contains is a .reg file with necessary tweaks. The registry file itself does not do anything malicious.
 
 For transparency, here is the registry file's contents. You can open it with a text editor and check if it matches if you're really scrutinous.
 
