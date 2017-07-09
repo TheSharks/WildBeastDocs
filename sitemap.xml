@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://docs.thesharks.xyz/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,19 @@
         
     <url>
      <loc>https://docs.thesharks.xyz/commands/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://docs.thesharks.xyz/custom_commands/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://docs.thesharks.xyz/tagscript/</loc>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,19 +35,19 @@
         
     <url>
      <loc>https://docs.thesharks.xyz/install_windows/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://docs.thesharks.xyz/install_linux/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://docs.thesharks.xyz/install_docker/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -51,19 +57,19 @@
         
     <url>
      <loc>https://docs.thesharks.xyz/updating/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://docs.thesharks.xyz/sharding/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://docs.thesharks.xyz/powershell/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -72,7 +78,7 @@
     
     <url>
      <loc>https://docs.thesharks.xyz/credits/</loc>
-     <lastmod>2017-06-25</lastmod>
+     <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

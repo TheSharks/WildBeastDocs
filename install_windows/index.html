@@ -308,6 +308,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tagscript/" title="Tag scripting" class="md-nav__link">
+      Tag scripting
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -826,15 +838,29 @@
                 <p>Welcome to the installation guide for WildBeast on Windows! In this guide, we'll walk you through the installation and deployment process for WildBeast on Windows.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Windows system<ul>
-<li>Most Windows systems can run this bot fine, unless you have a really low-end laptop</li>
-<li>OS: Windows 7 and up</li>
-<li>Administrator access to the computer</li>
+<li>
+<p>Windows system</p>
+<ul>
+<li>
+<p>Most Windows systems can run this bot fine, unless you have a really low-end laptop</p>
+</li>
+<li>
+<p>OS: Windows 7 and up</p>
+</li>
+<li>
+<p>Administrator access to the computer</p>
+</li>
 </ul>
 </li>
-<li>Programs<ul>
-<li>We will be installing programs that are directly related to the bot later on</li>
-<li>These programs are required pre-setup:<ul>
+<li>
+<p>Programs</p>
+<ul>
+<li>
+<p>We will be installing programs that are directly related to the bot later on</p>
+</li>
+<li>
+<p>These programs are required pre-setup:</p>
+<ul>
 <li>A code editor, i.e. <a href="https://notepad-plus-plus.org/">Notepad++</a> or <a href="https://atom.io">Atom</a> or <a href="http://brackets.io/">Brackets</a></li>
 </ul>
 </li>
@@ -864,10 +890,10 @@
 <p><img alt="Git 3" src="../screenshots/gitsetup4.png" /></p>
 <p><img alt="Git 4" src="../screenshots/gitsetup5.png" /></p>
 <p>In text:</p>
-<p><code class="codehilite">Use Git from the Windows Command Prompt</code><br />
-<code class="codehilite">Checkout Windows-style, commit Unix-style endings</code><br />
-<code class="codehilite">Use OpenSSH</code><br />
-<code class="codehilite">Use MinTTY (the default terminal MSYS2)</code>  </p>
+<p><code class="codehilite">Use Git from the Windows Command Prompt</code>  </p>
+<p><code class="codehilite">Checkout Windows-style, commit Unix-style endings</code>  </p>
+<p><code class="codehilite">Use OpenSSH</code>  </p>
+<p><code class="codehilite">Use MinTTY (the default terminal MSYS2)</code>  </p>
 <p>If you followed through correctly, you've got Git set up in a way that allows you to perform setup and future maintenance without hitches.</p>
 <p>Now, you'd want to figure out where you want the bot to be downloaded. Something simple where you can find it is good, AKA not in the system internals (Possibly some other drive, though <strong>NOT A FLASH DRIVE</strong>) or optionally your Desktop could be fine. When you've found the location of your choice, Shift+Right Click in that particular location and select "Open command window here". Then clone the WildBeast Git repository with <code class="codehilite">git clone https://github.com/TheSharks/WildBeast.git <span class="o">&amp;&amp;</span> <span class="nb">cd</span> WildBeast</code>.</p>
 <div class="admonition tip">
@@ -897,25 +923,47 @@
 <p>The <code class="codehilite">fibers</code> package requires node-gyp to build. Node-gyp may fail on building of <code class="codehilite">fibers</code> if a GCC compiler isn't installed on the system. If you get an error that resembles to the one below, you are having this issue.</p>
 <div class="codehilite"><pre><span></span>gyp ERR! build error
 
+
+
 gyp ERR! stack Error: C:<span class="se">\W</span>indows<span class="se">\M</span>icrosoft.NET<span class="se">\F</span>ramework<span class="se">\v</span><span class="m">4</span>.0.30319<span class="se">\m</span>sbuild.exe failed with <span class="nb">exit</span> code: <span class="m">1</span>
+
+
 
 gyp ERR! stack     at ChildProcess.onExit <span class="o">(</span>C:<span class="se">\P</span>rogram Files<span class="se">\n</span>odejs<span class="se">\n</span>ode_modules<span class="se">\n</span>pm<span class="se">\n</span>ode_modules<span class="se">\n</span>ode-gyp<span class="se">\l</span>ib<span class="se">\b</span>uild.js:276:23<span class="o">)</span>
 
+
+
 gyp ERR! stack     at emitTwo <span class="o">(</span>events.js:106:13<span class="o">)</span>
+
+
 
 gyp ERR! stack     at ChildProcess.emit <span class="o">(</span>events.js:194:7<span class="o">)</span>
 
+
+
 gyp ERR! stack     at Process.ChildProcess._handle.onexit <span class="o">(</span>internal/child_process.js:215:12<span class="o">)</span>
+
+
 
 gyp ERR! System Windows_NT <span class="m">10</span>.0.14393
 
+
+
 gyp ERR! <span class="nb">command</span> <span class="s2">&quot;C:\Program Files\nodejs\node.exe&quot;</span> <span class="s2">&quot;C:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js&quot;</span> <span class="s2">&quot;rebuild&quot;</span> <span class="s2">&quot;--release&quot;</span>
+
+
 
 gyp ERR! cwd %WildBeastDirectory%<span class="se">\n</span>ode_modules<span class="se">\f</span>ibers
 
+
+
 gyp ERR! node -v %NodeVersion%
 
+
+
 gyp ERR! node-gyp -v %Node-gypVersion%
+
+
 
 gyp ERR! not ok
 </pre></div>
@@ -945,313 +993,274 @@ gyp ERR! not ok
 <p>When opening the config file, you should have a file that looks like the <a href="https://github.com/TheSharks/WildBeast/blob/master/config.example.json">example config</a>.</p>
 <p>We'll now walk you through the different sections in the config and what they do.</p>
 <h4 id="bot-section">Bot section</h4>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Explanation</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>token</td>
-<td>OAuth token for the bot.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-<tr>
-<td>oauth</td>
-<td>The OAuth URL for the bot.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-</tbody>
-</table>
+<p>| Property | Explanation | Type |</p>
+<p>| -------- | ----------- | ---- |</p>
+<p>| token | OAuth token for the bot. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
+<p>| oauth | The OAuth URL for the bot. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
 <h4 id="database-section">Database section</h4>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Explanation</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>host</td>
-<td>Points to WildBeast's database, localhost by default.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-<tr>
-<td>port</td>
-<td>Specifies which network port the RethinkDB server is running on.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></td>
-</tr>
-<tr>
-<td>password</td>
-<td>Password to RethinkDB user.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-<tr>
-<td>user</td>
-<td>RethinkDB user account to use for accessing the database.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-</tbody>
-</table>
+<p>| Property | Explanation | Type |</p>
+<p>| -------- | ----------- | ---- |</p>
+<p>| host | Points to WildBeast's database, localhost by default. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
+<p>| port | Specifies which network port the RethinkDB server is running on. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> |</p>
+<p>| password | Password to RethinkDB user. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
+<p>| user | RethinkDB user account to use for accessing the database. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
 <h4 id="settings-section">Settings section</h4>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Explanation</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>prefix</td>
-<td>The command prefix the bot will use.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-<tr>
-<td>autodeletemsg</td>
-<td>Automatically delete music-related messages after a while.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></td>
-</tr>
-<tr>
-<td>deleteTimeout</td>
-<td>The amount of time after which to delete the messages.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></td>
-</tr>
-<tr>
-<td>deleteTimeoutLong</td>
-<td>Same as above, but for messages that have a longer timeout.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></td>
-</tr>
-<tr>
-<td>maxvcslots</td>
-<td>How many concurrent voice connections the bot can have until it won't join more.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></td>
-</tr>
-</tbody>
-</table>
+<p>| Property | Explanation | Type |</p>
+<p>| -------- | ----------- | ---- |</p>
+<p>| prefix | The command prefix the bot will use. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
+<p>| autodeletemsg | Automatically delete music-related messages after a while. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a> |</p>
+<p>| deleteTimeout | The amount of time after which to delete the messages. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> |</p>
+<p>| deleteTimeoutLong | Same as above, but for messages that have a longer timeout. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> |</p>
+<p>| maxvcslots | How many concurrent voice connections the bot can have until it won't join more. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> |</p>
 <h4 id="bezerk-section">Bezerk section</h4>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not modify any of these settings! They're for internal use only.</p>
 </div>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Explanation</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>use</td>
-<td>Whether Bezerk shall be used or not.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></td>
-</tr>
-<tr>
-<td>uri</td>
-<td>Specifies the websocket address for the Bezerk server.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-</tbody>
-</table>
+<p>| Property | Explanation | Type |</p>
+<p>| -------- | ----------- | ---- |</p>
+<p>| use | Whether Bezerk shall be used or not. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a> |</p>
+<p>| uri | Specifies the websocket address for the Bezerk server. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
 <h4 id="elasticsearch-section">Elasticsearch section</h4>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not modify any of these settings! They're for internal use only.</p>
 </div>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Explanation</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>use</td>
-<td>Whether Elastic shall be used or not.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></td>
-</tr>
-<tr>
-<td>client/host</td>
-<td>Specifies the address for the Elastic server.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-</tbody>
-</table>
+<p>| Property | Explanation | Type |</p>
+<p>| -------- | ----------- | ---- |</p>
+<p>| use | Whether Elastic shall be used or not. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a> |</p>
+<p>| client/host | Specifies the address for the Elastic server. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |  </p>
 <h4 id="permissions-section">Permissions section</h4>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Explanation</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>master</td>
-<td>The highest possible access level of Infinity. Full permissions.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>&gt;</td>
-</tr>
-<tr>
-<td>level1, level2, level3</td>
-<td>Settable access levels that give users access to certain commands.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>&gt;</td>
-</tr>
-</tbody>
-</table>
+<p>| Property | Explanation | Type |</p>
+<p>| -------- | ----------- | ---- |</p>
+<p>| master | The highest possible access level of Infinity. Full permissions. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>&gt; |</p>
+<p>| level1, level2, level3 | Settable access levels that give users access to certain commands. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>&gt; |</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>By default, when WildBeast joins a server it will set the owner's access level to 4. This is to give them control over normal users.</p>
 </div>
 <h4 id="api-keys-section">API keys section</h4>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Explanation</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>imgflip</td>
-<td>Your <a href="https://imgflip.com">imgflip</a> login details.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-<tr>
-<td>google</td>
-<td>For retrieving data from YouTube.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-<tr>
-<td>twitchId</td>
-<td>For retrieving status of whether a user on Twitch is streaming or not.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-<tr>
-<td>imgur</td>
-<td>For retrieving random memes from Imgur.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-<tr>
-<td>cleverbot_user</td>
-<td>Username to the cleverbot.io API, used in the cleverbot command.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-<tr>
-<td>cleverbot_key</td>
-<td>Key to the cleverbot.io API, used in the cleverbot command.</td>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></td>
-</tr>
-</tbody>
-</table>
+<p>| Property | Explanation | Type |</p>
+<p>| -------- | ----------- | ---- |</p>
+<p>| imgflip | Your <a href="https://imgflip.com">imgflip</a> login details. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
+<p>| google | For retrieving data from YouTube. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
+<p>| twitchId | For retrieving status of whether a user on Twitch is streaming or not. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
+<p>| imgur | For retrieving random memes from Imgur. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
+<p>| cleverbot_user | Username to the cleverbot.io API, used in the cleverbot command. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
+<p>| cleverbot_key | Key to the cleverbot.io API, used in the cleverbot command. | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> |</p>
 <h3 id="making-the-config">Making the config</h3>
 <ul>
-<li>OAuth app<ul>
-<li>We'll start off by creating an OAuth application in Discord's developer interface so that the bot can login.<ol>
-<li>Go to <a href="https://discordapp.com/developers/applications/me">the Discord Dev dashboard</a> and create a new application.</li>
-<li>Name it whatever you prefer and give it a fancy picture. Fill in a description if you want to, then click "Create application".</li>
-<li>Now you'll have a more full-fledged app page. Click "Add Bot User" and confirm to make it a bot.</li>
-<li>Here you'll get a Client ID and a token. Reveal the token (<strong>Not the secret</strong>) and replace "Bot token" with that in the config.</li>
+<li>
+<p>OAuth app</p>
+<ul>
+<li>
+<p>We'll start off by creating an OAuth application in Discord's developer interface so that the bot can login.</p>
+<ol>
+<li>
+<p>Go to <a href="https://discordapp.com/developers/applications/me">the Discord Developer dashboard</a> and create a new application.</p>
+</li>
+<li>
+<p>Name it whatever you prefer and give it a fancy picture. Fill in a description if you want to, then click "Create application".</p>
+</li>
+<li>
+<p>Now you'll have a more full-fledged app page. Click "Add Bot User" and confirm to make it a bot.</p>
+</li>
+<li>
+<p>Here you'll get a Client ID and a token. Reveal the token (<strong>Not the secret</strong>) and replace "Bot token" with that in the config.</p>
+</li>
 </ol>
 </li>
-<li>Next we'll make an OAuth URL for the bot so it can be added to the server.<ol>
-<li>Just put this placeholder URL somewhere for now, <strong>don't open it as it will not work</strong>.
-<code class="codehilite">https://discordapp.com/oauth2/authorize?&amp;client_id=CLIENTID&amp;scope=bot&amp;permissions=536345655</code></li>
-<li>Go back to the app page, and copy the Client ID.</li>
-<li>Replace the <code class="codehilite">CLIENTID</code> placeholder in the URL above with the ID you just copied. You can open the URL to test that you did it right.</li>
-<li>If the URL works as intended, copy it and replace "Bot OAuth URL (...)" in the config with the one you copied.</li>
-<li>You can also open the URL and add your bot to the server at this point, so you don't forget it. It will have the permissions it wants precalculated due to the number after the <code class="codehilite">permissions</code> property. Just select your server from the dropdown list and add it. The bot won't do anything at this stage because we're not finished yet.</li>
-<li>If you can't select your server, it might be that you lack Manage Server permissions.</li>
+<li>
+<p>Next we'll make an OAuth URL for the bot so it can be added to the server.</p>
+<ol>
+<li>Just put this placeholder URL somewhere for now, <strong>don't open it as it will not work</strong>.</li>
+</ol>
+<p><code class="codehilite">https://discordapp.com/oauth2/authorize?&amp;client_id=CLIENTID&amp;scope=bot&amp;permissions=536345655</code></p>
+<ol>
+<li>
+<p>Go back to the app page, and copy the Client ID.</p>
+</li>
+<li>
+<p>Replace the <code class="codehilite">CLIENTID</code> placeholder in the URL above with the ID you just copied. You can open the URL to test that you did it right.</p>
+</li>
+<li>
+<p>If the URL works as intended, copy it and replace "Bot OAuth URL (...)" in the config with the one you copied.</p>
+</li>
+<li>
+<p>You can also open the URL and add your bot to the server at this point, so you don't forget it. It will have the permissions it wants precalculated due to the number after the <code class="codehilite">permissions</code> property. Just select your server from the dropdown list and add it. The bot won't do anything at this stage because we're not finished yet.</p>
+</li>
+<li>
+<p>If you can't select your server, it might be that you lack Manage Server permissions.</p>
+</li>
 </ol>
 </li>
 </ul>
 </li>
-<li>Prefix and other settings<ul>
-<li>Setting the command prefix isn't really rocket science. This can be any special character, for instance <code class="codehilite"><span class="c">%</span></code>, <code class="codehilite">&amp;</code> and so forth.</li>
-<li>You can also use multiple characters as a prefix, for instance <code class="codehilite">!!</code> and <code class="codehilite">//</code>. Avoid common single-character prefixes like <code class="codehilite">!</code> and <code class="codehilite">/</code> to avoid initial prefix conflicts. These can however be resolved with <code class="codehilite">customize</code> and changing the prefix for the server.</li>
-<li>Note that there is always a so-called global prefix: A mention. Saying <code class="codehilite">@BotName</code> in chat will function as a prefix as well. <strong>This needn't be specified in the config as it's always active.</strong></li>
-</ul>
+<li>
+<p>Prefix and other settings</p>
+<ul>
+<li>
+<p>Setting the command prefix isn't really rocket science. This can be any special character, for instance <code class="codehilite"><span class="c">%</span></code>, <code class="codehilite">&amp;</code> and so forth.</p>
 </li>
-<li>The rest of the options are straightforward. <code class="codehilite">autodeletemsg</code> can be true or false, the message deletion times can be whatever you fancy in milliseconds and <code class="codehilite">maxvcslots</code> is just a number.</li>
-<li>Permissions<ul>
-<li>This is a section that has a very interesting gimmick to it.<ul>
-<li>WildBeast has a command named <code class="codehilite">setlevel</code> which will set the level of a user. <strong>However</strong>, that is written into a server-specific config. Which means that if you set the level of someone to 2 in Server1, they will not be level 2 in Server2, for example.</li>
-<li>The permissions fields here are so-called <strong>global permissions</strong>, and will apply unless a server-specific level is set.</li>
-<li>Use this to add technicians and others who need permissions regardless of where the bot is.</li>
-</ul>
+<li>
+<p>You can also use multiple characters as a prefix, for instance <code class="codehilite">!!</code> and <code class="codehilite">//</code>. Avoid common single-character prefixes like <code class="codehilite">!</code> and <code class="codehilite">/</code> to avoid initial prefix conflicts. These can however be resolved with <code class="codehilite">customize</code> and changing the prefix for the server.</p>
 </li>
-<li>You can specify users here by adding their IDs into the fields. Only the master field is mandatory.<ul>
-<li>You can get the ID of a user by either "backlash mentioning" them, which means to say typing <code class="codehilite">\@User</code> in chat or by enabling Developer Mode (Personal Settings -&gt; Appearance -&gt; Enable Developer Mode) and right-clicking on someone, subsequently selecting Copy ID from the list and pasting it in between the quotes.</li>
-<li>Remember to follow the example syntax in the master field when adding multiple users!</li>
-</ul>
+<li>
+<p>Note that there is always a so-called global prefix: A mention. Saying <code class="codehilite">@BotName</code> in chat will function as a prefix as well. <strong>This needn't be specified in the config as it's always active.</strong></p>
 </li>
 </ul>
 </li>
-<li>API keys<ul>
-<li>General notice: Anything within these fields is sensitive and could do much harm if revealed to the public. <strong>Therefore it is imperative that you keep this to yourself.</strong> WildBeast maintainers will <strong>NEVER</strong> ask for your login details or API keys. Only show the options to trusted WildBeast maintainers in WildBot's Territory.</li>
-<li>imgflip<ul>
+<li>
+<p>The rest of the options are straightforward. <code class="codehilite">autodeletemsg</code> can be true or false, the message deletion times can be whatever you fancy in milliseconds and <code class="codehilite">maxvcslots</code> is just a number.</p>
+</li>
+<li>
+<p>Permissions</p>
+<ul>
+<li>
+<p>This is a section that has a very interesting gimmick to it.</p>
+<ul>
+<li>
+<p>WildBeast has a command named <code class="codehilite">setlevel</code> which will set the level of a user. <strong>However</strong>, that is written into a server-specific config. Which means that if you set the level of someone to 2 in Server1, they will not be level 2 in Server2, for example.</p>
+</li>
+<li>
+<p>The permissions fields here are so-called <strong>global permissions</strong>, and will apply unless a server-specific level is set.</p>
+</li>
+<li>
+<p>Use this to add technicians and others who need permissions regardless of where the bot is.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>You can specify users here by adding their IDs into the fields. Only the master field is mandatory.</p>
+<ul>
+<li>
+<p>You can get the ID of a user by either "backlash mentioning" them, which means to say typing <code class="codehilite">\@User</code> in chat or by enabling Developer Mode (Personal Settings -&gt; Appearance -&gt; Enable Developer Mode) and right-clicking on someone, subsequently selecting Copy ID from the list and pasting it in between the quotes.</p>
+</li>
+<li>
+<p>Remember to follow the example syntax in the master field when adding multiple users!</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>API keys</p>
+<ul>
+<li>
+<p>General notice: Anything within these fields is sensitive and could do much harm if revealed to the public. <strong>Therefore it is imperative that you keep this to yourself.</strong> WildBeast maintainers will <strong>NEVER</strong> ask for your login details or API keys. Only show the options to trusted WildBeast maintainers in WildBot's Territory.</p>
+</li>
+<li>
+<p>imgflip</p>
+<ul>
 <li>The procedure for getting this isn't tricky. Just go to <a href="https://imgflip.com">https://imgflip.com</a>, create an account and input your username and password into the fields.</li>
 </ul>
 </li>
-<li>Google<ul>
-<li>This API is used to retrieve data from YouTube, related to music playback.<ol>
-<li>Go to <a href="../the Google Developer Console">https://console.developers.google.com</a> and create a new project. Name it whatever you fancy. Nothing else needs to be changed unless you want to change the project ID or the app engine location.</li>
-<li>Wait a while as the project is being created.</li>
-<li>When the creation process is completed, you'll get taken to the Dashboard screen of the project. In the sidebar on the left, click "Library".</li>
-<li>This will take you to the API library. Select "YouTube Data API" as highlighted below.
-<img alt="YT Data API" src="../screenshots/googleapi_lib.png" /></li>
-<li>When the API page opens, click the "Enable" button in the top bar. Then you will get a notification saying that you need to create credentials. That's exactly what we will do.</li>
-<li>Click the "Go to credentials" button. In the next dropdowns, make them look like following.
-<img alt="Credentials" src="../screenshots/ytapi.png" /></li>
+<li>
+<p>Google</p>
+<ul>
+<li>
+<p>This API is used to retrieve data from YouTube, related to music playback.</p>
+<ol>
+<li>
+<p>Go to <a href="../the Google Developer Console">https://console.developers.google.com</a> and create a new project. Name it whatever you fancy. Nothing else needs to be changed unless you want to change the project ID or the app engine location.</p>
+</li>
+<li>
+<p>Wait a while as the project is being created.</p>
+</li>
+<li>
+<p>When the creation process is completed, you'll get taken to the Dashboard screen of the project. In the sidebar on the left, click "Library".</p>
+</li>
+<li>
+<p>This will take you to the API library. Select "YouTube Data API" as highlighted below.</p>
+</li>
+</ol>
+<p><img alt="YT Data API" src="../screenshots/googleapi_lib.png" /></p>
+<ol>
+<li>
+<p>When the API page opens, click the "Enable" button in the top bar. Then you will get a notification saying that you need to create credentials. That's exactly what we will do.</p>
+</li>
+<li>
+<p>Click the "Go to credentials" button. In the next dropdowns, make them look like following.</p>
+</li>
+</ol>
+<p><img alt="Credentials" src="../screenshots/ytapi.png" /></p>
+<ol>
 <li>Hit "What credentials do I need?" and the page will generate a Google API key for you. Copy the API key and replace the "A google key" placeholder with that key in the config.</li>
 </ol>
 </li>
 </ul>
 </li>
-<li>Twitch<ul>
-<li>This API is used with the <code class="codehilite">twitch</code> command. This will be the client ID the bot passes to Twitch when retrieving stream status.<ol>
-<li>Go to the <a href="https://www.twitch.tv/settings/connections">Twitch Connections page</a>, scroll down to the bottom and click "Register new application".</li>
-<li>Fill in the fields. Name should be your app name, and set the Redirect URI to <code class="codehilite">http://localhost</code> unless you want something to function differently. Set the app type to "Chat Bot" as that's what you're basically doing here.
-<img alt="Twitch app" src="../screenshots/twitchapp.png" /></li>
-<li>Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".
-<img alt="Twitch app management" src="../screenshots/twitchappmanage.png" /></li>
+<li>
+<p>Twitch</p>
+<ul>
+<li>
+<p>This API is used with the <code class="codehilite">twitch</code> command. This will be the client ID the bot passes to Twitch when retrieving stream status.</p>
+<ol>
+<li>
+<p>Go to the <a href="https://www.twitch.tv/settings/connections">Twitch Connections page</a>, scroll down to the bottom and click "Register new application".</p>
+</li>
+<li>
+<p>Fill in the fields. Name should be your app name, and set the Redirect URI to <code class="codehilite">http://localhost</code> unless you want something to function differently. Set the app type to "Chat Bot" as that's what you're basically doing here.</p>
+</li>
+</ol>
+<p><img alt="Twitch app" src="../screenshots/twitchapp.png" /></p>
+<ol>
+<li>Click "Register". This will take you to the application management page. Down towards the bottom, there will be a section saying "Client ID".</li>
+</ol>
+<p><img alt="Twitch app management" src="../screenshots/twitchappmanage.png" /></p>
+<ol>
 <li>Copy that character sequence and replace the "A twitch Client-ID" placeholder in the config with that ID.</li>
 </ol>
 </li>
 </ul>
 </li>
-<li>Imgur<ul>
-<li>This API is used in conjuction with the <code class="codehilite">randommeme</code> command to pull random memes from Imgur.<ol>
-<li>Go to the <a href="https://api.imgur.com/oauth2/addclient">Imgur App Registration</a>.</li>
-<li>Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.</li>
-<li>Fill in the email you fancy to receive notifications about this app in.</li>
-<li>Description... Well, anything you find useful there.</li>
-<li>You should end up with the below view.
-<img alt="Imgur app creation" src="../screenshots/cAAkBHl.png" /></li>
-<li>Solve the CAPTCHA and hit "Submit" on the bottom of the page. This will take you to the page where you can see your client ID and secret.
-<img alt="Imgur ID &amp; secret" src="../screenshots/PUdSz6B.png" /></li>
+<li>
+<p>Imgur</p>
+<ul>
+<li>
+<p>This API is used in conjuction with the <code class="codehilite">randommeme</code> command to pull random memes from Imgur.</p>
+<ol>
+<li>
+<p>Go to the <a href="https://api.imgur.com/oauth2/addclient">Imgur App Registration</a>.</p>
+</li>
+<li>
+<p>Fill in the application name you prefer to use. Set Authorization type to "Anonymous usage without user authentication" as no further auth will be needed for pulling memes.</p>
+</li>
+<li>
+<p>Fill in the email you fancy to receive notifications about this app in.</p>
+</li>
+<li>
+<p>Description... Well, anything you find useful there.</p>
+</li>
+<li>
+<p>You should end up with the below view.</p>
+</li>
+</ol>
+<p><img alt="Imgur app creation" src="../screenshots/cAAkBHl.png" /></p>
+<ol>
+<li>Solve the CAPTCHA and hit "Submit" on the bottom of the page. This will take you to the page where you can see your client ID and secret.</li>
+</ol>
+<p><img alt="Imgur ID &amp; secret" src="../screenshots/PUdSz6B.png" /></p>
+<ol>
 <li>Copy the Client ID and replace the "A Imgur Client-ID" placeholder with that value.</li>
 </ol>
 </li>
 </ul>
 </li>
-<li>Cleverbot<ul>
-<li>This API is used in conjuction with the <code class="codehilite">cleverbot</code> command to do cleverbot discussions.<ol>
-<li>Go to <a href="https://cleverbot.io/keys">cleverbot.io</a> and login to get your API user and key.</li>
-<li>After logging in, copy the contents of the "API User" and "API Key" fields and paste them into the appropriate fields in the config, API User to cleverbot_user and API Key to cleverbot_key.
-<img alt="Cleverbot Keys" src="../screenshots/Rn01Umh.png" /></li>
+<li>
+<p>Cleverbot</p>
+<ul>
+<li>
+<p>This API is used in conjunction with the <code class="codehilite">cleverbot</code> command to do cleverbot discussions.</p>
+<ol>
+<li>
+<p>Go to <a href="https://cleverbot.io/keys">cleverbot.io</a> and login to get your API user and key.</p>
+</li>
+<li>
+<p>After logging in, copy the contents of the "API User" and "API Key" fields and paste them into the appropriate fields in the config, API User to cleverbot_user and API Key to cleverbot_key.</p>
+</li>
 </ol>
+<p><img alt="Cleverbot Keys" src="../screenshots/Rn01Umh.png" /></p>
 </li>
 </ul>
 </li>
@@ -1273,7 +1282,9 @@ gyp ERR! not ok
 <p>Keep in mind, if you have further questions or need help, we're around over at our official server! Link below.</p>
 <p>On the behalf of the WildBeast team, <strong>we hope you enjoy your bot!</strong></p>
 <p align="left">
+
   <a href="https://discord.gg/wildbot"><img src="https://discordapp.com/api/guilds/110462143152803840/widget.png?style=banner2" alt="Discord server"></a>
+
 </p>
                 
                   
@@ -1293,7 +1304,7 @@ gyp ERR! not ok
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../custom_commands/" title="Custom commands" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../tagscript/" title="Tag scripting" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1302,7 +1313,7 @@ gyp ERR! not ok
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Custom commands
+                Tag scripting
               </span>
             </div>
           </a>
