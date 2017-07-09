@@ -8,21 +8,30 @@
 
 ---
 
-Welcome to the now open source WildBeast documentation!
+This is the repository for the WildBeast documentation. Here you can contribute to our docs and help us make WildBeast easier to access for everyone!
 
-This repository hosts the official documentation for WildBeast so you can contribute to it and suggest changes as you see fit.
+## Contributing and info
 
-**Important notice: This repository has stricter guidelines than our other repos.**
+This repository is maintained by the documentation writers of TheSharks. Other staff and external contributors are encouraged to make pull requests for quality control reasons.
 
-## Contributing
+Project maintainers:
+
+- [@LWTechGaming](https://github,com/LWTechGaming) - Lead writer; legal representative
+- [@SteamingMutt](https://github.com/SteamingMutt) - Organization owner
+
+You can contact the above with issues that concern their respective fields of responsibility.
+
+### Styleguide
   
-When you make contributions to this repository, you have a more precise writing styleguide to follow. You can find them in [CONTRIBUTING.md](.github/CONTRIBUTING.md). This is to keep our docs as accurate and up to date as possible, with minimal errors.
-  
-Before you make any changes to the documentation, read the guides in the `.github` folder. You'll find info on what you need to do when working on the documentation.
+When you make contributions to this repository, you need to follow the styleguide and contribution rules (See [CONTRIBUTING.md](.github/CONTRIBUTING.md) and [STYLEGUIDE.md](.github/STYLEGUIDE.md). This is to keep our documentation as accurate and up to date as possible, with minimal errors.
 
-## Information
-  
-This repository is maintained by TheSharks documentation writers. Others are encouraged to make pull requests for quality control reasons.
+If you need help on how to setup a development environment or any of the like, check out [COMPILATION.md](.github/COMPILATION.md) for information on that.
+
+### Legal
+
+**Note to external contributors:** This repository is governed by a very specific license to protect our intellectual property rights. The gist of it is: You are allowed to download and modify the contents of this repository **only if the changes are intended to be returned as contributions**. Redistribution and/or reuse in any case or form is forbidden. For more information, refer to the [LICENSE.md](LICENSE.md) file.
+
+### Branches
 
 Quick branch rundown:
 

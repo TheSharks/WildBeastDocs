@@ -38,7 +38,7 @@ Command objects consist of different properties which define how the command run
 | noDM | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether to allow usage in direct messages. Default true. |
 | timeout | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) | Unsigned integer that defines how long a command will be on timeout before it's usable again. The number represents seconds. |
 | usage | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The example of how the command is used when `help <command>` is called on the command. |
-| ovewrite | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether to accept this command instead of the default one, in case the callback name is the same. Default false. |
+| overwrite | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether to accept this command instead of the default one, in case the callback name is the same. Default false. |
 | aliases | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> | Hardcoded aliases to call this command with in addition to the default callback name. |
 | hidden | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether to hide the command from the command list returned with `help`. Default false. |
 
@@ -68,7 +68,7 @@ Example of command that uses an external module:
 
 ```js
 var Commands = [] // Declaration of the command array
-var config = require('../../config.json') // Import config
+var config = require('../../../config.json') // Import config
 
 Commands.prefix = {
   name: 'prefix',
