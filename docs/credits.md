@@ -20,7 +20,7 @@ These people write, construct and handle most of the documentation.
 
 While less influential than the main contributors, these people have still provided worthwile fixes and corrections to the documentation.
 
-![André](https://avatars1.githubusercontent.com/u/19685105?v=3&s=60) ![Kayo](https://avatars3.githubusercontent.com/u/24500457?v=3&s=60) ![Pepe](https://avatars2.githubusercontent.com/u/5787588?v=3&s=60)
+![André](https://avatars1.githubusercontent.com/u/19685105?v=3&s=60) ![Kayo](https://avatars3.githubusercontent.com/u/24500457?v=3&s=60) ![Pepe](https://avatars2.githubusercontent.com/u/5787588?v=3&s=60) ![Piero](https://avatars3.githubusercontent.com/u/20953919?v=3&s=60)
 
 - [andre-paulo98](https://github.com/andre-paulo98)
     - Miscellaneous improvements
@@ -28,3 +28,5 @@ While less influential than the main contributors, these people have still provi
     - Linux guide improvements
 - [arunesh90](https://github.com/arunesh90)
     - Miscellaneous improvements
+- [caf203](https://github.com/caf203)
+    - Grammar fixes

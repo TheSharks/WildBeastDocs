@@ -21,6 +21,7 @@ pages:
   - Commands:
     - Command reference: 'commands.md'
     - Custom commands: 'custom_commands.md'
+    - Tag scripting: 'tagscript.md'
   - Installation:
     - Windows installation: 'install_windows.md'
     - Linux installation: 'install_linux.md'

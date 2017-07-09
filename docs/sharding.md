@@ -3,6 +3,7 @@ This is a quick document about Discord gateway sharding and how WildBeast uses t
 **Note:** Shard mode with WildBeast is an advanced feature and only intended for bots with over 2500 guilds. If you aren't proficient with Discord's gateway sharding and websocket technologies, don't attempt to use this feature!
 
 ## Terminology
+
 Quick terminology table:
 
 | Term | Definition |
