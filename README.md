@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<a href="https://snap-ci.com/TheSharks/WildBeastDocs/branch/master"><img src="https://snap-ci.com/TheSharks/WildBeastDocs/branch/master/build_image" alt="Build Status"></a>
+<a href="https://circleci.com/gh/TheSharks/WildBeastDocs"><img src="https://circleci.com/gh/TheSharks/WildBeastDocs.svg?style=svg" alt="Build Status"></a>
 </p>
 
 ---
