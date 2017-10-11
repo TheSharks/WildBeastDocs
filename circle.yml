@@ -17,3 +17,8 @@ deployment:
     commands: 
     - git config user.email 9768134+Dougley@users.noreply.github.com
     - mkdocs gh-deploy
+experimental:
+  notify:
+    branches:
+      only:
+        - master
