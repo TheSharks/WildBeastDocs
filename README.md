@@ -17,7 +17,7 @@ This repository is maintained by the documentation writers of TheSharks. Other s
 Project maintainers:
 
 - [@LWTechGaming](https://github,com/LWTechGaming) - Lead writer; legal representative
-- [@SteamingMutt](https://github.com/SteamingMutt) - Organization owner
+- [@Dougley](https://github.com/Dougley) - Organization owner
 
 You can contact the above with issues that concern their respective fields of responsibility.
 
