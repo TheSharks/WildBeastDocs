@@ -522,12 +522,12 @@
         },
         {
             "location": "/credits/",
-            "text": "There are some people in our team and community that should be acclaimed for their work with our documentation. Here you can find the contributors to this piece of writing.\n\n\nMain contributors\n\n\nThese people write, construct and handle most of the documentation.\n\n\n \n \n\n\n\n\nLWTechGaming\n \"LW\"\n\n\nLead documentation writer\n\n\nCurrent maintainer and project lead\n\n\n\n\n\n\nSteamingMutt\n \"Dougley\"\n\n\nCI and deployment engineer\n\n\nLegal assistance\n\n\n\n\n\n\nzaza7\n \"Zaza\"\n\n\nLinux guide co-writer\n\n\nTesting and feedback for Linux texts\n\n\n\n\n\n\n\n\nOther contributors\n\n\nWhile less influential than the main contributors, these people have still provided worthwile fixes and corrections to the documentation.\n\n\n \n \n \n\n\n\n\nandre-paulo98\n\n\nMiscellaneous improvements\n\n\n\n\n\n\nRyoshiKayo\n\n\nLinux guide improvements\n\n\n\n\n\n\narunesh90\n\n\nMiscellaneous improvements\n\n\n\n\n\n\ncaf203\n\n\nGrammar fixes",
+            "text": "There are some people in our team and community that should be acclaimed for their work with our documentation. Here you can find the contributors to this piece of writing.\n\n\nMain contributors\n\n\nThese people write, construct and handle most of the documentation.\n\n\n \n \n\n\n\n\nLWTechGaming\n \"LW\"\n\n\nLead documentation writer\n\n\nCurrent maintainer and project lead\n\n\n\n\n\n\nDougley\n \"Dougley\"\n\n\nCI and deployment engineer\n\n\nLegal assistance\n\n\n\n\n\n\nzaza7\n \"Zaza\"\n\n\nLinux guide co-writer\n\n\nTesting and feedback for Linux texts\n\n\n\n\n\n\n\n\nOther contributors\n\n\nWhile less influential than the main contributors, these people have still provided worthwile fixes and corrections to the documentation.\n\n\n \n \n \n\n\n\n\nandre-paulo98\n\n\nMiscellaneous improvements\n\n\n\n\n\n\nRyoshiKayo\n\n\nLinux guide improvements\n\n\n\n\n\n\narunesh90\n\n\nMiscellaneous improvements\n\n\n\n\n\n\ncaf203\n\n\nGrammar fixes",
             "title": "Credits"
         },
         {
             "location": "/credits/#main-contributors",
-            "text": "These people write, construct and handle most of the documentation.        LWTechGaming  \"LW\"  Lead documentation writer  Current maintainer and project lead    SteamingMutt  \"Dougley\"  CI and deployment engineer  Legal assistance    zaza7  \"Zaza\"  Linux guide co-writer  Testing and feedback for Linux texts",
+            "text": "These people write, construct and handle most of the documentation.        LWTechGaming  \"LW\"  Lead documentation writer  Current maintainer and project lead    Dougley  \"Dougley\"  CI and deployment engineer  Legal assistance    zaza7  \"Zaza\"  Linux guide co-writer  Testing and feedback for Linux texts",
             "title": "Main contributors"
         },
         {
