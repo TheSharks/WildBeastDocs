@@ -5,9 +5,14 @@ general:
 machine:
   python:
     version: 3.5.2
+  java:
+    version: openjdk8 # Crowdin probably needs java, just to make sure
 test:
   override:
-    - exit 0 # We don't use CI to test
+    # This isnt really testing, but theres no 'upload to crowdin' step
+    - wget https://artifacts.crowdin.com/repo/deb/crowdin.deb -O crowdin.deb
+    - sudo dpkg -i crowdin.deb
+    - crowdin upload sources -b WildBeast-Docs
 compile:
   override:
     - mkdocs build
@@ -17,8 +22,3 @@ deployment:
     commands: 
     - git config user.email 9768134+Dougley@users.noreply.github.com
     - mkdocs gh-deploy
-experimental:
-  notify:
-    branches:
-      only:
-        - master

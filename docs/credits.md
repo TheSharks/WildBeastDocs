@@ -9,7 +9,7 @@ These people write, construct and handle most of the documentation.
 - [LWTechGaming](https://github.com/LWTechGaming) "LW"
     - Lead documentation writer
     - Current maintainer and project lead
-- [SteamingMutt](https://github.com/SteamingMutt) "Dougley"
+- [Dougley](https://github.com/Dougley) "Dougley"
     - CI and deployment engineer
     - Legal assistance
 - [zaza7](https://github.com/zaza7) "Zaza"
