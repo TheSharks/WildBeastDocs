@@ -5,14 +5,25 @@ general:
 machine:
   python:
     version: 3.5.2
+  java:
+    version: openjdk8 # Crowdin probably needs java, just to make sure
+  node:
+    version: 8 # For MKDocs autogen
 test:
   override:
-    - exit 0 # We don't use CI to test
+    # Start updating crowdin sources
+    - wget https://artifacts.crowdin.com/repo/deb/crowdin.deb -O crowdin.deb
+    - sudo dpkg -i crowdin.deb
+    - crowdin upload sources -b WildBeast-Docs
 compile:
   override:
     - mkdocs build
 deployment:
   production:
     branch: master
-    commands: 
+    commands:
+    - npm i js-yaml superagent
+    - node ./autogen_mkdocs.js
+    - crowdin download -b WildBeast-Docs
+    - git config user.email 9768134+Dougley@users.noreply.github.com
     - mkdocs gh-deploy
