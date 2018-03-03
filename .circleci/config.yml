@@ -35,6 +35,8 @@ workflows:
   gh-pages:
     jobs:
       - build:
-          filters:
-            branches:
-              only: /master/
+          branches:
+            only:
+              - master
+            ignore:
+              - gh-pages
