@@ -34,7 +34,7 @@ workflows:
   version: 2
   gh-pages:
     jobs:
-      build:
-        branches:
-          only:
-            - master
+      - build:
+          filters:
+            branches:
+              only: master
