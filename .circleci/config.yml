@@ -1,12 +1,5 @@
 version: 2
 jobs:
-  noop:
-    docker:
-      - image: python:3.5
-    steps:
-      - run:
-          name: Do nothing
-          command: exit 0
   build:
     docker:
       - image: python:3.5
@@ -62,10 +55,6 @@ workflows:
   version: 2
   gh-pages:
     jobs:
-      - noop:
-          filters:
-            branches:
-              only: gh-pages
       - build
       - deploy:
           filters:
