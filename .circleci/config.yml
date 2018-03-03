@@ -18,15 +18,18 @@ jobs:
             - "venv"
       - run:
           name: Compile
-          command: mkdocs build
+          command: |
+            . venv/bin/activate
+            mkdocs build
       - run:
           name: Deploy
           command: |
+            . venv/bin/activate
             git config user.email 9768134+Dougley@users.noreply.github.com
             mkdocs gh-deploy
 workflows:
   version: 2
-  crowdin:
+  gh-pages:
     jobs:
       - build:
           filters:
