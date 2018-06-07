@@ -1,87 +1,72 @@
-This is the cheat sheet for the WildBeast command framework. Using these elements, you can build the command you really want to get into your own instance.
+title: Custom commands
+description: WildBeast custom command reference
+path: tree/master/docs
+source: custom_commands.md
 
-!!! failure "What not to do"
-    Do not come to us with questions on how to write custom commands, some basic JavaScript and programming knowledge is required. We won't give you assistance in writing your commands beyond what is listed on this page!
+This document outlines the procedure for writing custom commands for WildBeast.
 
-## Intro
+!!! bug "Migrating from versions preceding v6"
+    In WildBeast versions 3 and 4, commands were declared in a very different way - namely, the commands were indexed into files based on category (Whereas version 6 indexes commands individually). The syntax was also vastly different. If you wish to write commands for pre-v6 versions, the [Legacy custom commands](/legacy_custom_commands) page details the old approach.
 
-Starting at version 3.0.0, WildBeast allows for the addition of user created JavaScript files with commands, given that they are written in the exact same format as default files. This page provides you with the tools you need to create your own commands.
+!!! failure "Custom command support"
+    Some basic JavaScript knowledge is required to write custom commands. Support for doing this will not be provided in addition to what is listed on this page, if the issue does not specifically concern WildBeast.
 
-## Important notes
+## General notes
 
-1. Files need to declare commands to an array, and the array needs to be exported as `Commands`.
-    - In practice: `#!js var Commands = []` and `#!js exports.Commands = Commands`
-2. Your command files must be in the `custom` folder within the `commands` folder. The path would therefore be `~/WildBeast/runtime/commands/custom`.
-3. Commands are **objects** added to an **array**.
-4. Aliases can't be shared between commands. This means that a custom command can't have the same alias as a default command. The bot will stop itself from running and spit out an error if this happens, for safety reasons.
-5. Any functions that use for instance config fields and so forth need to be imported in the format `../../file.ext` or `../file.ext` depending on what folder the file is in.
+- Command files are placed into **~/src/commands**.
+- Each command is declared in a separate file, preferably with the command name. (I.e if your command is named **dankmeme**, name the file **dankmeme.js**.)
+- Commands cannot share names - each must have a name of its own.
 
 ## Property declaration
 
-Command objects consist of different properties which define how the command runs. There are mandatory properties and optional properties, divided into their own lists. The command callback name is decided by the `<cmdname>` placeholder in `Commands.<cmdname>`.
+The exported command data describes the command in various ways. Here are the properties that can be defined.
 
-### Property scheme
+A command object consists of a **meta** object and an **fn** function. The function gets executed when the command gets ran, while the meta object provides information and modifiers to the command. Both the meta and fn properties must be defined on a command object.
 
-**Mandatory properties**
+### Meta object structure
 
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Command name for the help module, **not** callback name! See above. |
-| help | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Message displayed when `help <command>` is called on the command. |
-| level | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) / [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) | Minimum user access level (0-3 int) required to execute this command. Set to `'master'` to restrict usage to config-defined master users. |
-| fn | [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) | Defines the JavaScript function to execute when the command is called. |
+**Note:** An empty **Value** column implies that there are no specific formatting requirements for the particular property.
 
-**Optional properties**
+| Property | Description | Value | Type | Required |
+| -------- | ----------- | ----- | ---- | -------- |
+| level | The permission level required to run the command. | 0-10/Infinity | Number | Yes |
+| help | A brief description of what the command does. |  | String | Yes |
+| alias | A list of aliases[^1] (Alternative command names) to run the command. |  | Array<String> | No |
+| usage | An example of how to use the command. |  | String | No |
+| module | A category to which the command belongs. |  | String | No |
+| noDM | Whether the command can be used in direct message context or not. |  | Boolean | No |
+| timeout | A time in milliseconds for which the command will be on cooldown between uses. |  | Number | No |
+| nsfw | Whether the command is NSFW or not. If set, restricts the command usage scope to NSFW channels only. |  | Boolean | No |
+| addons | Addendums to the command's help message. |  | String | No |
+| permAddons | Additional Discord permissions that are required to run the command. | Discord permission name (Manage Roles etc.) | Array<String> | No |
 
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| noDM | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether to allow usage in direct messages. Default true. |
-| timeout | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) | Unsigned integer that defines how long a command will be on timeout before it's usable again. The number represents seconds. |
-| usage | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The example of how the command is used when `help <command>` is called on the command. |
-| overwrite | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether to accept this command instead of the default one, in case the callback name is the same. Default false. |
-| aliases | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)> | Hardcoded aliases to call this command with in addition to the default callback name. |
-| hidden | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether to hide the command from the command list returned with `help`. Default false. |
 
-## Example structure
+!!! tip "Testing your commands"
+    To verify that your commands pass the above requirements, you can run **npm test**. 
 
-Simple command example:
-
-```js
-var Commands = [] // Declaration of the command array
-
-Commands.ping = {
-  name: 'ping',
-  help: 'Check if I still live.'
-  timeout: 10,
-  overwrite: true, // WildBeast already has a command called ping, will overwrite with this
-  aliases: ['pong'],
-  level: 0,
-  fn: function(msg) {
-    msg.channel.sendMessage('I LIVE')
-  }
-}
-
-exports.Commands = Commands // Expose the commands to the commandcontrol module
-```
-
-Example of command that uses an external module:
+## Example
 
 ```js
-var Commands = [] // Declaration of the command array
-var config = require('../../../config.json') // Import config
-
-Commands.prefix = {
-  name: 'prefix',
-  help: 'Ask the bot what the configured prefix is.'
-  timeout: 30,
-  overwrite: true,
-  level: 'master',
-  fn: function(msg) {
-  	msg.channel.sendMessage('My prefix is ' + config.prefix)
+module.exports = {
+  meta: {
+    level: 0,
+    help: 'I\'ll say hello to you!',
+    alias: [ 'hi', 'hey' ],
+    usage: 'sayhello <name>',
+    module: 'Fun',
+    noDM: false, // Can be omitted
+    timeout: 0, // Can be omitted
+    nsfw: false, // Can be omitted
+    addons: 'This command can also be used in Direct Messages.',
+    permAddons: [] // Can be omitted
+  },
+  fn: function (msg, suffix) {
+    if (suffix) msg.channel.createMessage(`Hello ${suffix}!`)
+    else msg.channel.createMessage('Hello!')
   }
 }
-
-exports.Commands = Commands // Expose the commands to the commandcontrol module
 ```
 
 And that's how easy it is to create your own commands for WildBeast. Good luck in making your commands, and tinker to your heart's desire!
+
+[^1]: Aliases must not overwrite existing command names or aliases.

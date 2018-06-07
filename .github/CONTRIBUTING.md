@@ -1,10 +1,6 @@
 ## Thank you for taking the time to contribute to the WildBeast documentation!
 
-Before you start making the changes to the documentation, let's clarify the following. **If you make changes, you must know what you're doing with WildBeast and/or the operating system in question.**
-
-Any larger additions or restructurations must be discussed with TheSharks documentation writers and/or developers!
-
-----
+Before making changes to the documentation, make sure that you have read this document. If you have made changes to the WildBeast source code, be sure that you have followed proper procedure as outlined in the [contribution guidelines](https://github.com/TheSharks/WildBeast/blob/master/.github/CONTRIBUTING.md).
 
 ## Rules
 
@@ -12,30 +8,19 @@ Please follow these rules when making contributions to this repository.
 
 ## General contribution rules
 
-* All pull requests go to the `review` branch.
-* **Do not** commit to the `gh-pages` branch. That branch is handled by our automated systems.
-* You must have good written English skills, pulls with grammar errors will get change requests.
-* Follow the overall format in the docs. You can check the styleguide from [STYLEGUIDE.md](STYLEGUIDE.md).
-* Leave image embedding to the official writers.
+* Additions should be committed to a **feature/your-changes-title** branch and PRed to the master branch.
+* Strive to submit grammatically correct changes.
+* Do not commit or PR to the **gh-pages** branch. The **gh-pages** branch is handled by our CI.
+* Follow the overall format in the docs.
+* Do not add extraneous material such as screenshots.
 * New pages must be added to the navbar in `mkdocs.yml`. See [COMPILATION.md](COMPILATION.md) for more details.
-
-## Wanted contributions
-
-* Correction of grammar/spelling errors.
-* Correction of incorrect/misleading information.
-* Rewording to clarify difficult statements.
-* Addition of description to things where needed.
-* Anything not found below.
 
 ## Unwanted contributions
 
 * Unnecessary restructurations of the docs.
-* Nitpicky changes unless they're bundled with others (Dot and comma changes, etc).
-* Adding of screenshots unless approved by TheSharks documentation writers.
-* Configuration changes, exception is changes that are necessary for the documentation to work properly.
+* Untested changes (Changes must be verified as working)
+* Configuration changes, except when changes are necessary for the documentation to work properly.
 
-When all the above give you a green light, you can consider yourself free to make the pull request!
+## Wanted contributions
 
-----
-
-**NOTE:** Pull requests that break the rules provided above **will be rejected until changes are made!**
+Anything not outlined in the above section is considered wanted.

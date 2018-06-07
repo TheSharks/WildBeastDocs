@@ -1,43 +1,30 @@
-##### MkDocs configuration #####
+# MkDocs
 
-# Meta
 site_name: 'WildBeast Documentation'
-site_description: 'Welcome to the WB documentation'
 site_author: 'TheSharks'
 site_url: 'https://docs.thesharks.xyz'
-site_favicon: 'img/favicon.ico'
 
-# Repository configuration
 repo_name: 'TheSharks/WildBeastDocs'
 repo_url: 'https://github.com/TheSharks/WildBeastDocs'
-edit_uri: edit/review/docs/
+edit_uri: edit/master/docs/
 
-# Copyright
-copyright: 'Copyright © 2016-2017 TheSharks, "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.'
+copyright: 'Copyright © 2016-2018 TheSharks. "Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.'
 
-# Sitemap
 pages:
   - Home: 'index.md'
+  - Migrating v4 => v6: migrating.md
   - Commands:
     - Command reference: 'commands.md'
     - Custom commands: 'custom_commands.md'
-    - Tag scripting: 'tagscript.md'
+    - Legacy custom commands: 'legacy_custom_commands.md'
   - Installation:
     - Windows installation: 'install_windows.md'
     - Linux installation: 'install_linux.md'
-    - Docker installation: 'install_docker.md'
-  - Selfhosters:
-    - Updating: 'updating.md'
-    - Sharding: 'sharding.md'
-    - PowerShell to CMD: 'powershell.md'
-  - Credits: 'credits.md'
 
-# Theme
 theme: 'material'
 
-##### Material configuration #####
+# MkDocs-Material
 
-# Material features
 extra:
   feature:
     tabs: true
@@ -52,9 +39,20 @@ extra:
     - type: 'github'
       link: 'https://github.com/TheSharks'
 
-# Markdown extensions
+extra_css:
+  - css/style.css
+
 markdown_extensions:
   - admonition
   - codehilite
-  - pymdownx.critic
+  - footnotes
+  - meta
+  - toc:
+      permalink: true 
   - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.mark
