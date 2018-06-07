@@ -8,7 +8,7 @@ This document outlines the procedure for writing custom commands for WildBeast.
 !!! bug "Migrating from versions preceding v6"
     In WildBeast versions 3 and 4, commands were declared in a very different way - namely, the commands were indexed into files based on category (Whereas version 6 indexes commands individually). The syntax was also vastly different. If you wish to write commands for pre-v6 versions, the [Legacy custom commands](/legacy_custom_commands) page details the old approach.
 
-!!! failure "Custom command support"
+!!! warning "Custom command support"
     Some basic JavaScript knowledge is required to write custom commands. Support for doing this will not be provided in addition to what is listed on this page, if the issue does not specifically concern WildBeast.
 
 ## General notes

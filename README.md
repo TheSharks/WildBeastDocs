@@ -2,6 +2,8 @@
   <img src="https://i.imgur.com/kg3pqR6.png">
 </p>
 
+## This repository has moved to [TheSharks/WildBeast](https://github.com/TheSharks/WildBeast) and is no longer being updated.
+
 This is the repository for the WildBeast documentation. Here you can contribute to our docs and help us make WildBeast easier to access for everyone!
 
 ## Information

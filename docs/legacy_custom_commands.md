@@ -5,10 +5,10 @@ source: legacy_custom_commands.md
 
 This document outlines the procedure for writing custom commands for WildBeast versions previous to version 6.
 
-!!! warning
-    This guide is no longer being updated after the release of WildBeast v6. It is highly recommended to migrate to v6 if possible.
+!!! failure "Legacy content ahead"
+    This guide is no longer being updated after the release of WildBeast v6. It is highly recommended to migrate to v6 if possible as v4 is no longer supported.
 
-!!! failure "Custom command support"
+!!! warning "Custom command support"
     Some basic JavaScript knowledge is required to write custom commands. Support for doing this will not be provided in addition to what is listed on this page, if the issue does not specifically concern WildBeast.
     
 
